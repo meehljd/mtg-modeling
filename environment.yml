@@ -1,0 +1,28 @@
+# Note, this is not a lean env.
+name: dl+bayes-env
+channels:
+  - defaults
+  - conda-forge
+  - bioconda
+  - pytorch
+  - nvidia
+  - pyg
+dependencies:
+  - python=3.12
+  - anaconda # contains most ds libs: pandas, numpy, scipy, sklearn, jupyter, etc.
+  - biopython
+  - graphviz
+  - pymc>=5
+  - numpyro # linux only
+  - blackjax # linux only
+  - nutpie # linux only
+  - pytorch=2.2 # conda currently only supports pytorch 2.2 w/ pyg
+  - pytorch-cuda=12.1
+  - torchvision
+  - torchaudio
+  - pyg  # conda currently only supports pytorch 2.2 w/ pyg
+  # - pyg-lib # currently not in conda, install via pip
+  - lime
+  - shap
+  - python-graphviz # optional, still need to install base graphviz tool via apt-get
+  

@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "test",
+            "database": "${workspaceFolder:mtg-modeling}/data/AllPrintings.sqlite"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

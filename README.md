@@ -1,7 +1,7 @@
 # mtg_modeling
 Modeling the Magic: The Gathering game.  I will explore aspects of the game, such as latent card strength, deck strength, card scarcity, and card prices.
 
-For futher discussion, refere to the jupyter notebooks.
+For further discussion, refer to the jupyter notebooks.
 
 
 # Installation
@@ -76,4 +76,8 @@ sudo apt install -y graphviz # also needs python-graphviz via conda.
 
 # ...I can't remember what this one helps with...
 sudo apt install -y xdg-utils
+
+# Install nodejs for SQLTools extension in VS Code
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install nodejs -y
 '''

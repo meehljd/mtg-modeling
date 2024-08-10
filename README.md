@@ -1,7 +1,8 @@
-# mtg_modeling
-Modeling the Magic: The Gathering game.  I will explore aspects of the game, such as latent card strength, deck strength, card scarcity, and card prices.
+# Introduction
 
-For further discussion, refer to the jupyter notebooks.
+Modeling of aspects of the Magic: The Gathering game.  I will explore aspects of the game, such as latent card strength, deck strength, card scarcity, and card prices.
+
+For more in-depth discussion on the topic, please refer to the [Introduction Notebook](notebooks/00-introduction.ipynb).
 
 
 # Installation
@@ -32,7 +33,7 @@ git clone https://github.com/meehljd/dl+bayes-template.git
 
 ## Install Conda (if needed)
 
-Ideally I would use `poetry`, but is problematic with pymc.  So using `conda` instead.
+Ideally I would use `poetry`, but is problematic with `pymc`.  So using `conda` instead.
 
 If needed, install conda:
 ```bash

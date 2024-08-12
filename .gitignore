@@ -1,3 +1,5 @@
 data/*
 !data/sql/
 ~/mtg-modeling/data
+
+dags.png

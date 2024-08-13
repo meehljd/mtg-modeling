@@ -1,9 +1,3 @@
-
-images/*
-*/dags.png
-./images/dags/dags.png
-images/dags/dags.png
-
 data/*
 !data/sql/
 ~/mtg-modeling/data

@@ -7,5 +7,16 @@
             "database": "${workspaceFolder:mtg-modeling}/data/AllPrintings.sqlite"
         }
     ],
-    "sqltools.useNodeRuntime": true
+    "sqltools.useNodeRuntime": true,
+    "cSpell.words": [
+        "buylist",
+        "Cardmarket",
+        "histplot",
+        "MTGJSON",
+        "Scryfall",
+        "supertypes",
+        "textless",
+        "Textless",
+        "Unfinity"
+    ]
 }

@@ -12,6 +12,7 @@ dependencies:
   - anaconda # contains most ds libs: pandas, numpy, scipy, sklearn, jupyter, etc.
   - biopython
   - graphviz
+  - polars
   - pymc>=5
   - numpyro # linux only
   - blackjax # linux only

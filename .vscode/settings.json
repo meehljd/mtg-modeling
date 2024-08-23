@@ -10,12 +10,17 @@
     "sqltools.useNodeRuntime": true,
     "cSpell.words": [
         "buylist",
+        "cardhoarder",
+        "cardkingdom",
         "Cardmarket",
+        "cardsphere",
         "gameplay",
         "histplot",
+        "metagame",
         "MTGJSON",
         "Scryfall",
         "supertypes",
+        "tcgplayer",
         "textless",
         "Textless",
         "Unfinity"

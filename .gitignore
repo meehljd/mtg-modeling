@@ -1,3 +1,4 @@
 data/*
 !data/sql/
 ~/mtg-modeling/data
+__pycache__

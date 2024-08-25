@@ -1,4 +1,4 @@
-""" Fetches MTG JSON data from API """
+"""Fetches MTG JSON data from API"""
 
 import os
 import platform

@@ -1,4 +1,4 @@
-""" This helper script is run as a header in the Jupyter Notebooks. """
+"""This helper script is run as a header in the Jupyter Notebooks."""
 
 # pylint: disable=undefined-variable, unused-import
 

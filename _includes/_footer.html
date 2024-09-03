@@ -1,0 +1,9 @@
+<footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">
+    © <span id="current-year"></span> Joshua Meehl. All rights reserved.
+</footer>
+<script>
+    const baseYear = 2024;
+    const currentYear = new Date().getFullYear();
+    const displayYear = currentYear > baseYear ? `${baseYear}-${currentYear}` : `${baseYear}`;
+    document.getElementById('current-year').textContent = displayYear;
+</script>

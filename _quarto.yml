@@ -1,3 +1,45 @@
 project:
   type: website
   output-dir: docs
+
+website:
+  title: "The Data Mage"
+  navbar:
+    left:
+      - text: "Home"
+        # href: index.qmd
+      - text: "About"
+        # href: about.qmd
+      - text: "Set Analysis"
+        # href: projects.qmd
+    right:
+      - icon: github
+        href: https://github.com/meehljd/mtg-modeling
+      # - icon: blog
+      #   href: blog.qmd
+      - icon: linkedin
+        href: https://www.linkedin.com/in/meehl/
+
+format:
+  html:
+    theme: flatly
+    toc: true
+    toc-depth: 2
+    # css: styles.css
+    include-after-body: _includes/_footer.html
+
+number-sections: true
+
+# LANGUAGE & CODE EXECUTION
+execute:
+  enabled: false
+  echo: false
+  warning: false
+  error: false
+  freeze: auto
+jupyter: python3
+
+# PAGE LAYOUT
+link-citations: true
+code-fold: true
+share: true

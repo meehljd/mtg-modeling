@@ -174,19 +174,18 @@ window.Quarto = {
   <li><a href="#color-win-rates" id="toc-color-win-rates" class="nav-link" data-scroll-target="#color-win-rates"><span class="header-section-number">4.2</span> Color Win Rates</a></li>
   <li><a href="#color-freq-vs-win-rate" id="toc-color-freq-vs-win-rate" class="nav-link" data-scroll-target="#color-freq-vs-win-rate"><span class="header-section-number">4.3</span> Color Freq vs Win Rate</a></li>
   </ul></li>
-  <li><a href="#opposing-player-colors" id="toc-opposing-player-colors" class="nav-link" data-scroll-target="#opposing-player-colors"><span class="header-section-number">5</span> Opposing Player Colors</a>
+  <li><a href="#opposing-player-colors" id="toc-opposing-player-colors" class="nav-link" data-scroll-target="#opposing-player-colors"><span class="header-section-number">5</span> Opposing Player Colors</a></li>
+  <li><a href="#color-face-offs-2-color-vs-2-color" id="toc-color-face-offs-2-color-vs-2-color" class="nav-link" data-scroll-target="#color-face-offs-2-color-vs-2-color"><span class="header-section-number">6</span> Color Face-Offs (2-Color vs 2-Color)</a></li>
+  <li><a href="#color-splash-update-me" id="toc-color-splash-update-me" class="nav-link" data-scroll-target="#color-splash-update-me"><span class="header-section-number">7</span> Color Splash (UPDATE ME)</a></li>
+  <li><a href="#player-rank" id="toc-player-rank" class="nav-link" data-scroll-target="#player-rank"><span class="header-section-number">8</span> Player Rank</a>
   <ul class="collapse">
-  <li><a href="#matrix-2-color-vs-2-color" id="toc-matrix-2-color-vs-2-color" class="nav-link" data-scroll-target="#matrix-2-color-vs-2-color"><span class="header-section-number">5.1</span> Matrix 2-Color vs 2-Color</a></li>
+  <li><a href="#ranks-over-time" id="toc-ranks-over-time" class="nav-link" data-scroll-target="#ranks-over-time"><span class="header-section-number">8.1</span> Ranks over Time</a></li>
+  <li><a href="#low-vs-high-rank-players" id="toc-low-vs-high-rank-players" class="nav-link" data-scroll-target="#low-vs-high-rank-players"><span class="header-section-number">8.2</span> Low vs High Rank Players</a></li>
   </ul></li>
-  <li><a href="#player-rank" id="toc-player-rank" class="nav-link" data-scroll-target="#player-rank"><span class="header-section-number">6</span> Player Rank</a>
-  <ul class="collapse">
-  <li><a href="#ranks-over-time" id="toc-ranks-over-time" class="nav-link" data-scroll-target="#ranks-over-time"><span class="header-section-number">6.1</span> Ranks over Time</a></li>
-  <li><a href="#low-vs-high-rank-players" id="toc-low-vs-high-rank-players" class="nav-link" data-scroll-target="#low-vs-high-rank-players"><span class="header-section-number">6.2</span> Low vs High Rank Players</a></li>
-  </ul></li>
-  <li><a href="#mulligans" id="toc-mulligans" class="nav-link" data-scroll-target="#mulligans"><span class="header-section-number">7</span> Mulligans</a></li>
-  <li><a href="#turn-counts" id="toc-turn-counts" class="nav-link" data-scroll-target="#turn-counts"><span class="header-section-number">8</span> Turn Counts</a></li>
-  <li><a href="#builds" id="toc-builds" class="nav-link" data-scroll-target="#builds"><span class="header-section-number">9</span> Builds</a></li>
-  <li><a href="#starting-player" id="toc-starting-player" class="nav-link" data-scroll-target="#starting-player"><span class="header-section-number">10</span> Starting Player</a></li>
+  <li><a href="#mulligans" id="toc-mulligans" class="nav-link" data-scroll-target="#mulligans"><span class="header-section-number">9</span> Mulligans</a></li>
+  <li><a href="#turn-counts-update-me" id="toc-turn-counts-update-me" class="nav-link" data-scroll-target="#turn-counts-update-me"><span class="header-section-number">10</span> Turn Counts (UPDATE ME)</a></li>
+  <li><a href="#builds-update-me" id="toc-builds-update-me" class="nav-link" data-scroll-target="#builds-update-me"><span class="header-section-number">11</span> Builds (UPDATE ME)</a></li>
+  <li><a href="#starting-player-update-me" id="toc-starting-player-update-me" class="nav-link" data-scroll-target="#starting-player-update-me"><span class="header-section-number">12</span> Starting Player (UPDATE ME)</a></li>
   </ul>
 </nav>
     </div>
@@ -242,19 +241,14 @@ window.Quarto = {
 <section id="introduction" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Introduction</h1>
 <p>I will explore the summary and draft data. This will look at the deck-level data and not get into specific cards.</p>
-<div id="cell-3" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-stdout">
-<pre><code>Changed working directory to: d:\mtg-modeling</code></pre>
-</div>
-</div>
 </section>
 <section id="summary-data" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Summary Data</h1>
 <p>Below is the summary data for the Bloomburrow Premier Draft data from 17Lands.</p>
 <p>You can see we have data from 07-30 through 08-18.<br>
 The average win rate for the 17Lands players is 54.7%, which indicates the user base is more highly skilled than the average Arena draft player by a healthy margin. The average number of turns is 8.9. This should be compared to other sets understand the speed of this sets. There is a total of 680,000 games played, with an average of 5.8 games per draft. This set has 276 cards and the average number of basic lands used is 22.2.</p>
-<div id="cell-7" class="cell" data-execution_count="5">
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div id="cell-7" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="11">
 <div><style>
 .dataframe > thead > tr,
 .dataframe > tbody > tr {
@@ -347,7 +341,7 @@ The average win rate for the 17Lands players is 54.7%, which indicates the user 
 <p>First I will look at the number of decks drafted for each color set. The 10 two-color decks are the most frequent. The Bloomburrow set is design for 10 two-color animal tribes, so this aligns with the design intent of the set. Mono-color and multi-color decks are much lest frequent.</p>
 <p>The Black-Green <em>Squirrels: Forage</em> decks and the White-Green <em>Rabbits: Go-Wide</em> decks are by far the most popular. Most decks using Blue are much less favored.</p>
 <p>See <a href="#fig-polar" class="quarto-xref">Figure&nbsp;1</a></p>
-<div id="cell-fig-polar" class="cell" data-execution_count="7">
+<div id="cell-fig-polar" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-display">
 <div id="fig-polar" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -355,14 +349,14 @@ The average win rate for the 17Lands players is 54.7%, which indicates the user 
 <img src="02-30-draft-eda-BLB-games_files/figure-html/fig-polar-output-1.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: A line plot on a polar axis
+Figure&nbsp;1: Frequency of Draft Deck Colors
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Since Bloomburrow is designed with 2-color tribal decks in mind, I will focus on these pairings. The most frequent drafted decks are Black-Green, White-Green, and Red-White. The least drafted are Blue-Black, Blue-Red and White-Blue.</p>
-<div id="cell-12" class="cell" data-execution_count="8">
+<div id="cell-12" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -373,7 +367,7 @@ Figure&nbsp;1: A line plot on a polar axis
 </div>
 <p>Next let’s look at the color composition of the decks. Below we can see that Green is the most frequently drafted color, with Black and White also favored. Red and Blue are much less frequent.</p>
 <p>The average draft use rate per component color is 40.0%.</p>
-<div id="cell-14" class="cell" data-execution_count="9">
+<div id="cell-14" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -383,7 +377,7 @@ Figure&nbsp;1: A line plot on a polar axis
 </div>
 </div>
 <p>I next select the 4 decks with the largest absolute change in use between the start and end of the time period. The WG and WB decks have the largest increase in use, while the UR and WR decks have the largest decrease in use.</p>
-<div id="cell-16" class="cell" data-execution_count="101">
+<div id="cell-16" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -397,12 +391,12 @@ Figure&nbsp;1: A line plot on a polar axis
 <h2 data-number="4.2" class="anchored" data-anchor-id="color-win-rates"><span class="header-section-number">4.2</span> Color Win Rates</h2>
 <p>In addition to the use rate of the colors, I will also look at the win rates of the colors. First I calculate the weighted average win rate of 54.7%. As we saw in the summary section, this indicates that the 17Lands player base has a higher win rate than the general draft player base.</p>
 <p>Below is a chart of the win rate for each color combination. There are some mono-color decks with high win rates, but have very low use rates, so the results may be circumstantial with a small sample size.</p>
-<div id="cell-18" class="cell" data-execution_count="11">
+<div id="cell-18" class="cell" data-execution_count="17">
 <div class="cell-output cell-output-stdout">
 <pre><code>Average Win Percentage: 54.71%</code></pre>
 </div>
 </div>
-<div id="cell-19" class="cell" data-execution_count="12">
+<div id="cell-19" class="cell" data-execution_count="18">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -412,7 +406,7 @@ Figure&nbsp;1: A line plot on a polar axis
 </div>
 </div>
 <p>Focusing on the 2-color decks, the Black-Red <em>Lizards: Opponents Lose Life</em> is the highest win rate, but with a fairly low use rate. The White-Red <em>Rabbits: Go-Wide</em> and Black-Green <em>Squirrels: Forage</em> are the most popular decks and have high win rates.</p>
-<div id="cell-21" class="cell" data-execution_count="13">
+<div id="cell-21" class="cell" data-execution_count="19">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -423,7 +417,7 @@ Figure&nbsp;1: A line plot on a polar axis
 </div>
 <p>Here is the win rates for the five primary colors, based on if they are a main color in a deck. For example, the “B” results below are for Black win rates in decks suck as WB, BG, B, and UBR.</p>
 <p>The average win rate for the data is 54.7%. The decks with Black perform the best, with a 55.2% win rate. Decks with Green and White also perform well, with 55.0% and 54.8% respectively. The decks with Red and Blue under-perform, with 53.8% and 53.2% win rate each.</p>
-<div id="cell-23" class="cell" data-execution_count="14">
+<div id="cell-23" class="cell" data-execution_count="20">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -432,7 +426,7 @@ Figure&nbsp;1: A line plot on a polar axis
 </div>
 </div>
 </div>
-<div id="cell-24" class="cell" data-execution_count="15">
+<div id="cell-24" class="cell" data-execution_count="21">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -446,7 +440,7 @@ Figure&nbsp;1: A line plot on a polar axis
 <h2 data-number="4.3" class="anchored" data-anchor-id="color-freq-vs-win-rate"><span class="header-section-number">4.3</span> Color Freq vs Win Rate</h2>
 <p>Let us now compare the use rate versus the win rate. If the player base is well calibrated to the win rate with their selections.</p>
 <p>Below we can see that most of the two-color decks fall in a straight line, with two outliers. The Blue-Red <em>Otters: Non-creature Spells</em> deck under-performs relative to its use rate. On the other hand, the Black-Red <em>Lizards: Opponents Lose Life</em> deck is a sleeper, with the highest win rates, but selected less than the average two-color deck. The reason for this under-selection is that Red doesn’t perform well in general, so many drafters probably avoid drafting Red unless they get strong Black-Red cards early. White, Green, and Black are perform well, so the BG, WG, and WB decks are easy to pivot among in the draft.</p>
-<div id="cell-26" class="cell" data-execution_count="16">
+<div id="cell-26" class="cell" data-execution_count="22">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -462,7 +456,7 @@ Figure&nbsp;1: A line plot on a polar axis
 <p>We have data on the opposing player colors. This is useful to understand the meta of the draft.<br>
 For a given draft color combination, we can see the use rate by 17Lands players versus the use rate opponents. Each draft color combination is also color coded if the win rate is above or below the 17Lands player base average win rate. A diagonal grey line is also added to show parity between the use by the 17Lands players and the general player base.</p>
 <p>In the chart blow looks at 2-color drafts. We can see that WG, BG, and UG are more favored by the 17Lands players and also has a higher win rate. The UB color deck is more favored, but has a much lower win rate. The other color pairs are on parity between the two player bases.</p>
-<div id="cell-28" class="cell" data-execution_count="17">
+<div id="cell-28" class="cell" data-execution_count="23">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -473,7 +467,7 @@ For a given draft color combination, we can see the use rate by 17Lands players 
 </div>
 <p>Looking at the non-2-color drafts, we see that the 17Lands players are much less likely to pick any color companion that is not a 2-color deck. The win rates are also lower for these decks, which some exceptions being the White, Green, and Black decks.</p>
 <p>Based on this, it appears that if a drafter is selecting mono White, Green, or Black, they are better staying mono than drafting a 2-color deck into Blue or Red. However, since the mono decks are so infrequent, the strong deck performance may be circumstantial to certain cards combinations and not generalize across the entire color set.</p>
-<div id="cell-30" class="cell" data-execution_count="18">
+<div id="cell-30" class="cell" data-execution_count="24">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -482,12 +476,13 @@ For a given draft color combination, we can see the use rate by 17Lands players 
 </div>
 </div>
 </div>
-<section id="matrix-2-color-vs-2-color" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="matrix-2-color-vs-2-color"><span class="header-section-number">5.1</span> Matrix 2-Color vs 2-Color</h2>
+</section>
+<section id="color-face-offs-2-color-vs-2-color" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Color Face-Offs (2-Color vs 2-Color)</h1>
 <p>Let’s now see how each pairing of the two-color decks compare. This will give us insight into strengths and weaknesses of individual decks.</p>
 <p>First we will look at the number of games played between each pairing. The rows and columns are sorted based on the maximum frequency of player deck pairings, with BG vs WG the most frequent, followed by WG vs WG. The average number of games played between each pairing was 5,031.</p>
 <p>As we saw above, the players use BG, WG, and UG more often than opponents, with the other color pairs being used at near parity.</p>
-<div id="cell-32" class="cell" data-execution_count="19">
+<div id="cell-32" class="cell" data-execution_count="25">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -498,7 +493,7 @@ For a given draft color combination, we can see the use rate by 17Lands players 
 </div>
 <p>Next we look at the pair-wise win rates for players.</p>
 <p>The most interesting observation is that the 17Lands player base is strong in most matchups, with a large exception for the UR deck. On average, the UR matchups under-perform by ~4 percentage points versus similar matchups. The UR-UR matchup is extremely low, and is the only like-paired matchup that has lower than even odds of winning.</p>
-<div id="cell-34" class="cell" data-execution_count="20">
+<div id="cell-34" class="cell" data-execution_count="26">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -508,14 +503,16 @@ For a given draft color combination, we can see the use rate by 17Lands players 
 </div>
 </div>
 </section>
+<section id="color-splash-update-me" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Color Splash (UPDATE ME)</h1>
 </section>
-<section id="player-rank" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Player Rank</h1>
+<section id="player-rank" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Player Rank</h1>
 <p>To get a sense of player skill, below I plotted the number of wins by the player rank. I do not have player IDs, so I cannot track individual player performance. However, we can see the average performance of the player base. I also cannot track the number of drafts per player, so more frequent players will be over-represented.</p>
 <p>While we do not have opponent rankings, we can infer that most opponents will be of the same rank as the player. This is because the Arena draft system matches players with similar records. Each ranked season is about 1 month long. Ranks have “rank decay” between seasons, meaning an the start of the next season, a players rank will be lower than the previous season, requiring them to play more games to get back to their previous rank.</p>
 <p>So our snapshot of each rank is a mix of lower-skill, end-of-season players at their peak, and higher-skill, start-of-season players who are climbing back up the ranks.</p>
 <p>Below we see that most drafts are played by players in the Platinum ranks.</p>
-<div id="cell-40" class="cell" data-execution_count="23">
+<div id="cell-41" class="cell" data-execution_count="29">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -525,7 +522,7 @@ For a given draft color combination, we can see the use rate by 17Lands players 
 </div>
 </div>
 <p>Here we see that the win rates vary by rank. The higher ranks have higher win rates. Bronze has by far the lowest win rate, indicating new or unskilled players. The Silver rank has the highest win rate. This may be from the large number of Gold and Platinum players that reset to Silver at the start of the season and quickly climb back up the ranks.</p>
-<div id="cell-42" class="cell" data-execution_count="24">
+<div id="cell-43" class="cell" data-execution_count="30">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -534,7 +531,7 @@ For a given draft color combination, we can see the use rate by 17Lands players 
 </div>
 </div>
 </div>
-<div id="cell-43" class="cell" data-execution_count="25">
+<div id="cell-44" class="cell" data-execution_count="31">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -544,7 +541,7 @@ For a given draft color combination, we can see the use rate by 17Lands players 
 </div>
 </div>
 <p>Below is a view for the number of games played per draft for each rank. While not identical, the pattern is very similar to the above chart of win rate.</p>
-<div id="cell-45" class="cell" data-execution_count="26">
+<div id="cell-46" class="cell" data-execution_count="32">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -553,20 +550,20 @@ For a given draft color combination, we can see the use rate by 17Lands players 
 </div>
 </div>
 </div>
-<section id="ranks-over-time" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="ranks-over-time"><span class="header-section-number">6.1</span> Ranks over Time</h2>
+<section id="ranks-over-time" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="ranks-over-time"><span class="header-section-number">8.1</span> Ranks over Time</h2>
 <p>We next look at the number of drafts played for each rank over the dataset. Since the BLB set was released two days before the season start, I have truncated the data at 08-01 to avoid the rank decay.</p>
 <p>The first few days are chaotic, as the BLB set released on 07-30, but with 07-31 being the first full day with games recorded. 08-01 was when the next ranked season started, resulting in rank decay, which is especially pronounced in Mythic and Diamond gameplay.</p>
 <p>An interesting pattern is seen starting on 08-01, with Gold quickly decaying after the initial peak of 3800 drafts per day. The Platinum rank having a quick peak during days 4-6, then dropping.<br>
 The Diamond rank has a slow climb with a plateau during days 8-13 and then slowly retracing.<br>
 The Mythic rank starts at zero, then very slowly climbs te a peak of 500 drafts per day peak at 13-16 days.</p>
 <p>From this chart, we can’t tell how much of the decline at each ranks is due to player advancement, and how much is loss of interest after the initial excitement of a new season. In the following charts, I will normalize to the total drafts played to better account for overall decrease in gameplay.</p>
-<div id="cell-49" class="cell" data-execution_count="28">
+<div id="cell-50" class="cell" data-execution_count="34">
 <div class="cell-output cell-output-stdout">
 <pre><code>Total Time Interval: 19 days 00:00:00</code></pre>
 </div>
 </div>
-<div id="cell-50" class="cell" data-execution_count="29">
+<div id="cell-51" class="cell" data-execution_count="35">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -580,7 +577,7 @@ The Mythic rank starts at zero, then very slowly climbs te a peak of 500 drafts 
 <p>It is interesting how releasing new sets increases player engagement. The introduction of the new season on 08-01 doesn’t seem to have caused an uptick in play, but this is a weak inference.<br>
 From this data, I understand the economic motivation for releasing new sets for digital engagement on Arena. One could infer that paper play would follow a similar pattern, with draft play consuming many more booster packs a few weeks after a launch of a new set.</p>
 <p>It would be interesting to compare this curve across set releases to get an indication of set-by-set preferences of the player base.</p>
-<div id="cell-52" class="cell" data-execution_count="30">
+<div id="cell-53" class="cell" data-execution_count="36">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -594,7 +591,7 @@ From this data, I understand the economic motivation for releasing new sets for 
 After the new season start, Gold shows a linear decay as the player base advances to Platinum.<br>
 The Platinum has a much more prolonged plateau, showing an equilibrium of new players joining the rank versus existing players advancing.<br>
 Both Diamond and Mythic start with minimal players, but gradually increase in play nearly monotonically at differing rates.</p>
-<div id="cell-54" class="cell" data-execution_count="31">
+<div id="cell-55" class="cell" data-execution_count="37">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -604,14 +601,14 @@ Both Diamond and Mythic start with minimal players, but gradually increase in pl
 </div>
 </div>
 </section>
-<section id="low-vs-high-rank-players" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="low-vs-high-rank-players"><span class="header-section-number">6.2</span> Low vs High Rank Players</h2>
+<section id="low-vs-high-rank-players" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="low-vs-high-rank-players"><span class="header-section-number">8.2</span> Low vs High Rank Players</h2>
 <p>Now let’s compare the performance of player rank versus success. I will take the 3 two-color decks that were outliers in the previous use-rate versus win-rate chart. I’ll use the BG deck with a high use and win rate, the BR deck with a high win rate and lower use rate, and the UR deck, with the very low use rate and an extremely low win rate.</p>
 <p>Below we can see the overall performance of players with these decks. We have two categories. The first is the week of play and the second is the if the player is in the elite ranks of Diamond or Mythic.</p>
 <p>For BG, the most played deck, the performance across weeks and ranks shows no clear trend.<br>
 However, the BR and UR decks, which are less played, both sets of ranked players showed noticeable gains in win rate from week one to two. This indicates that the 17Lands player base learned how to better use these less favorable decks, regardless of rank.</p>
 <p>Note that for the first week of play, the Mythic and Diamond play base is very small.</p>
-<div id="cell-56" class="cell" data-execution_count="32">
+<div id="cell-57" class="cell" data-execution_count="38">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -622,12 +619,12 @@ However, the BR and UR decks, which are less played, both sets of ranked players
 </div>
 </section>
 </section>
-<section id="mulligans" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Mulligans</h1>
+<section id="mulligans" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Mulligans</h1>
 <p>Mulligans are a key strategy in MTG. If a player starting hand is not good, they draw a new one, with one less card. This can be repeated as needed, with one less card each time. Evaluating the trade-off between a bad hand and a smaller hand is not trivial.</p>
 <p>Below we see the distribution of mulligans by number of re-draws. Most players do not take a mulligan. About 12% of players take one mulligan, and 2% take two mulligans. The number of players taking three or more mulligans is very low. There are two instances of a player taking 5 mulligans, which would have had a starting hand of two cards.</p>
 <p>We can also see that 17Lands players are slightly less likely to take mulligans than their opponents. This may be due to a combination of better deck construction and better mulligan decisions.</p>
-<div id="cell-59" class="cell" data-execution_count="34">
+<div id="cell-60" class="cell" data-execution_count="39">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -639,7 +636,7 @@ However, the BR and UR decks, which are less played, both sets of ranked players
 <p>A side note on probability distributions. The player distributions appear to me to be Poisson distributions, with the number of mulligans taken being a discrete event.</p>
 <p>Using the mean number of mulligans per game of 0.136, I did a random samplings of a Poisson distribution with <span class="math inline">\(\lambda=0.136\)</span>. The results are very similar to the actual data, with the actual data having a slightly higher number of 1 mulligan games and a slightly lower number of other values.</p>
 <p>We can investigate this further when we explore the card data and see what types of random draw events correlate with mulligan decisions. An example would be number of lands in the starting hand.</p>
-<div id="cell-61" class="cell" data-execution_count="35">
+<div id="cell-62" class="cell" data-execution_count="40">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -651,7 +648,7 @@ However, the BR and UR decks, which are less played, both sets of ranked players
 <p>We now look at the outcomes of games where mulligans occur. After plotting the win rates at each mulligan value, it is very apparent the near linear relationship between mulligans and win rate. The win rate decreases by about 15% for each mulligan taken.</p>
 <p>Comparing the 17Lands player their opponents, the win rate decay is consistent, with the gap between the two player bases being about 8-9% at each mulligan level.</p>
 <p>With this data, we cannot decern the causal relationship between mulligans and win rates. Are mulligans always bad, or are they a sign of a bad hand that would have an even lower probability of winning. This is a question that can be answered with the card data.</p>
-<div id="cell-63" class="cell" data-execution_count="36">
+<div id="cell-64" class="cell" data-execution_count="41">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -661,7 +658,7 @@ However, the BR and UR decks, which are less played, both sets of ranked players
 </div>
 </div>
 <p>To see if there is appreciable difference between mulligan success and player rank, I plotted the win rates for each rank. The win rates are very similar across ranks, with no appreciable differences.</p>
-<div id="cell-65" class="cell" data-execution_count="66">
+<div id="cell-66" class="cell" data-execution_count="42">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -671,14 +668,14 @@ However, the BR and UR decks, which are less played, both sets of ranked players
 </div>
 </div>
 </section>
-<section id="turn-counts" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Turn Counts</h1>
+<section id="turn-counts-update-me" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Turn Counts (UPDATE ME)</h1>
 </section>
-<section id="builds" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Builds</h1>
+<section id="builds-update-me" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Builds (UPDATE ME)</h1>
 </section>
-<section id="starting-player" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Starting Player</h1>
+<section id="starting-player-update-me" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Starting Player (UPDATE ME)</h1>
 
 
 </section>

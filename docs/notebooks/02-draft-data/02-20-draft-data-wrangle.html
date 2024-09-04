@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Summary</title>
+<title>Summary – The Data Mage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,44 +20,11 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -73,11 +40,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -106,14 +73,78 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">The Data Mage</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Home</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">About</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Set Analysis</span>
+    </span>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/meehljd/mtg-modeling"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/meehl/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
+  <ul class="collapse">
+  <li><a href="#terms" id="toc-terms" class="nav-link" data-scroll-target="#terms"><span class="header-section-number">1.1</span> Terms</a></li>
+  </ul></li>
+  <li><a href="#initial-setup" id="toc-initial-setup" class="nav-link" data-scroll-target="#initial-setup"><span class="header-section-number">2</span> Initial Setup</a></li>
+  <li><a href="#games-table" id="toc-games-table" class="nav-link" data-scroll-target="#games-table"><span class="header-section-number">3</span> Games Table</a></li>
+  <li><a href="#draft-table" id="toc-draft-table" class="nav-link" data-scroll-target="#draft-table"><span class="header-section-number">4</span> Draft Table</a></li>
+  <li><a href="#card-data" id="toc-card-data" class="nav-link" data-scroll-target="#card-data"><span class="header-section-number">5</span> Card Data</a></li>
+  <li><a href="#summary-table" id="toc-summary-table" class="nav-link" data-scroll-target="#summary-table"><span class="header-section-number">6</span> Summary Table</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -137,96 +168,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>The code to wrangle the data. Deal with NAs, join data frames, etc.</p>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 <p>This data set is very large, in both memory and in size. Each row is a game, with identifiers for the draft event and the player. The columns have information on the given draft game, with the majority are for card counts per state, such as the number of a given card in the deck or the number of a given card in the opening hand.</p>
 <p>Ideally I want to melt the data into a tall layout, with rows for each unique combination of card and game and columns for the card count states, such as deck, hand, etc. This will allow me to easily filter and group the data for analysis. Unfortunately, after attempting to wrangle in this format, I found that the data set is too large to handle in memory. I could play with making spares arrays, but I think that would be too much work for this data set.</p>
 <p>For this notebook, I will keep the data in the wide layout and aggregate down into useful tables, such as per-game and per-player summaries.</p>
-<section id="terms" class="level2">
-<h2 class="anchored" data-anchor-id="terms">Terms</h2>
+<section id="terms" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="terms"><span class="header-section-number">1.1</span> Terms</h2>
 <p>The following terms are used in the data set: - <strong>game:</strong> a single game of MTG - <strong>match:</strong> a series of games between two players. Typically best of 1 or best of 3. - <strong>draft:</strong> an initial draft event, followed by a series of matches between a group of players. - <strong>build:</strong> a instance of a deck in a draft. Can be adjusted between games.</p>
 </section>
 </section>
-<section id="initial-setup" class="level1">
-<h1>Initial Setup</h1>
+<section id="initial-setup" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Initial Setup</h1>
 <div id="cell-4" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup Notebook</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> os.path.basename(os.getcwd()) <span class="op">!=</span> <span class="st">"mtg-modeling"</span>:</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    get_ipython().run_line_magic(<span class="st">"run"</span>, <span class="st">'-i "../../scripts/notebook_header.py"'</span>)  <span class="co"># type: ignore</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Changed working directory to: /root/mtg-modeling</code></pre>
+<pre><code>Changed working directory to: d:\mtg-modeling</code></pre>
 </div>
-</div>
-<div id="cell-5" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tqdm.notebook <span class="im">import</span> tqdm</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> time</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Define Paths</p>
-<div id="cell-7" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>SET_CODE <span class="op">=</span> <span class="st">"BLB"</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>paths <span class="op">=</span> {</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"raw"</span>: Path(<span class="st">"data/raw/17lands/game_data/PremierDraft"</span>),</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"interim"</span>: Path(<span class="st">"data/interim/17lands/game_data/premier_draft"</span>),</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"processed"</span>: Path(<span class="st">"data/processed/17lands/game_data/premier_draft"</span>),</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>csv_file <span class="op">=</span> paths[<span class="st">"raw"</span>] <span class="op">/</span> <span class="ss">f"game_data_public.</span><span class="sc">{</span>SET_CODE<span class="sc">}</span><span class="ss">.PremierDraft.csv"</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>parquet_file <span class="op">=</span> paths[<span class="st">"interim"</span>] <span class="op">/</span> <span class="ss">f"game_data_public.</span><span class="sc">{</span>SET_CODE<span class="sc">}</span><span class="ss">.PremierDraft.parquet"</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>summary_file <span class="op">=</span> paths[<span class="st">"processed"</span>] <span class="op">/</span> <span class="ss">f"</span><span class="sc">{</span>SET_CODE<span class="sc">}</span><span class="ss">_Game_PD_Summary.parquet"</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>game_file <span class="op">=</span> paths[<span class="st">"processed"</span>] <span class="op">/</span> <span class="ss">f"</span><span class="sc">{</span>SET_CODE<span class="sc">}</span><span class="ss">_Game_PD_Games.parquet"</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>draft_file <span class="op">=</span> paths[<span class="st">"processed"</span>] <span class="op">/</span> <span class="ss">f"</span><span class="sc">{</span>SET_CODE<span class="sc">}</span><span class="ss">_Game_PD_Drafts.parquet"</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>card_file <span class="op">=</span> paths[<span class="st">"processed"</span>] <span class="op">/</span> <span class="ss">f"</span><span class="sc">{</span>SET_CODE<span class="sc">}</span><span class="ss">_Game_PD_Cards.parquet"</span></span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>os.makedirs(paths[<span class="st">"interim"</span>], exist_ok<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>os.makedirs(paths[<span class="st">"processed"</span>], exist_ok<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>Convert the csv file to parquet if needed.</p>
-<div id="cell-9" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">not</span> os.path.exists(parquet_file):</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.read_csv(csv_file)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    df.to_parquet(parquet_file)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Converted </span><span class="sc">{</span>csv_file<span class="sc">}</span><span class="ss"> to parquet"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>Scan file into a lazy frame.</p>
-<div id="cell-11" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>df_lazy <span class="op">=</span> pl.scan_parquet(parquet_file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>Parse column names, such as the card name and the card state.</p>
 <div id="cell-13" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>cols <span class="op">=</span> df_lazy.collect_schema().names()</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>state_prefixes <span class="op">=</span> [<span class="st">'tutored_'</span>, <span class="st">'deck_'</span>, <span class="st">'opening_hand_'</span>, <span class="st">'drawn_'</span>, <span class="st">'sideboard_'</span>]</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>card_cols <span class="op">=</span> [col <span class="cf">for</span> col <span class="kw">in</span> cols <span class="cf">if</span> <span class="bu">any</span>([col.startswith(s) <span class="cf">for</span> s <span class="kw">in</span> state_prefixes])]</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>index_cols <span class="op">=</span> [col <span class="cf">for</span> col <span class="kw">in</span> cols <span class="cf">if</span> col <span class="kw">not</span> <span class="kw">in</span> card_cols]</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>card_names <span class="op">=</span> [col.split(<span class="st">"_"</span>)[<span class="op">-</span><span class="dv">1</span>] <span class="cf">for</span> col <span class="kw">in</span> card_cols <span class="cf">if</span> col.startswith(<span class="st">"deck_"</span>)]</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>land_cards <span class="op">=</span> [<span class="st">"Plains"</span>, <span class="st">"Island"</span>, <span class="st">"Swamp"</span>, <span class="st">"Mountain"</span>, <span class="st">"Forest"</span>]</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>non_land_cards <span class="op">=</span> [card <span class="cf">for</span> card <span class="kw">in</span> card_names <span class="cf">if</span> card <span class="kw">not</span> <span class="kw">in</span> land_cards]</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>non_land_card_cols <span class="op">=</span> [col <span class="cf">for</span> col <span class="kw">in</span> card_cols <span class="cf">if</span> <span class="bu">all</span>([land <span class="kw">not</span> <span class="kw">in</span> col <span class="cf">for</span> land <span class="kw">in</span> land_cards])]</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>land_card_cols <span class="op">=</span> [col <span class="cf">for</span> col <span class="kw">in</span> card_cols <span class="cf">if</span> <span class="bu">any</span>([land <span class="kw">in</span> col <span class="cf">for</span> land <span class="kw">in</span> land_cards])]</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(card_cols), <span class="bu">len</span>(non_land_card_cols), <span class="bu">len</span>(land_card_cols)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>(1380, 1355, 25)</code></pre>
 </div>
 </div>
 <p>Check for extra underscores in card names.</p>
-<div id="cell-15" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> [col.count(<span class="st">"_"</span>) <span class="cf">for</span> col <span class="kw">in</span> card_cols <span class="cf">if</span> col.startswith(<span class="st">"deck_"</span>)]</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> <span class="bu">max</span>(counts) <span class="op">==</span> <span class="dv">1</span>, <span class="st">"There are some cards with underscores in their names"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <p>Show first few rows of the data.</p>
 <div id="cell-17" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df_lazy.<span class="bu">filter</span>(pl.col(<span class="st">"game_number"</span>)<span class="op">&gt;</span><span class="dv">1</span>).select(index_cols).head(<span class="dv">30</span>).collect()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <div><style>
 .dataframe > thead > tr,
@@ -334,36 +304,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Convert timestamps from strings to datetimes</p>
-<div id="cell-19" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df_lazy <span class="op">=</span> df_lazy.with_columns(</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    pl.col(<span class="st">"draft_time"</span>).<span class="bu">str</span>.strptime(pl.Datetime, <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M:%S"</span>),</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    pl.col(<span class="st">"game_time"</span>).<span class="bu">str</span>.strptime(pl.Datetime, <span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st"> %H:%M:%S"</span>),</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[9], line 6</span>
-<span class="ansi-green-fg ansi-bold">      1</span> df_lazy <span style="color:rgb(98,98,98)">=</span> df_lazy<span style="color:rgb(98,98,98)">.</span>with_columns(
-<span class="ansi-green-fg ansi-bold">      2</span>     pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">draft_time</span><span style="color:rgb(175,0,0)">"</span>)<span style="color:rgb(98,98,98)">.</span>str<span style="color:rgb(98,98,98)">.</span>strptime(pl<span style="color:rgb(98,98,98)">.</span>Datetime, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">%</span><span style="color:rgb(175,0,0)">Y-</span><span style="color:rgb(175,0,0)">%</span><span style="color:rgb(175,0,0)">m-</span><span style="font-weight:bold;color:rgb(175,95,135)">%d</span><span style="color:rgb(175,0,0)"> </span><span style="color:rgb(175,0,0)">%</span><span style="color:rgb(175,0,0)">H:</span><span style="color:rgb(175,0,0)">%</span><span style="color:rgb(175,0,0)">M:</span><span style="color:rgb(175,0,0)">%</span><span style="color:rgb(175,0,0)">S</span><span style="color:rgb(175,0,0)">"</span>),
-<span class="ansi-green-fg ansi-bold">      3</span>     pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">game_time</span><span style="color:rgb(175,0,0)">"</span>)<span style="color:rgb(98,98,98)">.</span>str<span style="color:rgb(98,98,98)">.</span>strptime(pl<span style="color:rgb(98,98,98)">.</span>Datetime, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">%</span><span style="color:rgb(175,0,0)">Y-</span><span style="color:rgb(175,0,0)">%</span><span style="color:rgb(175,0,0)">m-</span><span style="font-weight:bold;color:rgb(175,95,135)">%d</span><span style="color:rgb(175,0,0)"> </span><span style="color:rgb(175,0,0)">%</span><span style="color:rgb(175,0,0)">H:</span><span style="color:rgb(175,0,0)">%</span><span style="color:rgb(175,0,0)">M:</span><span style="color:rgb(175,0,0)">%</span><span style="color:rgb(175,0,0)">S</span><span style="color:rgb(175,0,0)">"</span>),
-<span class="ansi-green-fg ansi-bold">      4</span> )
-<span class="ansi-green-fg">----&gt; 6</span> df_lazy2<span style="color:rgb(98,98,98)">.</span>select([<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">draft_time</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">game_time</span><span style="color:rgb(175,0,0)">"</span>])<span style="color:rgb(98,98,98)">.</span>head(<span style="color:rgb(98,98,98)">2</span>)<span style="color:rgb(98,98,98)">.</span>collect()
-
-<span class="ansi-red-fg">NameError</span>: name 'df_lazy2' is not defined</pre>
-</div>
-</div>
-</div>
 </section>
-<section id="games-table" class="level1">
-<h1>Games Table</h1>
+<section id="games-table" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Games Table</h1>
 <p>A table of each game, excludes card data.</p>
-<div id="cell-21" class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df_games <span class="op">=</span> df_lazy.select(index_cols)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>df_games.collect().write_parquet(game_file)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>df_games.head(<span class="dv">2</span>).collect()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<div id="cell-21" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="10">
 <div><style>
 .dataframe > thead > tr,
 .dataframe > tbody > tr {
@@ -470,39 +416,11 @@ Cell <span class="ansi-green-fg">In[9], line 6</span>
 </div>
 </div>
 </section>
-<section id="draft-table" class="level1">
-<h1>Draft Table</h1>
+<section id="draft-table" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Draft Table</h1>
 <p>A table of the aggregated draft data, excluding card data.</p>
-<div id="cell-23" class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df_draft <span class="op">=</span> (</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    df_games.group_by(<span class="st">"draft_id"</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    .agg(</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"build_index"</span>).<span class="bu">max</span>().alias(<span class="st">"n_builds"</span>),</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"match_number"</span>).<span class="bu">max</span>().alias(<span class="st">"n_matches"</span>),</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"game_number"</span>).count().alias(<span class="st">"n_games"</span>),</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"won"</span>).<span class="bu">sum</span>().alias(<span class="st">"n_wins"</span>),</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"won"</span>).mean().alias(<span class="st">"win_rate"</span>),</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"rank"</span>).last(),</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"opp_rank"</span>).last(),</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"main_colors"</span>).last(),</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"opp_colors"</span>).last(),</span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"on_play"</span>).<span class="bu">sum</span>().alias(<span class="st">"n_starts"</span>),</span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"num_mulligans"</span>).<span class="bu">sum</span>().alias(<span class="st">"n_muls"</span>),</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"opp_num_mulligans"</span>).<span class="bu">sum</span>().alias(<span class="st">"n_opp_muls"</span>),</span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"num_turns"</span>).mean().alias(<span class="st">"mean_turns"</span>),</span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"draft_time"</span>).mean().alias(<span class="st">"draft_time"</span>),</span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"game_time"</span>).first().alias(<span class="st">"first_game_time"</span>),</span>
-<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>        pl.col(<span class="st">"game_time"</span>).last().alias(<span class="st">"last_game_time"</span>),</span>
-<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    .with_columns(</span>
-<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"n_games"</span>) <span class="op">-</span> pl.col(<span class="st">"n_wins"</span>)).alias(<span class="st">"n_losses"</span>),</span>
-<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>df_draft.collect().write_parquet(draft_file)</span>
-<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>df_draft.head().collect()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="21">
+<div id="cell-23" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="11">
 <div><style>
 .dataframe > thead > tr,
 .dataframe > tbody > tr {
@@ -524,9 +442,9 @@ Cell <span class="ansi-green-fg">In[9], line 6</span>
 <th data-quarto-table-cell-role="th">opp_rank</th>
 <th data-quarto-table-cell-role="th">main_colors</th>
 <th data-quarto-table-cell-role="th">opp_colors</th>
-<th data-quarto-table-cell-role="th">start_rate</th>
-<th data-quarto-table-cell-role="th">mul_rate</th>
-<th data-quarto-table-cell-role="th">opp_mul_rate</th>
+<th data-quarto-table-cell-role="th">n_starts</th>
+<th data-quarto-table-cell-role="th">n_muls</th>
+<th data-quarto-table-cell-role="th">n_opp_muls</th>
 <th data-quarto-table-cell-role="th">mean_turns</th>
 <th data-quarto-table-cell-role="th">draft_time</th>
 <th data-quarto-table-cell-role="th">first_game_time</th>
@@ -544,9 +462,9 @@ Cell <span class="ansi-green-fg">In[9], line 6</span>
 <th>str</th>
 <th>str</th>
 <th>str</th>
-<th>f64</th>
-<th>f64</th>
-<th>f64</th>
+<th>u32</th>
+<th>i64</th>
+<th>i64</th>
 <th>f64</th>
 <th>datetime[μs]</th>
 <th>datetime[μs]</th>
@@ -556,104 +474,104 @@ Cell <span class="ansi-green-fg">In[9], line 6</span>
 </thead>
 <tbody>
 <tr class="odd">
-<td>"89ef449d5a7c406288addccfcf96cf…</td>
+<td>"c4d54699b1fe4b2ba4a506c1bb6d7e…</td>
 <td>1</td>
 <td>7</td>
 <td>7</td>
 <td>4</td>
 <td>0.571429</td>
-<td>"platinum"</td>
+<td>"silver"</td>
 <td>"None"</td>
-<td>"BG"</td>
-<td>"WR"</td>
-<td>0.0</td>
-<td>0.285714</td>
-<td>0.0</td>
-<td>9.0</td>
-<td>2024-08-07 13:34:16</td>
-<td>2024-08-07 13:54:41</td>
-<td>2024-08-07 15:00:31</td>
+<td>"RG"</td>
+<td>"WU"</td>
+<td>6</td>
+<td>1</td>
+<td>0</td>
+<td>8.714286</td>
+<td>2024-08-12 16:46:54</td>
+<td>2024-08-12 17:10:14</td>
+<td>2024-08-12 17:55:15</td>
 <td>3</td>
 </tr>
 <tr class="even">
-<td>"08fccbaa19e148ea9f74a8b5961a73…</td>
+<td>"b8b37b19308b45e8bb8eb30591d6bd…</td>
 <td>0</td>
-<td>3</td>
-<td>3</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1.0</td>
+<td>"silver"</td>
+<td>"None"</td>
+<td>"UG"</td>
+<td>"UB"</td>
+<td>1</td>
 <td>0</td>
-<td>0.0</td>
+<td>0</td>
+<td>11.0</td>
+<td>2024-08-16 02:23:12</td>
+<td>2024-08-16 02:48:44</td>
+<td>2024-08-16 02:48:44</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>"89f874d2f53942859fee0a0ba398d5…</td>
+<td>0</td>
+<td>4</td>
+<td>4</td>
+<td>1</td>
+<td>0.25</td>
 <td>"platinum"</td>
 <td>"None"</td>
 <td>"WG"</td>
-<td>"UG"</td>
-<td>0.666667</td>
-<td>0.333333</td>
-<td>0.333333</td>
-<td>9.333333</td>
-<td>2024-08-06 00:42:33</td>
-<td>2024-08-06 00:59:44</td>
-<td>2024-08-06 01:14:32</td>
+<td>"WR"</td>
 <td>3</td>
-</tr>
-<tr class="odd">
-<td>"d6ae0ec7379f47fc9ad12a3c0ab49a…</td>
 <td>0</td>
-<td>5</td>
-<td>5</td>
-<td>2</td>
-<td>0.4</td>
-<td>"platinum"</td>
-<td>"None"</td>
-<td>"UG"</td>
-<td>"BG"</td>
-<td>0.6</td>
-<td>0.2</td>
-<td>0.0</td>
-<td>12.0</td>
-<td>2024-08-09 19:01:14</td>
-<td>2024-08-09 19:21:32</td>
-<td>2024-08-09 20:33:19</td>
+<td>1</td>
+<td>9.5</td>
+<td>2024-08-01 01:09:31</td>
+<td>2024-08-01 01:38:00</td>
+<td>2024-08-01 02:08:39</td>
 <td>3</td>
 </tr>
 <tr class="even">
-<td>"bc74892b2f0e4f4790c982afb50c05…</td>
-<td>1</td>
-<td>4</td>
-<td>4</td>
-<td>1</td>
-<td>0.25</td>
+<td>"f534102f8d904d1597d50db449defb…</td>
+<td>3</td>
+<td>9</td>
+<td>9</td>
+<td>6</td>
+<td>0.666667</td>
 <td>"platinum"</td>
 <td>"None"</td>
-<td>"WU"</td>
 <td>"UG"</td>
-<td>0.5</td>
-<td>0.25</td>
-<td>0.0</td>
-<td>9.5</td>
-<td>2024-08-04 23:27:12</td>
-<td>2024-08-04 23:47:29</td>
-<td>2024-08-05 00:08:48</td>
+<td>"BR"</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>8.777778</td>
+<td>2024-08-07 03:24:49</td>
+<td>2024-08-07 03:57:27</td>
+<td>2024-08-07 05:17:08</td>
 <td>3</td>
 </tr>
 <tr class="odd">
-<td>"3a512c7e843049b8bed883d89c48f8…</td>
-<td>0</td>
-<td>6</td>
-<td>6</td>
-<td>3</td>
-<td>0.5</td>
+<td>"6a1f7629698f4a6db74bb5a3717095…</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1.0</td>
 <td>"gold"</td>
 <td>"None"</td>
-<td>"BG"</td>
-<td>"UBRG"</td>
-<td>0.5</td>
-<td>0.166667</td>
-<td>0.0</td>
-<td>11.5</td>
-<td>2024-07-31 01:26:24</td>
-<td>2024-07-31 02:10:48</td>
-<td>2024-08-01 20:16:46</td>
-<td>3</td>
+<td>"UG"</td>
+<td>"WB"</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>7.0</td>
+<td>2024-08-02 21:22:51</td>
+<td>2024-08-02 21:52:46</td>
+<td>2024-08-02 21:52:46</td>
+<td>0</td>
 </tr>
 </tbody>
 </table>
@@ -661,16 +579,10 @@ Cell <span class="ansi-green-fg">In[9], line 6</span>
 </div>
 </div>
 </section>
-<section id="card-data" class="level1">
-<h1>Card Data</h1>
-<div id="cell-25" class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>id_cols <span class="op">=</span> [<span class="st">"draft_id"</span>, <span class="st">"match_number"</span>, <span class="st">"game_number"</span>, <span class="st">"build_index"</span>]</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>df_card <span class="op">=</span> df_lazy.select(<span class="op">*</span>id_cols, <span class="op">*</span>land_card_cols, <span class="op">*</span>non_land_card_cols)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>df_card.collect().write_parquet(card_file)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>df_card.head().collect()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="19">
+<section id="card-data" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Card Data</h1>
+<div id="cell-25" class="cell" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="12">
 <div><style>
 .dataframe > thead > tr,
 .dataframe > tbody > tr {
@@ -1228,50 +1140,10 @@ Cell <span class="ansi-green-fg">In[9], line 6</span>
 </div>
 </div>
 </section>
-<section id="summary-table" class="level1">
-<h1>Summary Table</h1>
-<div id="cell-27" class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df_select <span class="op">=</span> df_lazy.select(</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>        pl.<span class="bu">min</span>(<span class="st">"game_time"</span>).alias(<span class="st">"first_game"</span>), </span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>        pl.<span class="bu">max</span>(<span class="st">"game_time"</span>).alias(<span class="st">"last_game"</span>), </span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>        pl.<span class="bu">max</span>(<span class="st">"game_number"</span>).alias(<span class="st">"max_games"</span>), </span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        pl.mean(<span class="st">"won"</span>).alias(<span class="st">"win_rate"</span>), </span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>        pl.mean(<span class="st">"on_play"</span>).alias(<span class="st">"start_rate"</span>), </span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>        pl.count(<span class="st">"draft_id"</span>).alias(<span class="st">"n_games"</span>), </span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>        pl.<span class="bu">sum</span>(<span class="st">"num_mulligans"</span>).alias(<span class="st">"n_mul"</span>), </span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        pl.<span class="bu">sum</span>(<span class="st">"opp_num_mulligans"</span>).alias(<span class="st">"n_opp_mul"</span>), </span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>        pl.mean(<span class="st">"num_turns"</span>).alias(<span class="st">"mean_turns"</span>), </span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>        pl.<span class="bu">max</span>(<span class="st">"num_turns"</span>).alias(<span class="st">"max_turns"</span>), </span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>        pl.<span class="bu">min</span>(<span class="st">"num_turns"</span>).alias(<span class="st">"min_turns"</span>), </span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>df_draft_ct <span class="op">=</span> df_draft.select(</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    pl.count(<span class="st">"draft_id"</span>).alias(<span class="st">"n_drafts"</span>),</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    pl.<span class="bu">sum</span>(<span class="st">"n_matches"</span>).alias(<span class="st">"n_matches"</span>),</span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    pl.mean(<span class="st">"n_matches"</span>).alias(<span class="st">"mean_matches"</span>),</span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>df_max_card <span class="op">=</span> df_lazy.select(non_land_card_cols).<span class="bu">max</span>().collect()</span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>df_sum_land <span class="op">=</span> df_lazy.select(land_card_cols).collect().sum_horizontal()</span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>df_summary <span class="op">=</span> pl.concat([df_select, df_draft_ct], how<span class="op">=</span><span class="st">'horizontal'</span>)</span>
-<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>df_summary <span class="op">=</span> (</span>
-<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a>    df_summary.with_columns(</span>
-<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a>        (pl.col(<span class="st">"n_games"</span>) <span class="op">/</span> pl.col(<span class="st">"n_drafts"</span>)).alias(<span class="st">"n_games_per_draft"</span>),</span>
-<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>        pl.lit(<span class="bu">len</span>(card_names)).alias(<span class="st">"n_cards"</span>),</span>
-<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>        df_max_card.max_horizontal().alias(<span class="st">"max_card"</span>),</span>
-<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>        pl.lit(df_sum_land.mean()).alias(<span class="st">"mean_land"</span>),</span>
-<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>        pl.lit(df_sum_land.<span class="bu">max</span>()).alias(<span class="st">"max_land"</span>),</span>
-<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>        pl.lit(df_sum_land.<span class="bu">min</span>()).alias(<span class="st">"min_land"</span>),</span>
-<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>        )</span>
-<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>df_summary <span class="op">=</span> df_summary.collect()</span>
-<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>df_summary.write_parquet(summary_file)</span>
-<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>df_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
+<section id="summary-table" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Summary Table</h1>
+<div id="cell-27" class="cell" data-execution_count="13">
+<div class="cell-output cell-output-display" data-execution_count="13">
 <div><style>
 .dataframe > thead > tr,
 .dataframe > tbody > tr {
@@ -1305,8 +1177,8 @@ Cell <span class="ansi-green-fg">In[9], line 6</span>
 <th data-quarto-table-cell-role="th">min_land</th>
 </tr>
 <tr class="odd">
-<th>str</th>
-<th>str</th>
+<th>datetime[μs]</th>
+<th>datetime[μs]</th>
 <th>i64</th>
 <th>f64</th>
 <th>f64</th>
@@ -1329,8 +1201,8 @@ Cell <span class="ansi-green-fg">In[9], line 6</span>
 </thead>
 <tbody>
 <tr class="odd">
-<td>"2024-07-30 15:41:04"</td>
-<td>"2024-08-18 23:59:52"</td>
+<td>2024-07-30 15:41:04</td>
+<td>2024-08-18 23:59:52</td>
 <td>2</td>
 <td>0.547108</td>
 <td>0.500285</td>
@@ -1360,6 +1232,23 @@ Cell <span class="ansi-green-fg">In[9], line 6</span>
 </section>
 
 </main> <!-- /main -->
+<footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">
+
+    © <span id="current-year"></span> Joshua Meehl. All rights reserved.
+
+</footer>
+
+<script>
+
+    const baseYear = 2024;
+
+    const currentYear = new Date().getFullYear();
+
+    const displayYear = currentYear > baseYear ? `${baseYear}-${currentYear}` : `${baseYear}`;
+
+    document.getElementById('current-year').textContent = displayYear;
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

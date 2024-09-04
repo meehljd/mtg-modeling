@@ -9,29 +9,23 @@
     ],
     "sqltools.useNodeRuntime": true,
     "cSpell.words": [
-        "axvline",
         "Bloomburrow",
         "buylist",
         "cardhoarder",
         "cardkingdom",
         "Cardmarket",
         "cardsphere",
-        "figsize",
         "gameplay",
-        "histplot",
-        "lineplot",
-        "linestyle",
+        "matchups",
         "metagame",
         "MTGJSON",
+        "muls",
+        "scatterplot",
         "Scryfall",
         "supertypes",
         "tcgplayer",
         "textless",
         "Textless",
-        "Unfinity",
-        "xlabel",
-        "xlim",
-        "xticks",
-        "ylabel"
+        "Unfinity"
     ]
 }

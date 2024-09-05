@@ -25,7 +25,7 @@ def get_circle_sector_points(rotation=45, extend=180):
     x_rotated = x * np.cos(t) - y * np.sin(t)
     y_rotated = x * np.sin(t) + y * np.cos(t)
 
-    # Center the semicircle in the 100x100 image with center at (50, 50)
+    # Center the semicircle
     center = SCALE / 2
     x_centered = center + 0.40 * SCALE * x_rotated
     y_centered = center + 0.40 * SCALE * y_rotated
@@ -36,18 +36,22 @@ def get_circle_sector_points(rotation=45, extend=180):
         y_centered = np.concatenate(([center], y_centered, [center]))
     return {"x": x_centered, "y": y_centered}
 
+def scale_fill(sector_lines):
+    """Scales the fill to avoid bleed-over."""
+    scale_factor = 0.98
+    center = SCALE / 2
+    scaled_x = center + (sector_lines["x"] - center) * scale_factor
+    scaled_y = center + (sector_lines["y"] - center) * scale_factor
+    return scaled_x, scaled_y
 
 def plot_circle_sector(char, fill_color, sector_lines, text_pos, fontsize):
     """Plots the circle sector, including lines, fill, and text."""
     ax.plot(
-        sector_lines["x"], sector_lines["y"], color="black", linewidth=0.25, zorder=2
+        sector_lines["x"], sector_lines["y"], 
+        color="black", linewidth=0.25
     )
-
-    scale_factor = 0.98
-    scaled_x = SCALE / 2 + (sector_lines["x"] - SCALE / 2) * scale_factor
-    scaled_y = SCALE / 2 + (sector_lines["y"] - SCALE / 2) * scale_factor
-
-    ax.fill(scaled_x, scaled_y, color=fill_color, zorder=1)
+    scaled_x, scaled_y = scale_fill(sector_lines)
+    ax.fill(scaled_x, scaled_y, color=fill_color)
     ax.text(
         text_pos["x"] * SCALE / 100,
         text_pos["y"] * SCALE / 100,

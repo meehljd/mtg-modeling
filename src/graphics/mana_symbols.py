@@ -10,12 +10,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import yaml
 
+SCALE = 100
 
 def get_circle_sector_points(rotation=45, extend=180):
     """Defines the geometric points of the circle sector."""
 
     # Define the partial circle points
-    theta = np.linspace(0, np.deg2rad(extend), 100)
+    theta = np.linspace(0, np.deg2rad(extend), SCALE)
     x = np.cos(theta)
     y = np.sin(theta)
 
@@ -25,21 +26,31 @@ def get_circle_sector_points(rotation=45, extend=180):
     y_rotated = x * np.sin(t) + y * np.cos(t)
 
     # Center the semicircle in the 100x100 image with center at (50, 50)
-    x_centered = 50 + 40 * x_rotated
-    y_centered = 50 + 40 * y_rotated
+    center = SCALE / 2
+    x_centered = center + 0.40 * SCALE * x_rotated
+    y_centered = center + 0.40 * SCALE * y_rotated
 
     # Add lines to form the complete shape
-    x_full = np.concatenate(([50], x_centered, [50]))
-    y_full = np.concatenate(([50], y_centered, [50]))
-    return {"x": x_full, "y": y_full}
+    if extend < 360:
+        x_centered = np.concatenate(([center], x_centered, [center]))
+        y_centered = np.concatenate(([center], y_centered, [center]))
+    return {"x": x_centered, "y": y_centered}
 
 
 def plot_circle_sector(char, fill_color, sector_lines, text_pos, fontsize):
     """Plots the circle sector, including lines, fill, and text."""
-    ax.fill(sector_lines["x"], sector_lines["y"], color=fill_color)
+    ax.plot(
+        sector_lines["x"], sector_lines["y"], color="black", linewidth=0.25, zorder=2
+    )
+
+    scale_factor = 0.98
+    scaled_x = SCALE / 2 + (sector_lines["x"] - SCALE / 2) * scale_factor
+    scaled_y = SCALE / 2 + (sector_lines["y"] - SCALE / 2) * scale_factor
+
+    ax.fill(scaled_x, scaled_y, color=fill_color, zorder=1)
     ax.text(
-        text_pos["x"],
-        text_pos["y"],
+        text_pos["x"] * SCALE / 100,
+        text_pos["y"] * SCALE / 100,
         char,
         fontsize=fontsize,
         color="#130c0e",
@@ -52,8 +63,8 @@ def plot_circle_sector(char, fill_color, sector_lines, text_pos, fontsize):
 def save_plot():
     """Clean up and save plot."""
     ax.set_aspect("equal")
-    plt.xlim(0, 100)
-    plt.ylim(0, 100)
+    plt.xlim(0, SCALE)
+    plt.ylim(0, SCALE)
     plt.axis("off")
     plt.savefig(
         f"images/mana_symbols/png/{name}.png",
@@ -75,7 +86,7 @@ for name, colors in color_config["pairs"].items():
     n_colors = len(colors)
     text_config = text_configs[n_colors]
     sector_angle = 360 / n_colors
-    fig, ax = plt.subplots(figsize=(1, 1), dpi=100)
+    fig, ax = plt.subplots(figsize=(1, 1), dpi=SCALE)
     for i, color in enumerate(colors):
         rotation_angle = start_angles[n_colors] - i * sector_angle
         lines = get_circle_sector_points(rotation=rotation_angle, extend=sector_angle)

@@ -1,110 +1,91 @@
-import svgwrite
-import cairosvg
+"""Creates mana icons for each color combination.
+
+Using the color_palette.yaml file, draws circles using 
+mana colors and characters. For multi-color combinations, 
+each color is a circle sector (i.e. pizza slice).  
+The circles are saved as PNG.
+"""
+
+import matplotlib.pyplot as plt
 import numpy as np
-
-# Define the color palette
-color_palette = {
-    "W": "#fffbd5",  # Faint Yellow
-    "U": "#aae0fa",  # Light Blue
-    "B": "#cbc2bf",  # Gray
-    "R": "#f9aa8f",  # Soft Red
-    "G": "#9bd3ae",  # Light Green
-}
+import yaml
 
 
-def create_svg_circle(letter, color, filename):
-    """Function to create SVG images of circles with specified colors"""
-    dwg = svgwrite.Drawing(filename, profile="tiny", size=(100, 100))
-    dwg.add(dwg.circle(center=(50, 50), r=40, fill=color))
-    dwg.add(
-        dwg.text(
-            letter,
-            insert=(50, 75),
-            text_anchor="middle",
-            font_size="70px",
-            font_family="Arial",
-            fill="#000000",
-        )
-    )
-    dwg.save()
+def get_circle_sector_points(rotation=45, extend=180):
+    """Defines the geometric points of the circle sector."""
 
-import svgwrite
-
-
-def draw_semi_circle(rotation_angle=45, diam=100):
-
-    # Define the semicircle points before rotation
-    theta = np.linspace(0, np.pi, 100)
+    # Define the partial circle points
+    theta = np.linspace(0, np.deg2rad(extend), 100)
     x = np.cos(theta)
     y = np.sin(theta)
 
-    # Rotate points
-    t = np.deg2rad(rotation_angle)
+    # Rotate the points by 45 degrees
+    t = np.deg2rad(rotation)
     x_rotated = x * np.cos(t) - y * np.sin(t)
     y_rotated = x * np.sin(t) + y * np.cos(t)
 
-    # Scale and translate points to fit in the SVG view
-    s1 = 50 * diam / 100
-    s2 = 100 * diam / 100
-    return [(s1 + s2 * x, s1 - s2 * y) for x, y in zip(x_rotated, y_rotated)]
+    # Center the semicircle in the 100x100 image with center at (50, 50)
+    x_centered = 50 + 40 * x_rotated
+    y_centered = 50 + 40 * y_rotated
+
+    # Add lines to form the complete shape
+    x_full = np.concatenate(([50], x_centered, [50]))
+    y_full = np.concatenate(([50], y_centered, [50]))
+    return {"x": x_full, "y": y_full}
 
 
-# Function to create SVG images with two half circles of different colors and characters
-def create_svg_half_circle(letter1, color1, letter2, color2, filename):
-    """Create an SVG with two half circles, each with a different color and character."""
-    dwg = svgwrite.Drawing(filename, profile="tiny", size=(100, 100))
-    # Draw the first semicircle (lower left to upper right split)
-
-    points = draw_semi_circle(rotation_angle=0, diam=100)
-    print(points)
-    dwg.add(dwg.polyline(points=points, fill=color1))
-
-    # Draw the second semicircle (upper right to lower left split)
-
-    # dwg.add(dwg.path(d="M 50,50 L 100,0 A 50,50 0 0,1 0,100 Z", fill=color2))
-
-    # Add text for the first character on the lower left
-    dwg.add(
-        dwg.text(
-            letter1,
-            insert=(30, 70),  # Adjust position to balance within the triangle
-            text_anchor="middle",
-            font_size="30px",
-            font_family="Arial",
-            fill="#000000",
-        )
+def plot_circle_sector(char, fill_color, sector_lines, text_pos, fontsize):
+    """Plots the circle sector, including lines, fill, and text."""
+    ax.fill(sector_lines["x"], sector_lines["y"], color=fill_color)
+    ax.text(
+        text_pos["x"],
+        text_pos["y"],
+        char,
+        fontsize=fontsize,
+        color="#130c0e",
+        ha="center",
+        va="center",
+        fontname="monospace",
+        weight="bold",
     )
 
-    # Add text for the second character on the upper right
-    dwg.add(
-        dwg.text(
-            letter2,
-            insert=(70, 30),  # Adjust position to balance within the triangle
-            text_anchor="middle",
-            font_size="30px",
-            font_family="Arial",
-            fill="#000000",
-        )
+def save_plot():
+    """Clean up and save plot."""
+    ax.set_aspect("equal")
+    plt.xlim(0, 100)
+    plt.ylim(0, 100)
+    plt.axis("off")
+    plt.savefig(
+        f"images/mana_symbols/png/{name}.png",
+        bbox_inches="tight",
+        pad_inches=0,
+        transparent=True,
     )
+    plt.close()
 
-    dwg.save()
+# Read configs
+with open("src/graphics/color_palette.yml", "r", encoding="utf-8") as file:
+    color_config = yaml.safe_load(file)
+color_palette = color_config["colors"]
+text_configs = color_config["text_positions"]
+start_angles = color_config["start_angles"]
 
-def convert_svg_to_png(svg_filename, png_filename):
-    """Function to convert SVG to PNG."""
-    cairosvg.svg2png(url=svg_filename, write_to=png_filename)
+# Draw mana symbols
+for name, colors in color_config["pairs"].items():
+    n_colors = len(colors)
+    text_config = text_configs[n_colors]
+    sector_angle = 360 / n_colors
+    fig, ax = plt.subplots(figsize=(1, 1), dpi=100)
+    for i, color in enumerate(colors):
+        rotation_angle = start_angles[n_colors] - i * sector_angle
+        lines = get_circle_sector_points(rotation=rotation_angle, extend=sector_angle)
 
-file_paths = []
-for letter, color in color_palette.items():
-    filename = f"images/mana_symbols/svg/{letter}.svg"
-    create_svg_circle(letter, color, filename)
-    file_paths.append(filename)
+        plot_circle_sector(
+            char=color,
+            fill_color=color_palette[color],
+            sector_lines=lines,
+            text_pos=text_config["text_pos"][i],
+            fontsize=text_config["size"],
+        )
 
-filename = f"images/mana_symbols/svg/UR.svg"
-create_svg_half_circle("U", "#aae0fa", "R", "#f9aa8f", filename)
-file_paths.append(filename)
-
-jpg_file_paths = []
-for svg_path in file_paths:
-    png_path = svg_path.replace("svg", "png")
-    convert_svg_to_png(svg_path, png_path)
-    jpg_file_paths.append(png_path)
+    save_plot()

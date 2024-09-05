@@ -1,37 +1,205 @@
 colors:
-  "W": "#fffbd5"
-  "U": "#aae0fa"
-  "B": "#cbc2bf"
-  "R": "#f9aa8f"
-  "G": "#9bd3ae"
+  W: "#fffbd5"
+  U: "#aae0fa"
+  B: "#cbc2bf"
+  R: "#f9aa8f"
+  G: "#9bd3ae"
+text_positions:
+  1:
+    text_pos:
+      - x: 49
+        y: 45
+    size: 35
+  2:
+    text_pos:
+      - x: 34
+        y: 60
+      - x: 65
+        y: 33
+    size: 23
+  3:
+    text_pos:
+      - x: 50
+        y: 68
+      - x: 68
+        y: 33
+      - x: 30
+        y: 33
+    size: 19
+  4:
+    text_pos:
+      - x: 50
+        y: 70
+      - x: 75
+        y: 47
+      - x: 50
+        y: 25
+      - x: 25
+        y: 47
+    size: 17
+  5:
+    text_pos:
+      - x: 50
+        y: 72
+      - x: 76
+        y: 55
+      - x: 66
+        y: 26
+      - x: 34
+        y: 26
+      - x: 24
+        y: 55
+    size: 15
+start_angles:
+  1: 0
+  2: 45
+  3: 30
+  4: 45
+  5: 54 
 pairs:
-  "WU":
-    - "W"
-    - "U"
-  "WB":
-    - "W"
-    - "B"
-  "WR":
-    - "W"
-    - "R"
-  "WG":
-    - "W"
-    - "G"
-  "UB":
-    - "U"
-    - "B"
-  "UR":
-    - "U"
-    - "R"
-  "UG":
-    - "U"
-    - "G"
-  "BR":
-    - "B"
-    - "R"
-  "BG":
-    - "B"
-    - "G"
-  "RG":
-    - "R"
-    - "G"
+  W:
+    - W
+  U:
+    - U
+  B:
+    - B
+  R:
+    - R
+  G:
+    - G
+  WU:
+    - W
+    - U
+  WB:
+    - W
+    - B
+  WR:
+    - W
+    - R
+  WG:
+    - W
+    - G
+  UB:
+    - U
+    - B
+  UR:
+    - U
+    - R
+  UG:
+    - U
+    - G
+  BR:
+    - B
+    - R
+  BG:
+    - B
+    - G
+  RG:
+    - R
+    - G
+  WUB:
+    - W
+    - U
+    - B
+  WUR:
+    - W
+    - U
+    - R
+  WUG:
+    - W
+    - U
+    - G
+  WBR:
+    - W
+    - B
+    - R
+  WBG:
+    - W
+    - B
+    - G
+  WRG:
+    - W
+    - R
+    - G
+  UBR:
+    - U
+    - B
+    - R
+  UBG:
+    - U
+    - B
+    - G
+  URG:
+    - U
+    - R
+    - G
+  BRG:
+    - B
+    - R
+    - G
+  WUBR:
+    - W
+    - U
+    - B
+    - R
+  WUBG:
+    - W
+    - U
+    - B
+    - G
+  WURG:
+    - W
+    - U
+    - R
+    - G
+  WBRG:
+    - W
+    - B
+    - R
+    - G
+  UBRG:
+    - U
+    - B
+    - R
+    - G
+  WUBRG:
+    - W
+    - U
+    - B
+    - R
+    - G
+names:
+  bloomburrow: # animals
+    WU: birds
+    WB: bats
+    WR: mice
+    WG: rabbits
+    UB: rats
+    UR: otters
+    UG: frogs
+    BR: lizards
+    BG: squirrels
+    RG: raccoons
+  ravnica: # guilds
+    WU: Azorius
+    WB: Orzhov
+    WR: Boros
+    WG: Selesnya
+    UB: Dimir
+    UR: Izzet
+    UG: Simic
+    BR: Rakdos
+    BG: Golgari
+    RG: Gruul
+  alara: # shards
+    WUB: Esper
+    WUG: Bant
+    WRG: Naya
+    UBR: Grixis
+    BRG: Jund
+  tarkir: # clans
+    WUR: Jeskai
+    WBR: Mardu
+    WBG: Abzan
+    UBG: Sultai
+    URG: Temur

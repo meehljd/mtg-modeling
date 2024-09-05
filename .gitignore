@@ -3,3 +3,4 @@ data/*
 ~/mtg-modeling/data
 __pycache__
 /.quarto/
+scratch_files/

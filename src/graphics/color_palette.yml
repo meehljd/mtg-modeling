@@ -1,0 +1,37 @@
+colors:
+  "W": "#fffbd5"
+  "U": "#aae0fa"
+  "B": "#cbc2bf"
+  "R": "#f9aa8f"
+  "G": "#9bd3ae"
+pairs:
+  "WU":
+    - "W"
+    - "U"
+  "WB":
+    - "W"
+    - "B"
+  "WR":
+    - "W"
+    - "R"
+  "WG":
+    - "W"
+    - "G"
+  "UB":
+    - "U"
+    - "B"
+  "UR":
+    - "U"
+    - "R"
+  "UG":
+    - "U"
+    - "G"
+  "BR":
+    - "B"
+    - "R"
+  "BG":
+    - "B"
+    - "G"
+  "RG":
+    - "R"
+    - "G"

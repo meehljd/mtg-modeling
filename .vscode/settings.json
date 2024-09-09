@@ -19,10 +19,12 @@
         "Cardmarket",
         "cardsphere",
         "Esper",
+        "figsize",
         "gameplay",
         "Grixis",
         "Jeskai",
         "Jund",
+        "lineplot",
         "Mardu",
         "matchups",
         "metagame",
@@ -45,6 +47,8 @@
         "WUBR",
         "WUBRG",
         "WURG",
+        "xlabel",
+        "ylabel",
         "yticks"
     ]
 }

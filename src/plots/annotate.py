@@ -28,6 +28,7 @@ def set_axis_labels_and_show(
     legend: Union[bool, Legend] = False,
     legend_title: Optional[str] = None,
     legend_labels: Optional[Dict[str, str]] = None,
+    legend_format: Optional[str] = None,
     tight: bool = True,
     show: bool = True,
     rot_x: bool = False,
@@ -50,13 +51,27 @@ def set_axis_labels_and_show(
         if legend_labels is not None:
             if isinstance(legend, Legend):
                 for text in legend.get_texts():
-                    text.set_text(legend_labels.get(text.get_text(), text.get_text()))
+                    original_text = text.get_text()
+                    formatted_text = legend_labels.get(original_text, original_text)
+                    try:
+                        formatted_text = f"{float(formatted_text):,.0f}"
+                        print(formatted_text)
+                    except ValueError:
+                        pass
+                    text.set_text(formatted_text)
             else:
                 raise ValueError(
                     "'legend' needs to be a boolean or a matplotlib.legend.Legend type"
                 )
         if isinstance(legend, bool):
             plt.legend(title=legend_title)
+
+        if legend_format is not None:
+            for text in plt.gca().get_legend().get_texts():
+                original_text = text.get_text()
+                formatted_text = f"{float(original_text):{legend_format}}"
+                text.set_text(formatted_text)
+
     if rot_x:
         plt.xticks(rotation=90)
     if reverse_y:

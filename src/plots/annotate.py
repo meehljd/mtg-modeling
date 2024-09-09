@@ -86,9 +86,9 @@ def _get_percent_precision(axis='x'):
     if axis=='x':
         lims = ax.get_xlim()
     elif axis=='y':
-        libs = ax.get_ylim()
+        lims = ax.get_ylim()
     elif axis=='xy':
-        libs = ax.get_xlim()
+        lims = ax.get_xlim()
 
     span = max(lims) - min(lims)
     if span < 0.01:
@@ -112,7 +112,7 @@ def set_labels_to_commas(axis="x", precision=0):
     _format_axis_labels(formatter, axis)
 
 def set_labels_to_ints(axis="x"):
-
+    """Converts floating point axis tick labels to integers."""
     ticks = plt.gca().get_xticks()
     ticks = list(set(map(int, ticks)))
 

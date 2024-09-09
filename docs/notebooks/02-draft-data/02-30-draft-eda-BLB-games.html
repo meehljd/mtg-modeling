@@ -172,11 +172,13 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#color-frequency" id="toc-color-frequency" class="nav-link" data-scroll-target="#color-frequency"><span class="header-section-number">4.1</span> Color Frequency</a></li>
   <li><a href="#color-win-rates" id="toc-color-win-rates" class="nav-link" data-scroll-target="#color-win-rates"><span class="header-section-number">4.2</span> Color Win Rates</a></li>
-  <li><a href="#color-freq-vs-win-rate" id="toc-color-freq-vs-win-rate" class="nav-link" data-scroll-target="#color-freq-vs-win-rate"><span class="header-section-number">4.3</span> Color Freq vs Win Rate</a></li>
+  <li><a href="#win-rate-over-time" id="toc-win-rate-over-time" class="nav-link" data-scroll-target="#win-rate-over-time"><span class="header-section-number">4.3</span> Win Rate over Time</a></li>
+  <li><a href="#color-freq-vs-win-rate" id="toc-color-freq-vs-win-rate" class="nav-link" data-scroll-target="#color-freq-vs-win-rate"><span class="header-section-number">4.4</span> Color Freq vs Win Rate</a></li>
+  <li><a href="#wedges-vs-shards" id="toc-wedges-vs-shards" class="nav-link" data-scroll-target="#wedges-vs-shards"><span class="header-section-number">4.5</span> Wedges vs Shards</a></li>
   </ul></li>
   <li><a href="#opposing-player-colors" id="toc-opposing-player-colors" class="nav-link" data-scroll-target="#opposing-player-colors"><span class="header-section-number">5</span> Opposing Player Colors</a></li>
   <li><a href="#color-face-offs-2-color-vs-2-color" id="toc-color-face-offs-2-color-vs-2-color" class="nav-link" data-scroll-target="#color-face-offs-2-color-vs-2-color"><span class="header-section-number">6</span> Color Face-Offs (2-Color vs 2-Color)</a></li>
-  <li><a href="#color-splash-update-me" id="toc-color-splash-update-me" class="nav-link" data-scroll-target="#color-splash-update-me"><span class="header-section-number">7</span> Color Splash (UPDATE ME)</a></li>
+  <li><a href="#color-splash" id="toc-color-splash" class="nav-link" data-scroll-target="#color-splash"><span class="header-section-number">7</span> Color Splash</a></li>
   <li><a href="#player-rank" id="toc-player-rank" class="nav-link" data-scroll-target="#player-rank"><span class="header-section-number">8</span> Player Rank</a>
   <ul class="collapse">
   <li><a href="#ranks-over-time" id="toc-ranks-over-time" class="nav-link" data-scroll-target="#ranks-over-time"><span class="header-section-number">8.1</span> Ranks over Time</a></li>
@@ -247,8 +249,8 @@ window.Quarto = {
 <p>Below is the summary data for the Bloomburrow Premier Draft data from 17Lands.</p>
 <p>You can see we have data from 07-30 through 08-18.<br>
 The average win rate for the 17Lands players is 54.7%, which indicates the user base is more highly skilled than the average Arena draft player by a healthy margin. The average number of turns is 8.9. This should be compared to other sets understand the speed of this sets. There is a total of 680,000 games played, with an average of 5.8 games per draft. This set has 276 cards and the average number of basic lands used is 22.2.</p>
-<div id="cell-7" class="cell" data-execution_count="11">
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div id="cell-9" class="cell" data-execution_count="273">
+<div class="cell-output cell-output-display" data-execution_count="273">
 <div><style>
 .dataframe > thead > tr,
 .dataframe > tbody > tr {
@@ -340,48 +342,63 @@ The average win rate for the 17Lands players is 54.7%, which indicates the user 
 <h2 data-number="4.1" class="anchored" data-anchor-id="color-frequency"><span class="header-section-number">4.1</span> Color Frequency</h2>
 <p>First I will look at the number of decks drafted for each color set. The 10 two-color decks are the most frequent. The Bloomburrow set is design for 10 two-color animal tribes, so this aligns with the design intent of the set. Mono-color and multi-color decks are much lest frequent.</p>
 <p>The Black-Green <em>Squirrels: Forage</em> decks and the White-Green <em>Rabbits: Go-Wide</em> decks are by far the most popular. Most decks using Blue are much less favored.</p>
-<p>See <a href="#fig-polar" class="quarto-xref">Figure&nbsp;1</a></p>
-<div id="cell-fig-polar" class="cell" data-execution_count="13">
+<p>See <strong>?@fig-all-color-frequency</strong></p>
+<div id="cell-fig-n-color-frequency" class="cell" data-execution_count="276">
 <div class="cell-output cell-output-display">
-<div id="fig-polar" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-n-color-frequency" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-polar-output-1.png" class="img-fluid figure-img">
+<div aria-describedby="fig-n-color-frequency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-n-color-frequency-output-1.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Frequency of Draft Deck Colors
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-n-color-frequency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The rate at which the drafted deck has a given number of main colors.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Since Bloomburrow is designed with 2-color tribal decks in mind, I will focus on these pairings. The most frequent drafted decks are Black-Green, White-Green, and Red-White. The least drafted are Blue-Black, Blue-Red and White-Blue.</p>
-<div id="cell-12" class="cell" data-execution_count="14">
+<div id="cell-fig-n-two-color-frequency" class="cell" data-execution_count="278">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-n-two-color-frequency" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-n-two-color-frequency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-n-two-color-frequency-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-n-two-color-frequency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The rate at which the drafted deck is a given 2-color pair.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Next let’s look at the color composition of the decks. Below we can see that Green is the most frequently drafted color, with Black and White also favored. Red and Blue are much less frequent.</p>
 <p>The average draft use rate per component color is 40.0%.</p>
-<div id="cell-14" class="cell" data-execution_count="15">
+<div id="cell-fig-component-color-frequency" class="cell" data-execution_count="280">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-component-color-frequency" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-component-color-frequency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-component-color-frequency-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-component-color-frequency-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The rate at which the drafted deck contains a given color in the main deck colors.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>I next select the 4 decks with the largest absolute change in use between the start and end of the time period. The WG and WB decks have the largest increase in use, while the UR and WR decks have the largest decrease in use.</p>
-<div id="cell-16" class="cell" data-execution_count="16">
+<div id="cell-fig-color-freq-over-time" class="cell" data-execution_count="282">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-color-freq-over-time" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-color-freq-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-color-freq-over-time-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-color-freq-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: “Frequency of Drafted Decks by Two-Color Pair: This figure shows the rate at which different two-color pairs are drafted, highlighting trends and preferences in deck selection over time.”
+</figcaption>
 </figure>
 </div>
 </div>
@@ -391,60 +408,108 @@ Figure&nbsp;1: Frequency of Draft Deck Colors
 <h2 data-number="4.2" class="anchored" data-anchor-id="color-win-rates"><span class="header-section-number">4.2</span> Color Win Rates</h2>
 <p>In addition to the use rate of the colors, I will also look at the win rates of the colors. First I calculate the weighted average win rate of 54.7%. As we saw in the summary section, this indicates that the 17Lands player base has a higher win rate than the general draft player base.</p>
 <p>Below is a chart of the win rate for each color combination. There are some mono-color decks with high win rates, but have very low use rates, so the results may be circumstantial with a small sample size.</p>
-<div id="cell-18" class="cell" data-execution_count="17">
+<div id="cell-24" class="cell" data-execution_count="283">
 <div class="cell-output cell-output-stdout">
 <pre><code>Average Win Percentage: 54.71%</code></pre>
 </div>
 </div>
-<div id="cell-19" class="cell" data-execution_count="18">
+<div id="cell-fig-n-color-wins" class="cell" data-execution_count="285">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-n-color-wins" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-n-color-wins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-n-color-wins-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-n-color-wins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: The rate at which the drafted deck is a given 2-color pair.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Focusing on the 2-color decks, the Black-Red <em>Lizards: Opponents Lose Life</em> is the highest win rate, but with a fairly low use rate. The White-Red <em>Rabbits: Go-Wide</em> and Black-Green <em>Squirrels: Forage</em> are the most popular decks and have high win rates.</p>
-<div id="cell-21" class="cell" data-execution_count="19">
+<div id="cell-fig-n-two-color-wins" class="cell" data-execution_count="287">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-13-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-n-two-color-wins" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-n-two-color-wins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-n-two-color-wins-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-n-two-color-wins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: The win rate for each 2-color pair.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Here is the win rates for the five primary colors, based on if they are a main color in a deck. For example, the “B” results below are for Black win rates in decks suck as WB, BG, B, and UBR.</p>
 <p>The average win rate for the data is 54.7%. The decks with Black perform the best, with a 55.2% win rate. Decks with Green and White also perform well, with 55.0% and 54.8% respectively. The decks with Red and Blue under-perform, with 53.8% and 53.2% win rate each.</p>
-<div id="cell-23" class="cell" data-execution_count="20">
+<div id="cell-fig-component-color-wins" class="cell" data-execution_count="289">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-14-output-1.png" class="img-fluid figure-img"></p>
-</figure>
+<div id="fig-component-color-wins" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-component-color-wins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-component-color-wins-output-1.png" class="img-fluid figure-img">
 </div>
-</div>
-</div>
-<div id="cell-24" class="cell" data-execution_count="21">
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-15-output-1.png" class="img-fluid figure-img"></p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-component-color-wins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: The win rate for each given color in the main deck colors.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="color-freq-vs-win-rate" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="color-freq-vs-win-rate"><span class="header-section-number">4.3</span> Color Freq vs Win Rate</h2>
+<section id="win-rate-over-time" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="win-rate-over-time"><span class="header-section-number">4.3</span> Win Rate over Time</h2>
+<p>It is also interesting to see how the win rate for the two-color decks change over time. I selected the 4 decks with the largest absolute change in win rate between the start and end of the time period. The WR, WB, and WR decks start with high end rates, but slowly decrease over time. The UR deck starts with a low win rate, but increases over time.</p>
+<div id="cell-fig-color-wins-over-time" class="cell" data-execution_count="292">
+<div class="cell-output cell-output-display">
+<div id="fig-color-wins-over-time" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-color-wins-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-color-wins-over-time-output-1.png" id="fig-color-wins-over-time" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-color-wins-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="color-freq-vs-win-rate" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="color-freq-vs-win-rate"><span class="header-section-number">4.4</span> Color Freq vs Win Rate</h2>
 <p>Let us now compare the use rate versus the win rate. If the player base is well calibrated to the win rate with their selections.</p>
 <p>Below we can see that most of the two-color decks fall in a straight line, with two outliers. The Blue-Red <em>Otters: Non-creature Spells</em> deck under-performs relative to its use rate. On the other hand, the Black-Red <em>Lizards: Opponents Lose Life</em> deck is a sleeper, with the highest win rates, but selected less than the average two-color deck. The reason for this under-selection is that Red doesn’t perform well in general, so many drafters probably avoid drafting Red unless they get strong Black-Red cards early. White, Green, and Black are perform well, so the BG, WG, and WB decks are easy to pivot among in the draft.</p>
-<div id="cell-26" class="cell" data-execution_count="22">
+<div id="cell-fig-wins-vs-freq-2color" class="cell" data-execution_count="294">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-16-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-wins-vs-freq-2color" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-wins-vs-freq-2color-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-wins-vs-freq-2color-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wins-vs-freq-2color-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Win Rate vs Use Rate of 2-Color Draft Decks
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="wedges-vs-shards" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="wedges-vs-shards"><span class="header-section-number">4.5</span> Wedges vs Shards</h2>
+<p>The MTG color theory has 5 wedges and 5 shards. The wedges are 3-color decks with a primary color and its two allies. The shards are 3-color decks with a primary color and its two enemies. The conventional wisdom is that wedges are easier to draft than shards.</p>
+<p>In <a href="#fig-wedge-vs-shards" class="quarto-xref">Figure&nbsp;10</a> we can see that the shards have a slightly higher win rate, as well as a higher use rate.</p>
+<div id="cell-fig-wedge-vs-shards" class="cell" data-execution_count="357">
+<div class="cell-output cell-output-display">
+<div id="fig-wedge-vs-shards" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-wedge-vs-shards-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-wedge-vs-shards-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-wedge-vs-shards-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: The win rate for shards versus wedges.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -456,22 +521,32 @@ Figure&nbsp;1: Frequency of Draft Deck Colors
 <p>We have data on the opposing player colors. This is useful to understand the meta of the draft.<br>
 For a given draft color combination, we can see the use rate by 17Lands players versus the use rate opponents. Each draft color combination is also color coded if the win rate is above or below the 17Lands player base average win rate. A diagonal grey line is also added to show parity between the use by the 17Lands players and the general player base.</p>
 <p>In the chart blow looks at 2-color drafts. We can see that WG, BG, and UG are more favored by the 17Lands players and also has a higher win rate. The UB color deck is more favored, but has a much lower win rate. The other color pairs are on parity between the two player bases.</p>
-<div id="cell-28" class="cell" data-execution_count="23">
+<div id="cell-fig-player-vs-opp-freq-2color" class="cell" data-execution_count="296">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-17-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-player-vs-opp-freq-2color" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-player-vs-opp-freq-2color-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-player-vs-opp-freq-2color-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-player-vs-opp-freq-2color-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Use Rate of Players vs Opponents in 2-Color Draft Decks
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Looking at the non-2-color drafts, we see that the 17Lands players are much less likely to pick any color companion that is not a 2-color deck. The win rates are also lower for these decks, which some exceptions being the White, Green, and Black decks.</p>
 <p>Based on this, it appears that if a drafter is selecting mono White, Green, or Black, they are better staying mono than drafting a 2-color deck into Blue or Red. However, since the mono decks are so infrequent, the strong deck performance may be circumstantial to certain cards combinations and not generalize across the entire color set.</p>
-<div id="cell-30" class="cell" data-execution_count="24">
+<div id="cell-fig-player-vs-opp-freq-non-2color" class="cell" data-execution_count="298">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-18-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-player-vs-opp-freq-non-2color" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-player-vs-opp-freq-non-2color-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-player-vs-opp-freq-non-2color-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-player-vs-opp-freq-non-2color-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: Use Rate of Players vs Opponents in 2-Color Draft Decks
+</figcaption>
 </figure>
 </div>
 </div>
@@ -482,29 +557,69 @@ For a given draft color combination, we can see the use rate by 17Lands players 
 <p>Let’s now see how each pairing of the two-color decks compare. This will give us insight into strengths and weaknesses of individual decks.</p>
 <p>First we will look at the number of games played between each pairing. The rows and columns are sorted based on the maximum frequency of player deck pairings, with BG vs WG the most frequent, followed by WG vs WG. The average number of games played between each pairing was 5,031.</p>
 <p>As we saw above, the players use BG, WG, and UG more often than opponents, with the other color pairs being used at near parity.</p>
-<div id="cell-32" class="cell" data-execution_count="25">
+<div id="cell-fig-player-vs-opp-2color-freq-heat" class="cell" data-execution_count="300">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-19-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-player-vs-opp-2color-freq-heat" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-player-vs-opp-2color-freq-heat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-player-vs-opp-2color-freq-heat-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-player-vs-opp-2color-freq-heat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: Use Rate of Players vs Opponents in 2-Color Draft Decks
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Next we look at the pair-wise win rates for players.</p>
 <p>The most interesting observation is that the 17Lands player base is strong in most matchups, with a large exception for the UR deck. On average, the UR matchups under-perform by ~4 percentage points versus similar matchups. The UR-UR matchup is extremely low, and is the only like-paired matchup that has lower than even odds of winning.</p>
-<div id="cell-34" class="cell" data-execution_count="26">
+<div id="cell-fig-player-vs-opp-2color-wins-heat" class="cell" data-execution_count="302">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-20-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-player-vs-opp-2color-wins-heat" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-player-vs-opp-2color-wins-heat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-player-vs-opp-2color-wins-heat-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-player-vs-opp-2color-wins-heat-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14: Win Rate of Players vs Opponents in 2-Color Draft Decks
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="color-splash-update-me" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Color Splash (UPDATE ME)</h1>
+<section id="color-splash" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Color Splash</h1>
+<p>Splash colors are 1-3 non-land spell cards of a given color that spice up a deck without diluting the main colors in the deck. They are often very powerful cards.</p>
+<p>In the below plot, we see how often splashing occurs.</p>
+<div id="cell-fig-n-color-splash-freq" class="cell" data-execution_count="304">
+<div class="cell-output cell-output-display">
+<div id="fig-n-color-splash-freq" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-n-color-splash-freq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-n-color-splash-freq-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-n-color-splash-freq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;15: The frequency of splash colors.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-fig-component-splash-freq" class="cell" data-execution_count="306">
+<div class="cell-output cell-output-display">
+<div id="fig-component-splash-freq" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-component-splash-freq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-component-splash-freq-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-component-splash-freq-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;16: The rate at which the drafted deck contains a given splash color.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="player-rank" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> Player Rank</h1>
@@ -512,40 +627,60 @@ For a given draft color combination, we can see the use rate by 17Lands players 
 <p>While we do not have opponent rankings, we can infer that most opponents will be of the same rank as the player. This is because the Arena draft system matches players with similar records. Each ranked season is about 1 month long. Ranks have “rank decay” between seasons, meaning an the start of the next season, a players rank will be lower than the previous season, requiring them to play more games to get back to their previous rank.</p>
 <p>So our snapshot of each rank is a mix of lower-skill, end-of-season players at their peak, and higher-skill, start-of-season players who are climbing back up the ranks.</p>
 <p>Below we see that most drafts are played by players in the Platinum ranks.</p>
-<div id="cell-41" class="cell" data-execution_count="29">
+<div id="cell-fig-rank-games" class="cell" data-execution_count="308">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-23-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-rank-games" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rank-games-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-rank-games-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rank-games-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;17: Drafts Played by Players of Different Ranks.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Here we see that the win rates vary by rank. The higher ranks have higher win rates. Bronze has by far the lowest win rate, indicating new or unskilled players. The Silver rank has the highest win rate. This may be from the large number of Gold and Platinum players that reset to Silver at the start of the season and quickly climb back up the ranks.</p>
-<div id="cell-43" class="cell" data-execution_count="30">
+<div id="cell-fig-ranks-win-rate" class="cell" data-execution_count="309">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-24-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-ranks-win-rate" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ranks-win-rate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-ranks-win-rate-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ranks-win-rate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;18: Win Rate by Players of Different Ranks.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div id="cell-44" class="cell" data-execution_count="31">
+<div id="cell-fig-ranked-win-rate-over-time" class="cell" data-execution_count="311">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-25-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-ranked-win-rate-over-time" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ranked-win-rate-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-ranked-win-rate-over-time-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ranked-win-rate-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19: Win Rate by Players of Different Ranks by Timeframe.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Below is a view for the number of games played per draft for each rank. While not identical, the pattern is very similar to the above chart of win rate.</p>
-<div id="cell-46" class="cell" data-execution_count="32">
+<div id="cell-fig-ranked-n-games" class="cell" data-execution_count="313">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-26-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-ranked-n-games" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ranked-n-games-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-ranked-n-games-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ranked-n-games-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;20: Games Played per Draft by Players of Different Ranks.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -558,16 +693,21 @@ For a given draft color combination, we can see the use rate by 17Lands players 
 The Diamond rank has a slow climb with a plateau during days 8-13 and then slowly retracing.<br>
 The Mythic rank starts at zero, then very slowly climbs te a peak of 500 drafts per day peak at 13-16 days.</p>
 <p>From this chart, we can’t tell how much of the decline at each ranks is due to player advancement, and how much is loss of interest after the initial excitement of a new season. In the following charts, I will normalize to the total drafts played to better account for overall decrease in gameplay.</p>
-<div id="cell-50" class="cell" data-execution_count="34">
+<div id="cell-74" class="cell" data-execution_count="315">
 <div class="cell-output cell-output-stdout">
 <pre><code>Total Time Interval: 19 days 00:00:00</code></pre>
 </div>
 </div>
-<div id="cell-51" class="cell" data-execution_count="35">
+<div id="cell-fig-ranked-drafts-over-time" class="cell" data-execution_count="316">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-29-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-ranked-drafts-over-time" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ranked-drafts-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-ranked-drafts-over-time-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ranked-drafts-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;21: Drafts Played by Players Over Time, by Player rank.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -577,11 +717,16 @@ The Mythic rank starts at zero, then very slowly climbs te a peak of 500 drafts 
 <p>It is interesting how releasing new sets increases player engagement. The introduction of the new season on 08-01 doesn’t seem to have caused an uptick in play, but this is a weak inference.<br>
 From this data, I understand the economic motivation for releasing new sets for digital engagement on Arena. One could infer that paper play would follow a similar pattern, with draft play consuming many more booster packs a few weeks after a launch of a new set.</p>
 <p>It would be interesting to compare this curve across set releases to get an indication of set-by-set preferences of the player base.</p>
-<div id="cell-53" class="cell" data-execution_count="36">
+<div id="cell-fig-ranked-total-drafts-over-time" class="cell" data-execution_count="318">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-30-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-ranked-total-drafts-over-time" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ranked-total-drafts-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-ranked-total-drafts-over-time-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ranked-total-drafts-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;22: Total Drafts Played by Players Over Time.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -591,11 +736,16 @@ From this data, I understand the economic motivation for releasing new sets for 
 After the new season start, Gold shows a linear decay as the player base advances to Platinum.<br>
 The Platinum has a much more prolonged plateau, showing an equilibrium of new players joining the rank versus existing players advancing.<br>
 Both Diamond and Mythic start with minimal players, but gradually increase in play nearly monotonically at differing rates.</p>
-<div id="cell-55" class="cell" data-execution_count="37">
+<div id="cell-fig-normalized-ranked-drafts-over-time" class="cell" data-execution_count="320">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-31-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-normalized-ranked-drafts-over-time" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-normalized-ranked-drafts-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-normalized-ranked-drafts-over-time-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-normalized-ranked-drafts-over-time-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;23: Normalized Drafts Played by Players of Different Ranks Over Time.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -608,11 +758,16 @@ Both Diamond and Mythic start with minimal players, but gradually increase in pl
 <p>For BG, the most played deck, the performance across weeks and ranks shows no clear trend.<br>
 However, the BR and UR decks, which are less played, both sets of ranked players showed noticeable gains in win rate from week one to two. This indicates that the 17Lands player base learned how to better use these less favorable decks, regardless of rank.</p>
 <p>Note that for the first week of play, the Mythic and Diamond play base is very small.</p>
-<div id="cell-57" class="cell" data-execution_count="38">
+<div id="cell-fig-top-decks-by-rank" class="cell" data-execution_count="322">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-32-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-top-decks-by-rank" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-top-decks-by-rank-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-top-decks-by-rank-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-top-decks-by-rank-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;24: Win Rate for given color decks for top-ranked players vs others.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -624,11 +779,16 @@ However, the BR and UR decks, which are less played, both sets of ranked players
 <p>Mulligans are a key strategy in MTG. If a player starting hand is not good, they draw a new one, with one less card. This can be repeated as needed, with one less card each time. Evaluating the trade-off between a bad hand and a smaller hand is not trivial.</p>
 <p>Below we see the distribution of mulligans by number of re-draws. Most players do not take a mulligan. About 12% of players take one mulligan, and 2% take two mulligans. The number of players taking three or more mulligans is very low. There are two instances of a player taking 5 mulligans, which would have had a starting hand of two cards.</p>
 <p>We can also see that 17Lands players are slightly less likely to take mulligans than their opponents. This may be due to a combination of better deck construction and better mulligan decisions.</p>
-<div id="cell-60" class="cell" data-execution_count="39">
+<div id="cell-fig-mulligan-distro" class="cell" data-execution_count="324">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-33-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-mulligan-distro" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mulligan-distro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-mulligan-distro-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mulligan-distro-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;25: Distribution of Mulligans.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -636,11 +796,16 @@ However, the BR and UR decks, which are less played, both sets of ranked players
 <p>A side note on probability distributions. The player distributions appear to me to be Poisson distributions, with the number of mulligans taken being a discrete event.</p>
 <p>Using the mean number of mulligans per game of 0.136, I did a random samplings of a Poisson distribution with <span class="math inline">\(\lambda=0.136\)</span>. The results are very similar to the actual data, with the actual data having a slightly higher number of 1 mulligan games and a slightly lower number of other values.</p>
 <p>We can investigate this further when we explore the card data and see what types of random draw events correlate with mulligan decisions. An example would be number of lands in the starting hand.</p>
-<div id="cell-62" class="cell" data-execution_count="40">
+<div id="cell-fig-mulligan-poisson" class="cell" data-execution_count="326">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-34-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-mulligan-poisson" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mulligan-poisson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-mulligan-poisson-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mulligan-poisson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;26: Distribution of Player Mulligans vs Poisson Distribution.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -648,21 +813,31 @@ However, the BR and UR decks, which are less played, both sets of ranked players
 <p>We now look at the outcomes of games where mulligans occur. After plotting the win rates at each mulligan value, it is very apparent the near linear relationship between mulligans and win rate. The win rate decreases by about 15% for each mulligan taken.</p>
 <p>Comparing the 17Lands player their opponents, the win rate decay is consistent, with the gap between the two player bases being about 8-9% at each mulligan level.</p>
 <p>With this data, we cannot decern the causal relationship between mulligans and win rates. Are mulligans always bad, or are they a sign of a bad hand that would have an even lower probability of winning. This is a question that can be answered with the card data.</p>
-<div id="cell-64" class="cell" data-execution_count="41">
+<div id="cell-fig-player-vs-opponent-mulligan-wins" class="cell" data-execution_count="328">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-35-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-player-vs-opponent-mulligan-wins" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-player-vs-opponent-mulligan-wins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-player-vs-opponent-mulligan-wins-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-player-vs-opponent-mulligan-wins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;27: Win Rates for Players and Opponents by Mulligans.
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>To see if there is appreciable difference between mulligan success and player rank, I plotted the win rates for each rank. The win rates are very similar across ranks, with no appreciable differences.</p>
-<div id="cell-66" class="cell" data-execution_count="42">
+<div id="cell-fig-mulligan-win-rate-by-rank" class="cell" data-execution_count="330">
 <div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="02-30-draft-eda-BLB-games_files/figure-html/cell-36-output-1.png" class="img-fluid figure-img"></p>
+<div id="fig-mulligan-win-rate-by-rank" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mulligan-win-rate-by-rank-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="02-30-draft-eda-BLB-games_files/figure-html/fig-mulligan-win-rate-by-rank-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mulligan-win-rate-by-rank-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;28: Win Rates of Mulligans by Player Rank.
+</figcaption>
 </figure>
 </div>
 </div>
@@ -683,7 +858,9 @@ However, the BR and UR decks, which are less played, both sets of ranked players
 </main> <!-- /main -->
 <footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">
 
-    © <span id="current-year"></span> Joshua Meehl. All rights reserved.
+    © <span id="current-year"></span> Joshua Meehl. All rights reserved. This website is unofficial Fan Content permitted under the Fan Content Policy of Wizards of the Coast. It is not
+
+    sponsored, endorsed, or affiliated with Wizards of the Coast.
 
 </footer>
 

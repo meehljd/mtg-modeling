@@ -6,12 +6,12 @@ website:
   title: "The Data Mage"
   navbar:
     left:
-      - text: "Home"
-        # href: index.qmd
+      - text: "Home" #see docs/index.html for the redirect to the home page.
+        href: /notebooks/00-intro/00-00-table-of-contents.html
       - text: "About"
-        # href: about.qmd
+        href: /notebooks/00-intro/00-10-introduction.html
       - text: "Set Analysis"
-        href: notebooks\02-draft-data\02-00-draft-data-intro.html
+        href: /notebooks/02-draft-data/02-00-draft-data-intro.html
     right:
       - icon: github
         href: https://github.com/meehljd/mtg-modeling
@@ -43,3 +43,6 @@ jupyter: python3
 link-citations: true
 code-fold: true
 share: true
+
+resources:
+  - CNAME

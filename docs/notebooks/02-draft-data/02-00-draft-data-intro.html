@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Josh Meehl">
+<meta name="dcterms.date" content="2024-09-10">
+<meta name="description" content="Overview of the 17Lands Data Analyses">
 
-<title>Summary</title>
+<title>17Lands Draft Data Analysis Overview – The Data Mage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,6 +27,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -39,11 +43,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -69,27 +73,112 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">The Data Mage</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Home</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">About</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../notebooks\02-draft-data\02-00-draft-data-intro.html"> 
+<span class="menu-text">Set Analysis</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/meehljd/mtg-modeling"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/meehl/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1</span> Summary</a></li>
+  <li><a href="#set-analysis" id="toc-set-analysis" class="nav-link" data-scroll-target="#set-analysis"><span class="header-section-number">2</span> Set Analysis</a></li>
+  <li><a href="#lands" id="toc-lands" class="nav-link" data-scroll-target="#lands"><span class="header-section-number">3</span> 17 Lands</a>
+  <ul class="collapse">
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source"><span class="header-section-number">3.1</span> Data Source</a></li>
+  <li><a href="#data-files" id="toc-data-files" class="nav-link" data-scroll-target="#data-files"><span class="header-section-number">3.2</span> Data Files</a></li>
+  <li><a href="#game-formats" id="toc-game-formats" class="nav-link" data-scroll-target="#game-formats"><span class="header-section-number">3.3</span> Game Formats</a></li>
+  <li><a href="#terms" id="toc-terms" class="nav-link" data-scroll-target="#terms"><span class="header-section-number">3.4</span> Terms</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Summary</h1>
-</div>
+<h1 class="title">17Lands Draft Data Analysis Overview</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">EDA</div>
+    <div class="quarto-category">Draft</div>
+    <div class="quarto-category">Arena</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Overview of the 17Lands Data Analyses
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Josh Meehl </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 10, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -99,34 +188,117 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="summary" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Summary</h1>
 <p>An introduction to the <a href="https://www.17lands.com/">17lands</a> draft gameplay data, including reviewing the data files and column features.</p>
-<section id="lands" class="level1">
-<h1>17 Lands</h1>
+</section>
+<section id="set-analysis" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Set Analysis</h1>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Set Name</th>
+<th>Code</th>
+<th>Arena Release Date</th>
+<th>Deck Analysis</th>
+<th>Card Analysis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Murders at Karlov Manor</td>
+<td>MKM</td>
+<td>2024-02-09</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>Outlaws of Thunder Junction</td>
+<td>OTJ</td>
+<td>2024-04-16</td>
+<td><a href="../../notebooks/02-draft-data/02-31-draft-eda-OTJ-games.html">OTJ Deck</a></td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>Modern Horizons 3</td>
+<td>MH3</td>
+<td>2024-07-11</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>Bloomburrow</td>
+<td>BLB</td>
+<td>2024-07-30</td>
+<td><a href="../../notebooks/02-draft-data/02-30-draft-eda-BLB-games.html">BLB Deck</a></td>
+<td>-</td>
+</tr>
+<tr class="odd">
+<td>Duskmourn: House of Horror</td>
+<td>DSK</td>
+<td>2024-09-24</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><!-- https://articles.starcitygames.com/magic-the-gathering/magic-the-gathering-full-set-release-schedule-for-2024/ --> <!-- https://www.ign.com/articles/magic-the-gathering-full-release-schedule-2024#2 --></p>
+</section>
+<section id="lands" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> 17 Lands</h1>
 <p>As outlined in the <a href="../../notebooks/00-intro/00-10-introduction.html">00-10-introduction</a> notebook, the game play data will focus on limited draft on the MTG Arena platform.</p>
 <p>The best source of draft data is the <a href="https://www.17lands.com/">17Lands</a> website. 17lands is a website that provides draft and gameplay data for Arena. The data is collected from users who have installed the 17Lands tracker, which records draft picks and gameplay data. The data is then aggregated and made available for analysis.</p>
-<section id="data-source" class="level2">
-<h2 class="anchored" data-anchor-id="data-source">Data Source</h2>
+<section id="data-source" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="data-source"><span class="header-section-number">3.1</span> Data Source</h2>
 <p>17Lands offers <a href="https://www.17lands.com/public_datasets">public datasets</a> for download. The data is available in CSV format. The newest sets are updated regularly for a few months after initial set release.</p>
 </section>
-<section id="data-files" class="level2">
-<h2 class="anchored" data-anchor-id="data-files">Data Files</h2>
-<p>There are 3 files types available.<br>
-- <strong>DraftData:</strong> Data related to the draft pool and picks. - <strong>GameData:</strong> Data related to game play and outcomes. - <strong>ReplayData:</strong> Detailed data related to player actions in game play.</p>
+<section id="data-files" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="data-files"><span class="header-section-number">3.2</span> Data Files</h2>
+<p>There are 3 files types available.</p>
+<ul>
+<li><strong>DraftData:</strong> Data related to the draft pool and picks.</li>
+<li><strong>GameData:</strong> Data related to game play and outcomes.</li>
+<li><strong>ReplayData:</strong> Detailed data related to player actions in game play.</li>
+</ul>
 </section>
-<section id="game-formats" class="level2">
-<h2 class="anchored" data-anchor-id="game-formats">Game Formats</h2>
-<p>The game formats can be Draft or Sealed. - <strong>Draft:</strong> A set of 8 players open a shared pool of packs and select cards to build a deck. - <strong>Sealed:</strong> A player opens a set of packs and selects cards to build a deck.</p>
-<p>The tournament types can be Traditional or Premier. - <strong>Traditional:</strong> A best of 3 match with sideboarding. - <strong>Premier:</strong> A best of 1 match.</p>
+<section id="game-formats" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="game-formats"><span class="header-section-number">3.3</span> Game Formats</h2>
+<p>The game formats can be Draft or Sealed.</p>
+<ul>
+<li><strong>Draft:</strong> A set of 8 players open a shared pool of packs and select cards to build a deck.</li>
+<li><strong>Sealed:</strong> A player opens a set of packs and selects cards to build a deck.</li>
+</ul>
+<p>The tournament types can be Traditional or Premier.</p>
+<ul>
+<li><strong>Traditional:</strong> A best of 3 match with sideboarding.</li>
+<li><strong>Premier:</strong> A best of 1 match.</li>
+</ul>
 </section>
-<section id="terms" class="level2">
-<h2 class="anchored" data-anchor-id="terms">Terms</h2>
-<p>The following terms are used in the data set: - <strong>game:</strong> a single game of MTG - <strong>match:</strong> a series of games between two players. Typically best of 1 or best of 3. - <strong>draft:</strong> an initial draft event, followed by a series of matches between a group of players. - <strong>build:</strong> a instance of a deck in a draft. Can be adjusted between games.</p>
+<section id="terms" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="terms"><span class="header-section-number">3.4</span> Terms</h2>
+<p>The following terms are used in the data set:</p>
+<ul>
+<li><strong>game:</strong> a single game of MTG</li>
+<li><strong>match:</strong> a series of games between two players. Typically best of 1 or best of 3.</li>
+<li><strong>draft:</strong> an initial draft event, followed by a series of matches between a group of players.</li>
+<li><strong>build:</strong> a instance of a deck in a draft. Can be adjusted between games.</li>
+</ul>
 
 
 </section>
 </section>
 
 </main> <!-- /main -->
+<footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">
+    © <span id="current-year"></span> Joshua Meehl. All rights reserved. This website is unofficial Fan Content permitted under the Fan Content Policy of Wizards of the Coast. It is not
+    sponsored, endorsed, or affiliated with Wizards of the Coast.
+</footer>
+<script>
+    const baseYear = 2024;
+    const currentYear = new Date().getFullYear();
+    const displayYear = currentYear > baseYear ? `${baseYear}-${currentYear}` : `${baseYear}`;
+    document.getElementById('current-year').textContent = displayYear;
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

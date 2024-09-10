@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Summary</title>
+<title>Summary – The Data Mage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,6 +24,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -39,11 +40,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -98,14 +99,76 @@ window.Quarto = {
 
 </head>
 
-<body class="fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">The Data Mage</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Home</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">About</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../notebooks\02-draft-data\02-00-draft-data-intro.html"> 
+<span class="menu-text">Set Analysis</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/meehljd/mtg-modeling"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/meehl/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link active" data-scroll-target="#table-of-contents"><span class="header-section-number">1</span> Table of Contents</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python"><span class="header-section-number">2</span> Python</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">3</span> Introduction</a></li>
+  <li><a href="#data-science" id="toc-data-science" class="nav-link" data-scroll-target="#data-science"><span class="header-section-number">4</span> Data Science</a>
+  <ul class="collapse">
+  <li><a href="#card-scope" id="toc-card-scope" class="nav-link" data-scroll-target="#card-scope"><span class="header-section-number">4.1</span> Card Scope</a></li>
+  <li><a href="#play-format-scope" id="toc-play-format-scope" class="nav-link" data-scroll-target="#play-format-scope"><span class="header-section-number">4.2</span> Play Format Scope</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -129,18 +192,18 @@ window.Quarto = {
 
 
 <p>An introduction to the entire project.</p>
-<section id="table-of-contents" class="level1">
-<h1>Table of Contents</h1>
-<p>Refer to the <a href="../00-intro/00-00-project-table-of-contents.ipynb">Project ToC</a> file for the table of contents for each notebook in the project.</p>
+<section id="table-of-contents" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Table of Contents</h1>
+<p>Refer to the <a href="00-00-project-table-of-contents.ipynb">Project ToC</a> file for the table of contents for each notebook in the project.</p>
 <hr>
 </section>
-<section id="python" class="level1">
-<h1>Python</h1>
+<section id="python" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Python</h1>
 <p>Refer to the <a href="../../README.md">README.md</a> for the python environment setup.</p>
 <hr>
 </section>
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
+<section id="introduction" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Introduction</h1>
 <p>This project is an exploration of applying data science to Magic: The Gathering (MTG), a collectible card game known for its popularity, long history, and intricate gameplay. MTG offers a wealth of data and countless opportunities for analysis.</p>
 <p>Although I’m not an MTG expert, I played briefly in 1999-2000 and recently returned to the game after my son became interested. This project is a way for me to deepen my understanding of MTG and provide insights that others might find useful.</p>
 <p>I’ll analyze three main aspects of MTG: <strong>gameplay</strong>, <strong>collecting</strong>, and <strong>economics</strong>.</p>
@@ -149,14 +212,14 @@ window.Quarto = {
 <p>Finally, the economics of MTG, particularly the secondary market for singles, is of great interest to me. I’ll focus on predicting card prices and analyzing price trends for new sets.</p>
 <hr>
 </section>
-<section id="data-science" class="level1">
-<h1>Data Science</h1>
+<section id="data-science" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Data Science</h1>
 <p>MTG can be fodder for may aspects data science. Here is a sampler of concepts I would like to explore: <strong>Regression:</strong> Predict card’s expected mana cost given its attributes and keywords. - <strong>LLMs:</strong> Generate numeric representations from card descriptions with encoder LLMs. Use representations for predictive tasks. - <strong>Network Science:</strong> Bipartite graphs of deck-card relationships. Identify communities in card one-mode projection. - <strong>Graph Neural Networks:</strong> Predict deck win rate with given card compositions. - <strong>Bayesian Inference:</strong> Posterior distribution of a booster pack’s value given the pack composition and secondary market prices. - <strong>Time-Series Analysis:</strong> Predict card price on secondary market <span class="math inline">\(d\)</span> days after set release. - <strong>Hidden Markov Models:</strong> Estimation of board state. For example, estimate the states from <a href="https://magic.wizards.com/en/news/feature/quadrant-theory-2014-08-20">Quadrant Theory</a>. These states are ‘opening’, ‘parity’, ‘winning’, or ‘losing’ state. - <strong>Reinforcement Learning:</strong> Maximize the outcome of combat stage, given the board state of potentially attacking and defending creatures. - <strong>Optimization</strong>: Optimize win rate of a deck, given constraints such as maximum market cost or number of mythic rares. - <strong>Game Theory</strong>: For mulligans, calculate the expected value of hands using utility theory.</p>
 <hr>
-<section id="card-scope" class="level2">
-<h2 class="anchored" data-anchor-id="card-scope">Card Scope</h2>
-<section id="otj-set-description" class="level3">
-<h3 class="anchored" data-anchor-id="otj-set-description">OTJ Set Description</h3>
+<section id="card-scope" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="card-scope"><span class="header-section-number">4.1</span> Card Scope</h2>
+<section id="otj-set-description" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="otj-set-description"><span class="header-section-number">4.1.1</span> OTJ Set Description</h3>
 <p>To keep the problem space tractable, I’ll limit the analysis to the <a href="https://mtg.fandom.com/wiki/Outlaws_of_Thunder_Junction">Outlaws of Thunder Junction</a> (OTJ) set, which was released on April 19, 2024.</p>
 <p>The set contains 276 regular cards comprised of:</p>
 <ul>
@@ -169,30 +232,30 @@ window.Quarto = {
 <p>Additional “booster fun” cards include: - 13 Showcase “Wanted Poster” cards - 60 Extended Art cards - 13 Borderless cards - 6 Bundle Basics lands - 7 Promos</p>
 <p>For game play analysis, I’ll focus on the 276 regular cards. For market analysis, I’ll include the booster fun cards, as the scarcity and desirability of these cards may affect the secondary market prices and will be interesting to explore.</p>
 </section>
-<section id="card-data-sources" class="level3">
-<h3 class="anchored" data-anchor-id="card-data-sources">Card Data Sources</h3>
+<section id="card-data-sources" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="card-data-sources"><span class="header-section-number">4.1.2</span> Card Data Sources</h3>
 <p>I’ll use the card data generously made available by the tireless folks at the open-source project <a href="https://mtgjson.com/">MTGJSON</a>. MTGJSON provides a comprehensive database of MTG cards, including card attributes, card text, and card prices. The data is available in JSON format, which I’ll convert to a pandas DataFrame for analysis.</p>
 <p>MTGJSON sources a lot of data from <a href="https://scryfall.com/docs/api">Scryfall</a>, which has an excellent webapp for exploring MTG card data.</p>
 <p>MTGJSON sources the booster pack composition data from. The source code provided by <a href="https://github.com/taw">taw</a> on <a href="https://github.com/taw/magic-search-engine?tab=readme-ov-file">github</a> contains estimated booster pack composition probabilities. He also provides a webapp at <a href="https://mtg.wtf/">mtg.wtf</a>. Note that booster pack composition is proprietary information of Wizards of the Coast, and the above probabilities are estimates.</p>
 <p>See the <a href="../../notebooks/01-mtgjson-data/01-00-mtgjson-data-intro.html">01-00-mtgjson-data-intro</a> notebook for more details on the data sources.</p>
 </section>
 </section>
-<section id="play-format-scope" class="level2">
-<h2 class="anchored" data-anchor-id="play-format-scope">Play Format Scope</h2>
-<section id="limited-play" class="level3">
-<h3 class="anchored" data-anchor-id="limited-play">Limited Play</h3>
+<section id="play-format-scope" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="play-format-scope"><span class="header-section-number">4.2</span> Play Format Scope</h2>
+<section id="limited-play" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="limited-play"><span class="header-section-number">4.2.1</span> Limited Play</h3>
 <p>For game play, I will look at limited formats, such as Draft and Sealed Deck. Constructed formats, such as Standard, Modern, and Legacy, are out of scope for now. This is due to the complexity of the metagame and the vast number of cards available for deck construction.</p>
 <p>Draft play also allows us to study three types of player skill. First, there is the skill of drafting the best cards from the draft pool based on one’s currently drafted cards. Second, there is the skill of deck construction from the drafted cards. Third, there is the skill of playing the deck in a tournament setting.</p>
 <p>Sealed and constructed formats are also interesting, but exclude the drafting skill. Constructed formats also require a deep understanding of the metagame, which is out of scope for now.</p>
 </section>
-<section id="mtg-arena-draft" class="level3">
-<h3 class="anchored" data-anchor-id="mtg-arena-draft">MTG Arena Draft</h3>
+<section id="mtg-arena-draft" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="mtg-arena-draft"><span class="header-section-number">4.2.2</span> MTG Arena Draft</h3>
 <p>I will specifically look at the Draft format on <a href="https://magic.wizards.com/en/mtgarena">MTG Arena</a>. MTG Arena is an online platform for playing MTG. The Draft format on MTG Arena is a popular way to play limited MTG. In the Draft format, players open booster packs and pick one card from the pack. The remaining cards are passed to the next player. This process continues until all cards are picked. Players then construct a deck from the picked cards and play a tournament with the constructed deck.</p>
 <p>MTG Arena offers several Draft formats. I will focus on the <a href="https://magicarena.fandom.com/wiki/Premier_Draft">Premier Draft</a> format, which is a best-of-one (Bo1) format. In the Premier Draft format, players draft against other players in a pod of 8 players. Players play a tournament with the drafted deck. Players play until they reach 7 wins or 3 losses. Players have a sideboard and are allowed to change the deck composition between games.</p>
 <p>Other formats include Quick Draft, which also Bo1, but the drafting process in against a pool of bots, and play is against players with independent draft pools. Traditional Draft is a best-of-three (Bo3) format. Sealed Deck is another limited format where players open 6 booster packs and construct a deck from the opened cards. These are out of scope for now.</p>
 </section>
-<section id="draft-play-data-sources" class="level3">
-<h3 class="anchored" data-anchor-id="draft-play-data-sources">Draft Play Data Sources</h3>
+<section id="draft-play-data-sources" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="draft-play-data-sources"><span class="header-section-number">4.2.3</span> Draft Play Data Sources</h3>
 <p>For draft play, I will used data from <a href="https://www.17lands.com/public_datasets">17lands</a>. They compile data from their user base to provide draft pick data. The data includes the draft pick order, the cards picked, and the win rate of the deck.</p>
 <p>See the <a href="../../notebooks/02-draft-data/02-00-draft-data-intro.html">02-10-draft-data-intro</a> notebook for more information on the draft data.</p>
 
@@ -202,6 +265,16 @@ window.Quarto = {
 </section>
 
 </main> <!-- /main -->
+<footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">
+    © <span id="current-year"></span> Joshua Meehl. All rights reserved. This website is unofficial Fan Content permitted under the Fan Content Policy of Wizards of the Coast. It is not
+    sponsored, endorsed, or affiliated with Wizards of the Coast.
+</footer>
+<script>
+    const baseYear = 2024;
+    const currentYear = new Date().getFullYear();
+    const displayYear = currentYear > baseYear ? `${baseYear}-${currentYear}` : `${baseYear}`;
+    document.getElementById('current-year').textContent = displayYear;
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

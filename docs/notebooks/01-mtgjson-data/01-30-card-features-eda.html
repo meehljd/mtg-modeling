@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Summary</title>
+<title>Summary – The Data Mage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,44 +20,11 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -73,11 +40,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -106,14 +73,74 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">The Data Mage</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Home</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">About</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../notebooks\02-draft-data\02-00-draft-data-intro.html"> 
+<span class="menu-text">Set Analysis</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/meehljd/mtg-modeling"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/meehl/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#explore-card-table" id="toc-explore-card-table" class="nav-link active" data-scroll-target="#explore-card-table"><span class="header-section-number">1</span> Explore Card Table</a>
+  <ul class="collapse">
+  <li><a href="#exploring-data-features" id="toc-exploring-data-features" class="nav-link" data-scroll-target="#exploring-data-features"><span class="header-section-number">1.1</span> Exploring Data Features</a></li>
+  <li><a href="#identifiers" id="toc-identifiers" class="nav-link" data-scroll-target="#identifiers"><span class="header-section-number">1.2</span> Identifiers</a></li>
+  <li><a href="#boosters" id="toc-boosters" class="nav-link" data-scroll-target="#boosters"><span class="header-section-number">1.3</span> Boosters</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -137,29 +164,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Exploratory data analysis of basic card features (e.g.&nbsp;power and toughness)</p>
-<section id="explore-card-table" class="level1">
-<h1>Explore Card Table</h1>
+<section id="explore-card-table" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Explore Card Table</h1>
 <p>Time to load up the card data (<code>cards.parquet</code>) and take a look at the columns and data types. We will explore the various data columns.</p>
 <p>The file has 96,216 records of cards, with each having 78 data fields.</p>
-<div id="cell-3" class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup Notebook</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> os.path.basename(os.getcwd()) <span class="op">!=</span> <span class="st">"mtg-modeling"</span>:</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    get_ipython().run_line_magic(<span class="st">"run"</span>, <span class="st">'-i "../../scripts/notebook_header.py"'</span>)  <span class="co"># type: ignore</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div id="cell-4" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pathlib</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>plt.rcParams[<span class="st">'figure.figsize'</span>] <span class="op">=</span> [<span class="dv">5</span>, <span class="dv">3</span>]</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>PATH <span class="op">=</span> pathlib.Path(<span class="st">"../../data/raw/mtgjson/AllPrintingsParquetFiles/cards.parquet"</span>)</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_parquet(PATH)</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Loaded DF of shape: </span><span class="sc">{</span>df<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="ch">\n</span><span class="ss">Columns: </span><span class="sc">{</span>df<span class="sc">.</span>columns<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Loaded DF of shape: (96296, 78)
 
@@ -183,18 +192,18 @@ Columns: Index(['artist', 'artistIds', 'asciiName', 'attractionLights', 'availab
       dtype='object')</code></pre>
 </div>
 </div>
-<section id="exploring-data-features" class="level2">
-<h2 class="anchored" data-anchor-id="exploring-data-features">Exploring Data Features</h2>
+<section id="exploring-data-features" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="exploring-data-features"><span class="header-section-number">1.1</span> Exploring Data Features</h2>
 <p>Here I’ll explore the various data feature is the card data.</p>
-<section id="identifier-features" class="level3">
-<h3 class="anchored" data-anchor-id="identifier-features">Identifier Features</h3>
+<section id="identifier-features" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="identifier-features"><span class="header-section-number">1.1.1</span> Identifier Features</h3>
 <ul>
 <li><code>uuid</code>:</li>
 <li>Also see the <code>cardIdentifiers.parquet</code> file</li>
 </ul>
 </section>
-<section id="name-features" class="level3">
-<h3 class="anchored" data-anchor-id="name-features">Name Features</h3>
+<section id="name-features" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="name-features"><span class="header-section-number">1.1.2</span> Name Features</h3>
 <ul>
 <li><code>asciiName</code>: Name with only legal ASCII characters. Only populated if non-ASCII characters in <code>name</code></li>
 <li><code>flavorName</code>: Promotion name, with true name underneath, such as Cabal Coffers with the flavor name: <a href="https://scryfall.com/card/ltc/360/cabal-coffers">Minas Morgul</a></li>
@@ -203,11 +212,10 @@ Columns: Index(['artist', 'artistIds', 'asciiName', 'attractionLights', 'availab
 <li><code>setCode</code>: The set code a card is in</li>
 <li>Also see the <code>sets.parquet</code> file for set data.</li>
 </ul>
-<section id="ascii-name" class="level4">
-<h4 class="anchored" data-anchor-id="ascii-name">ASCII Name</h4>
+<section id="ascii-name" class="level4" data-number="1.1.2.1">
+<h4 data-number="1.1.2.1" class="anchored" data-anchor-id="ascii-name"><span class="header-section-number">1.1.2.1</span> ASCII Name</h4>
 <p>Look at the <code>name</code> and <code>asciiName</code> columns to see if there are any differences.</p>
 <div id="cell-9" class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.loc[df[<span class="st">'asciiName'</span>] <span class="op">==</span> <span class="st">'Nazgul'</span>, [<span class="st">'asciiName'</span>, <span class="st">'name'</span>]].head(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 
@@ -233,12 +241,10 @@ Columns: Index(['artist', 'artistIds', 'asciiName', 'attractionLights', 'availab
 </div>
 </div>
 </section>
-<section id="set-code" class="level4">
-<h4 class="anchored" data-anchor-id="set-code">Set Code</h4>
+<section id="set-code" class="level4" data-number="1.1.2.2">
+<h4 data-number="1.1.2.2" class="anchored" data-anchor-id="set-code"><span class="header-section-number">1.1.2.2</span> Set Code</h4>
 <p>Here is the sets with the top 10 highest counts of <code>uuid</code>s.</p>
 <div id="cell-11" class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> df[<span class="st">'setCode'</span>].value_counts()</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>counts[:<span class="dv">10</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>setCode
 PLST    4853
@@ -256,10 +262,6 @@ Name: count, dtype: int64</code></pre>
 </div>
 <p>A histogram of the set card counts. It is bimodal with a peak around 200 cards, and a peak around 10 cards.</p>
 <div id="cell-13" class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>bins <span class="op">=</span> counts.value_counts()</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.histplot(counts, bins<span class="op">=</span><span class="dv">30</span>, log_scale<span class="op">=</span>[<span class="va">True</span>, <span class="va">False</span>], cbar<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>g.<span class="bu">set</span>(xlabel<span class="op">=</span><span class="st">"Set Size"</span>, ylabel<span class="op">=</span><span class="st">"Number of Occurrences"</span>, title<span class="op">=</span><span class="st">"Set Size Distribution"</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -269,13 +271,11 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </section>
-<section id="card-name" class="level4">
-<h4 class="anchored" data-anchor-id="card-name">Card Name</h4>
+<section id="card-name" class="level4" data-number="1.1.2.3">
+<h4 data-number="1.1.2.3" class="anchored" data-anchor-id="card-name"><span class="header-section-number">1.1.2.3</span> Card Name</h4>
 <p>See how many occurrences of each name there are in the data set.</p>
 <p>The five basic lands show up very frequently.</p>
 <div id="cell-15" class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> df[<span class="st">'name'</span>].value_counts()</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>counts[:<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>name
 Forest      872
@@ -288,7 +288,6 @@ Name: count, dtype: int64</code></pre>
 </div>
 <p>Here are the next 10 frequent cards, including <code>Sol Ring</code> and <code>Swords to Plowshares</code></p>
 <div id="cell-17" class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>counts[<span class="dv">5</span>:<span class="dv">16</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>name
 Sol Ring                92
@@ -307,9 +306,6 @@ Name: count, dtype: int64</code></pre>
 </div>
 <p>Plotting out the histogram of card name frequency, we can see it follows the power-law. It is nearly linear on a log-log scale.</p>
 <div id="cell-19" class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.histplot(counts[<span class="dv">5</span>:], log_scale<span class="op">=</span>[<span class="va">True</span>, <span class="va">True</span>], kde<span class="op">=</span><span class="va">True</span>, kde_kws<span class="op">=</span>{<span class="st">"bw_adjust"</span>: <span class="dv">2</span>})</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>g.<span class="bu">set</span>(xlabel<span class="op">=</span><span class="st">"Card Name Count"</span>, ylabel<span class="op">=</span><span class="st">"Number of Occurrences"</span>, title<span class="op">=</span><span class="st">"Card Name Count Distribution"</span>)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -320,28 +316,19 @@ Name: count, dtype: int64</code></pre>
 </div>
 </section>
 </section>
-<section id="primary-play-features" class="level3">
-<h3 class="anchored" data-anchor-id="primary-play-features">Primary Play Features</h3>
+<section id="primary-play-features" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="primary-play-features"><span class="header-section-number">1.1.3</span> Primary Play Features</h3>
 <ul>
 <li><code>keywords</code>: A list of keywords on the card</li>
 <li><code>power</code>: The power of a creature card</li>
 <li><code>rarity</code>: The rarity of the card</li>
 <li><code>toughness</code>: The toughness of a creature card</li>
 </ul>
-<section id="keywords" class="level4">
-<h4 class="anchored" data-anchor-id="keywords">Keywords</h4>
+<section id="keywords" class="level4" data-number="1.1.3.1">
+<h4 data-number="1.1.3.1" class="anchored" data-anchor-id="keywords"><span class="header-section-number">1.1.3.1</span> Keywords</h4>
 <p>Get count of all keywords in the data. There are 588 unique keywords. We can see <code>flying</code> takes the lead, with <code>enchant</code> and <code>trample</code> also being popular.</p>
 <p>We’ll adjust the data to only look at one of each unique name and removing alterative art cards.</p>
-<div id="cell-22" class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df_1st <span class="op">=</span> df[df[<span class="st">'isAlternative'</span>] <span class="op">!=</span> <span class="va">True</span>]</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>df_1st <span class="op">=</span> df_1st.groupby(<span class="st">'name'</span>).first()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div id="cell-23" class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> df_1st[<span class="st">'keywords'</span>].<span class="bu">str</span>.split(<span class="st">', '</span>).explode().value_counts()</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Total Unique Keywords: </span><span class="sc">{</span>counts<span class="sc">.</span>count()<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Keywords w/ &gt;250 Counts: </span><span class="sc">{</span>counts[counts<span class="op">&gt;</span><span class="dv">250</span>]<span class="sc">.</span>count()<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Keywords w/ &lt;10 Count: </span><span class="sc">{</span>counts[counts<span class="op">&lt;</span><span class="dv">10</span>]<span class="sc">.</span>count()<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>counts[:<span class="dv">10</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Total Unique Keywords: 586
 Keywords w/ &gt;250 Counts: 18
@@ -364,10 +351,6 @@ Name: count, dtype: int64</code></pre>
 </div>
 <p>Here we see that most keywords are infrequent, with only 18 keywords appearing more than 250 times.</p>
 <div id="cell-25" class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>counts2 <span class="op">=</span> counts[counts<span class="op">&gt;</span><span class="dv">1</span>]</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.histplot(counts2, bins<span class="op">=</span><span class="dv">30</span>, log_scale<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>g.<span class="bu">set</span>(xlabel<span class="op">=</span><span class="st">"Keyword Count"</span>, ylabel<span class="op">=</span><span class="st">"Number of occurrences"</span>, title<span class="op">=</span><span class="st">"Keyword Count Distribution"</span>)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -377,12 +360,10 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </section>
-<section id="rarity" class="level4">
-<h4 class="anchored" data-anchor-id="rarity">Rarity</h4>
+<section id="rarity" class="level4" data-number="1.1.3.2">
+<h4 data-number="1.1.3.2" class="anchored" data-anchor-id="rarity"><span class="header-section-number">1.1.3.2</span> Rarity</h4>
 <p>We can see that for <code>uuid</code>s, the <code>rare</code> is the most common type.</p>
 <div id="cell-27" class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> df[<span class="st">'rarity'</span>].value_counts()</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>counts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>rarity
 rare        35408
@@ -397,8 +378,6 @@ Name: count, dtype: int64</code></pre>
 <p>We clean this up by only selecting one instance of each name, and removing alterative art cards.</p>
 <p>The number of cards per rarity is fairly uniform except for <code>mythic</code> which is much lower. Note that this is the number of uniquely named cards, not print frequency.</p>
 <div id="cell-29" class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> df_1st[<span class="st">'rarity'</span>].value_counts()</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>counts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>rarity
 common      9941
@@ -410,9 +389,6 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <div id="cell-30" class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> sns.barplot(x<span class="op">=</span>counts.index, y<span class="op">=</span>counts.values, order<span class="op">=</span>[<span class="st">'common'</span>, <span class="st">'uncommon'</span>, <span class="st">'rare'</span>, <span class="st">'mythic'</span>])</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>g.<span class="bu">set</span>(xlabel<span class="op">=</span><span class="st">"Rarity"</span>, ylabel<span class="op">=</span><span class="st">"Number of Occurrences"</span>, title<span class="op">=</span><span class="st">"Rarity Distribution"</span>)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -422,31 +398,9 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 </section>
-<section id="power-toughness" class="level4">
-<h4 class="anchored" data-anchor-id="power-toughness">Power &amp; Toughness</h4>
-<div id="cell-32" class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> select_numeric(counts, col<span class="op">=</span><span class="st">'power'</span>):</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    counts <span class="op">=</span> counts.reset_index()</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    mask <span class="op">=</span> counts[col].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x.isnumeric())</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    counts <span class="op">=</span> counts[mask]</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    counts[col] <span class="op">=</span> counts[col].astype(<span class="bu">int</span>)</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    counts.sort_values(col, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    counts <span class="op">=</span> counts[counts[col] <span class="op">&lt;</span> <span class="dv">12</span>]</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    counts[<span class="st">'label'</span>] <span class="op">=</span> col</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    counts.rename(columns<span class="op">=</span>{col: <span class="st">'value'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> counts</span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_values(df, col<span class="op">=</span><span class="st">'power'</span>):</span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>    counts <span class="op">=</span> df[col].value_counts()</span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> select_numeric(counts, col<span class="op">=</span>col)</span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> group(df, col1<span class="op">=</span><span class="st">'power'</span>, col2<span class="op">=</span><span class="st">'toughness'</span>):</span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.concat([count_values(df, col1), count_values(df, col2)])</span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> group(df_1st, col1<span class="op">=</span><span class="st">'power'</span>, col2<span class="op">=</span><span class="st">'toughness'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="power-toughness" class="level4" data-number="1.1.3.3">
+<h4 data-number="1.1.3.3" class="anchored" data-anchor-id="power-toughness"><span class="header-section-number">1.1.3.3</span> Power &amp; Toughness</h4>
 <div id="cell-33" class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data<span class="op">=</span>counts, x<span class="op">=</span><span class="st">'value'</span>, y<span class="op">=</span><span class="st">'count'</span>, hue<span class="op">=</span><span class="st">'label'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>&lt;Axes: xlabel='value', ylabel='count'&gt;</code></pre>
 </div>
@@ -459,7 +413,6 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <div id="cell-34" class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>df_pl[<span class="st">'power'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>name
 "Ach! Hans, Run!"                 None
@@ -477,14 +430,6 @@ Name: power, Length: 29651, dtype: object</code></pre>
 </div>
 </div>
 <div id="cell-35" class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>df_pl <span class="op">=</span> df_1st[[<span class="st">'power'</span>, <span class="st">'toughness'</span>]].copy()</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>df_pl.dropna(inplace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>df_pl[<span class="st">'p_mask'</span>] <span class="op">=</span> df_pl[<span class="st">'power'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x.isnumeric())</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>df_pl[<span class="st">'t_mask'</span>] <span class="op">=</span> df_pl[<span class="st">'toughness'</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: x.isnumeric())</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>df_pl <span class="op">=</span> df_pl[df_pl[<span class="st">'p_mask'</span>] <span class="op">&amp;</span> df_pl[<span class="st">'t_mask'</span>]]</span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>df_pl[<span class="st">'power'</span>] <span class="op">=</span> df_pl[<span class="st">'power'</span>].astype(<span class="bu">int</span>)</span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>df_pl[<span class="st">'toughness'</span>] <span class="op">=</span> df_pl[<span class="st">'toughness'</span>].astype(<span class="bu">int</span>)</span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>sns.histplot(data<span class="op">=</span>df_pl, x<span class="op">=</span><span class="st">'power'</span>, y<span class="op">=</span><span class="st">'toughness'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>&lt;Axes: xlabel='power', ylabel='toughness'&gt;</code></pre>
 </div>
@@ -498,8 +443,8 @@ Name: power, Length: 29651, dtype: object</code></pre>
 </div>
 </section>
 </section>
-<section id="color-mana-features" class="level3">
-<h3 class="anchored" data-anchor-id="color-mana-features">Color &amp; Mana Features</h3>
+<section id="color-mana-features" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="color-mana-features"><span class="header-section-number">1.1.4</span> Color &amp; Mana Features</h3>
 <ul>
 <li><code>colorIdentity</code></li>
 <li><code>colorIndicator</code></li>
@@ -508,8 +453,8 @@ Name: power, Length: 29651, dtype: object</code></pre>
 <li><code>manaValue</code></li>
 </ul>
 </section>
-<section id="card-type-features" class="level3">
-<h3 class="anchored" data-anchor-id="card-type-features">Card Type Features</h3>
+<section id="card-type-features" class="level3" data-number="1.1.5">
+<h3 data-number="1.1.5" class="anchored" data-anchor-id="card-type-features"><span class="header-section-number">1.1.5</span> Card Type Features</h3>
 <ul>
 <li><code>subsets</code></li>
 <li><code>subtypes</code></li>
@@ -518,8 +463,8 @@ Name: power, Length: 29651, dtype: object</code></pre>
 <li><code>types</code></li>
 </ul>
 </section>
-<section id="text-features" class="level3">
-<h3 class="anchored" data-anchor-id="text-features">Text Features</h3>
+<section id="text-features" class="level3" data-number="1.1.6">
+<h3 data-number="1.1.6" class="anchored" data-anchor-id="text-features"><span class="header-section-number">1.1.6</span> Text Features</h3>
 <ul>
 <li><code>flavorText</code>:</li>
 <li><code>hasContentWarning</code>: Cards that have sensitive content. See this <a href="https://magic.wizards.com/en/articles/archive/news/depictions-racism-magic-2020-06-10">article</a> for more.</li>
@@ -532,8 +477,8 @@ Name: power, Length: 29651, dtype: object</code></pre>
 <li>Also see the <code>cardForeignData.parquet</code> file foreign language translations</li>
 </ul>
 </section>
-<section id="special-play-features" class="level3">
-<h3 class="anchored" data-anchor-id="special-play-features">Special Play Features</h3>
+<section id="special-play-features" class="level3" data-number="1.1.7">
+<h3 data-number="1.1.7" class="anchored" data-anchor-id="special-play-features"><span class="header-section-number">1.1.7</span> Special Play Features</h3>
 <ul>
 <li><code>attractionLights</code>: List of attraction lights found on cards, such as Unfinity attraction ride cards</li>
 <li><code>defense</code>: Used by <code>Battle - Siege</code> type cards, such as <code>Invasion of Gobakhan // Lightshield Array</code></li>
@@ -545,8 +490,8 @@ Name: power, Length: 29651, dtype: object</code></pre>
 <li><code>relatedCards</code>: A list of card names associated to a card, such as <code>Sword of Dungeons &amp; Dragons</code> and <code>Dragon</code></li>
 </ul>
 </section>
-<section id="card-layout-variant-features" class="level3">
-<h3 class="anchored" data-anchor-id="card-layout-variant-features">Card Layout Variant Features</h3>
+<section id="card-layout-variant-features" class="level3" data-number="1.1.8">
+<h3 data-number="1.1.8" class="anchored" data-anchor-id="card-layout-variant-features"><span class="header-section-number">1.1.8</span> Card Layout Variant Features</h3>
 <ul>
 <li><code>cardParts</code>: List of multiple card parts for <a href="https://mtg.fandom.com/wiki/Meld?so=search">meld</a> layouts, such as <code>Brisela, Voice of Nightmares</code> + <code>Bruna, the Fading Light // Brisela, Voice of Nightmares</code></li>
 <li><code>faceConvertedManaCost</code></li>
@@ -558,21 +503,21 @@ Name: power, Length: 29651, dtype: object</code></pre>
 <li><code>side</code>: Identifier on side of card for given face, such as <code>a</code> or <code>b</code></li>
 </ul>
 </section>
-<section id="performance-features" class="level3">
-<h3 class="anchored" data-anchor-id="performance-features">Performance Features</h3>
+<section id="performance-features" class="level3" data-number="1.1.9">
+<h3 data-number="1.1.9" class="anchored" data-anchor-id="performance-features"><span class="header-section-number">1.1.9</span> Performance Features</h3>
 <ul>
 <li><code>edhrecRank</code></li>
 <li><code>edhrecSaltiness</code></li>
 </ul>
 </section>
-<section id="legal-features" class="level3">
-<h3 class="anchored" data-anchor-id="legal-features">Legal Features</h3>
+<section id="legal-features" class="level3" data-number="1.1.10">
+<h3 data-number="1.1.10" class="anchored" data-anchor-id="legal-features"><span class="header-section-number">1.1.10</span> Legal Features</h3>
 <ul>
 <li>Also see the <code>cardLegalities.parquet</code> file for format legalities</li>
 </ul>
 </section>
-<section id="visual-collector-features" class="level3">
-<h3 class="anchored" data-anchor-id="visual-collector-features">Visual &amp; Collector Features</h3>
+<section id="visual-collector-features" class="level3" data-number="1.1.11">
+<h3 data-number="1.1.11" class="anchored" data-anchor-id="visual-collector-features"><span class="header-section-number">1.1.11</span> Visual &amp; Collector Features</h3>
 <ul>
 <li><code>artist</code></li>
 <li><code>artistIds</code></li>
@@ -591,8 +536,8 @@ Name: power, Length: 29651, dtype: object</code></pre>
 <li><code>watermark</code>: Name of <a href="https://mtg.fandom.com/wiki/Watermark">watermark</a> on the card</li>
 </ul>
 </section>
-<section id="printing-features" class="level3">
-<h3 class="anchored" data-anchor-id="printing-features">Printing Features</h3>
+<section id="printing-features" class="level3" data-number="1.1.12">
+<h3 data-number="1.1.12" class="anchored" data-anchor-id="printing-features"><span class="header-section-number">1.1.12</span> Printing Features</h3>
 <ul>
 <li><code>availability</code>: A lest of card’s available printing types, such as paper, arena, etc.</li>
 <li><code>isOnlineOnly</code></li>
@@ -606,8 +551,8 @@ Name: power, Length: 29651, dtype: object</code></pre>
 <li><code>securityStamp</code>: Security stamp, such as acorn, heart, etc.</li>
 </ul>
 </section>
-<section id="original-printing-features" class="level3">
-<h3 class="anchored" data-anchor-id="original-printing-features">Original Printing Features</h3>
+<section id="original-printing-features" class="level3" data-number="1.1.13">
+<h3 data-number="1.1.13" class="anchored" data-anchor-id="original-printing-features"><span class="header-section-number">1.1.13</span> Original Printing Features</h3>
 <ul>
 <li><code>originalPrintings</code>: <code>uuid</code>s of original printings if its different than the original, such as rebalanced cards.</li>
 <li><code>originalReleaseDate</code>: If release date was different than the set release date.</li>
@@ -615,8 +560,8 @@ Name: power, Length: 29651, dtype: object</code></pre>
 <li><code>originalType</code></li>
 </ul>
 </section>
-<section id="products-features" class="level3">
-<h3 class="anchored" data-anchor-id="products-features">Products Features</h3>
+<section id="products-features" class="level3" data-number="1.1.14">
+<h3 data-number="1.1.14" class="anchored" data-anchor-id="products-features"><span class="header-section-number">1.1.14</span> Products Features</h3>
 <ul>
 <li><code>boosterTypes</code>: List of booster types. Default is a random booster, versus deck boosters which are deterministic.</li>
 <li><code>duelDeck</code>: Indicates which deck (‘a’ vs ‘b’) a card is in <a href="https://mtg.fandom.com/wiki/Duel_Decks">Dual Decks</a></li>
@@ -627,9 +572,6 @@ Name: power, Length: 29651, dtype: object</code></pre>
 <li>Also see the <code>setBoosterContents.parquet</code> and related files for booster pack data.</li>
 </ul>
 <div id="cell-47" class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> df[<span class="st">'name'</span>] <span class="op">==</span> <span class="st">'Boom // Bust'</span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>mask <span class="op">&amp;=</span> df[<span class="st">'uuid'</span>] <span class="op">==</span> <span class="st">'7104f01e-0ca6-53e6-873f-ee246015174a'</span></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>df.loc[mask, [<span class="st">'faceName'</span>, <span class="st">'name'</span>, <span class="st">'language'</span>, <span class="st">'multiverseId'</span>, <span class="st">'identifiers'</span>, <span class="st">'uuid'</span>]].head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <div class="ansi-escaped-output">
 <pre><span class="ansi-red-fg ansi-bold">---------------------------------------------------------------------------</span>
@@ -762,9 +704,6 @@ File <span class="ansi-green-fg ansi-bold">c:\Users\Josh.Meehl\AppData\Local\Pro
 </div>
 <p>Here we can see that each printing of the <code>Boom // Bust</code> card has a common <code>multiverseId</code> and unique <code>uuid</code> across the Boom and Bust faces.</p>
 <div id="cell-49" class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> df[<span class="st">'name'</span>] <span class="op">==</span> <span class="st">'Boom // Bust'</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>mask <span class="op">&amp;=</span> df[<span class="st">'multiverseId'</span>] <span class="op">==</span> <span class="fl">140480.0</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>df.loc[mask, [<span class="st">'faceName'</span>, <span class="st">'name'</span>, <span class="st">'language'</span>, <span class="st">'multiverseId'</span>, <span class="st">'identifiers'</span>, <span class="st">'uuid'</span>]].head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 
@@ -808,7 +747,6 @@ File <span class="ansi-green-fg ansi-bold">c:\Users\Josh.Meehl\AppData\Local\Pro
 </div>
 <p>Most cards are printed in 10 languages beyond english.</p>
 <div id="cell-51" class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'uuid'</span>].value_counts().value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>count
 10    13194
@@ -826,7 +764,6 @@ Name: count, dtype: int64</code></pre>
 </div>
 <p>It appears that Phyrexian is not compatible with the UTF-8 character encoding!</p>
 <div id="cell-53" class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>df.loc[df[<span class="st">'language'</span>] <span class="op">==</span> <span class="st">'Phyrexian'</span>, <span class="st">'text'</span>].head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <pre><code>116703    |zvEZYCsDFhg.\n|besYf,GvEng,mpreLYv co,LFr2aho...
 116704    |pcEnusL.\n+Ⅰ: |co,tuhtZFsDYt,DEEtAGvEnyg,hruP...
@@ -838,16 +775,13 @@ Name: text, dtype: object</code></pre>
 </div>
 </section>
 </section>
-<section id="identifiers" class="level2">
-<h2 class="anchored" data-anchor-id="identifiers">Identifiers</h2>
+<section id="identifiers" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="identifiers"><span class="header-section-number">1.2</span> Identifiers</h2>
 <p>The <code>cardIdentifiers.parquet</code> file contains the <a href="https://mtgjson.com/data-models/identifiers/">Identifiers</a>. These are used to map the MTGJSON card to other platforms, such as TCG Player or MTG Arena.</p>
 <p>The other platforms are:<br>
 - <a href="www.cardkingdom.com">Card Kingdom</a>: A large-scale card vender - <a href="https://www.cardsphere.com/">Card Sphere</a>: A card trading marketplace - <a href="https://www.cardmarket.com/en/Magic">Cardmarket</a>: A card marketplace - <a href="https://magic.wizards.com/en/mtgarena">MTG Arena</a>: An online environment to play MTG - <a href="https://magic.wizards.com/en/mtgo">MTG Online</a>: An online environment to play MTG - <a href="https://gatherer.wizards.com/">WOTC Gather</a>: WOTC’s official data source. - <a href="https://scryfall.com/">Scryfall</a>: Another MTG data source. Note DFC do not have unique UUIDs. - <a href="https://www.tcgplayer.com/">TGC Player</a>: A card marketplace</p>
 <p>A note on the <code>uuids</code>. The foil and non-foil versions of a card have unique <code>uuids</code>. To cross-reference the other foil type, use the <code>mtgjsonFoilVersionId</code> and <code>mtgjsonNonFoilVersionId</code> fields.</p>
 <div id="cell-55" class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">file</span> <span class="op">=</span> files[<span class="dv">1</span>]</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> load_by_filename(<span class="bu">file</span>)</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>df.loc[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Opening cardIdentifiers.parquet
 Loaded DF of shape: (96203, 21)</code></pre>
@@ -878,9 +812,6 @@ Name: 2, dtype: object</code></pre>
 </div>
 </div>
 <div id="cell-56" class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>uuids <span class="op">=</span> [<span class="st">'57aaebc1-850c-503d-9f6e-bb8d00d8bf7c'</span>, <span class="st">'8fd4e2eb-3eb4-50ea-856b-ef638fa47f8a'</span>]</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> df[<span class="st">'uuid'</span>].isin(uuids)</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>df.loc[mask, [<span class="st">'mtgjsonFoilVersionId'</span>, <span class="st">'mtgjsonNonFoilVersionId'</span>, <span class="st">'uuid'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 
@@ -914,8 +845,8 @@ Name: 2, dtype: object</code></pre>
 </div>
 </div>
 </section>
-<section id="boosters" class="level2">
-<h2 class="anchored" data-anchor-id="boosters">Boosters</h2>
+<section id="boosters" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="boosters"><span class="header-section-number">1.3</span> Boosters</h2>
 <p>df = load_by_filename(“setBoosterContents.parquet”) mask = df[‘setCode’] == ‘OTJ’ mask &amp;= df[‘boosterName’] == ‘play’ mask &amp;= df[‘sheetName’] == ‘breakingNews’ df.loc[mask].head(50)</p>
 <p>df = load_by_filename(“setBoosterContentWeights.parquet”) mask = df[‘setCode’] == ‘OTJ’ mask &amp;= df[‘boosterName’] == ‘play’ df.loc[mask].head(50)</p>
 <p>df = load_by_filename(“setBoosterSheets.parquet”) mask = df[‘setCode’] == ‘OTJ’ mask &amp;= df[‘boosterName’] == ‘collector’ df.loc[mask].head(50)</p>
@@ -926,6 +857,16 @@ Name: 2, dtype: object</code></pre>
 </section>
 
 </main> <!-- /main -->
+<footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">
+    © <span id="current-year"></span> Joshua Meehl. All rights reserved. This website is unofficial Fan Content permitted under the Fan Content Policy of Wizards of the Coast. It is not
+    sponsored, endorsed, or affiliated with Wizards of the Coast.
+</footer>
+<script>
+    const baseYear = 2024;
+    const currentYear = new Date().getFullYear();
+    const displayYear = currentYear > baseYear ? `${baseYear}-${currentYear}` : `${baseYear}`;
+    document.getElementById('current-year').textContent = displayYear;
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

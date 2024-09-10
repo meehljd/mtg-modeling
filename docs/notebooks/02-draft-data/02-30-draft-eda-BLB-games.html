@@ -130,9 +130,8 @@ window.Quarto = {
     </span>
   </li>  
   <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">Set Analysis</span>
-    </span>
+    <a class="nav-link" href="../../notebooks\02-draft-data\02-00-draft-data-intro.html"> 
+<span class="menu-text">Set Analysis</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -237,6 +236,7 @@ window.Quarto = {
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 <p>Drafting in Magic: The Gathering (MTG) is a complex and dynamic format that challenges players to adapt quickly, make strategic decisions, and understand the evolving meta of each new set. In this analysis, we explore the summary and draft data for Bloomburrow, focusing on draft-level insights without diving into individual cards. We use data from Bloomburrow Premier Drafts, recorded from the <a href="17lands.com">17Lands</a> user base in MTG Arena, a best-of-one draft format where players draft in a pool and play until they win 7 games or lose 3. The Bloomburrow set was released in Arena on July 30, 2024.</p>
 <p>By examining deck performance, player strategies, and various in-game factors such as mulligans and turn counts, we aim to uncover the key elements that contribute to success in this draft environment. We’ll explore how factors like deck choice, player rank, sideboarding, and the number of turns impact win rates. Additionally, we’ll investigate gameplay differences when players go first versus second and highlight how player behavior evolves throughout a ranked season. Through this analysis, we provide valuable insights to help both seasoned and new drafters make more strategic decisions in the Bloomburrow draft format and beyond.</p>
+<p>To see other analyses of MTG draft data, check out the <a href="../../notebooks/02-draft-data/02-00-draft-data-intro.html">Draft Analysis</a> page.</p>
 </section>
 <section id="summary-data" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Summary Data</h1>
@@ -870,23 +870,14 @@ Figure&nbsp;33: The win rate for starting versus non-starting player.
 
 </main> <!-- /main -->
 <footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">
-
     © <span id="current-year"></span> Joshua Meehl. All rights reserved. This website is unofficial Fan Content permitted under the Fan Content Policy of Wizards of the Coast. It is not
-
     sponsored, endorsed, or affiliated with Wizards of the Coast.
-
 </footer>
-
 <script>
-
     const baseYear = 2024;
-
     const currentYear = new Date().getFullYear();
-
     const displayYear = currentYear > baseYear ? `${baseYear}-${currentYear}` : `${baseYear}`;
-
     document.getElementById('current-year').textContent = displayYear;
-
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

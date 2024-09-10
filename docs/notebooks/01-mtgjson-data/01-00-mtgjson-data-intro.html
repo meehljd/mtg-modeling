@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>mtgjson-data-intro</title>
+<title>mtgjson-data-intro – The Data Mage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,44 +20,11 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -73,11 +40,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -103,14 +70,84 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">The Data Mage</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Home</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">About</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../notebooks\02-draft-data\02-00-draft-data-intro.html"> 
+<span class="menu-text">Set Analysis</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/meehljd/mtg-modeling"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/meehl/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">0.1</span> Introduction</a></li>
+  <li><a href="#downloads" id="toc-downloads" class="nav-link" data-scroll-target="#downloads"><span class="header-section-number">0.2</span> Downloads</a></li>
+  <li><a href="#review-allprintings-tables" id="toc-review-allprintings-tables" class="nav-link" data-scroll-target="#review-allprintings-tables"><span class="header-section-number">1</span> Review AllPrintings Tables</a>
+  <ul class="collapse">
+  <li><a href="#card-files" id="toc-card-files" class="nav-link" data-scroll-target="#card-files"><span class="header-section-number">1.1</span> Card Files:</a></li>
+  <li><a href="#set-files" id="toc-set-files" class="nav-link" data-scroll-target="#set-files"><span class="header-section-number">1.2</span> Set Files:</a></li>
+  <li><a href="#identifier-files" id="toc-identifier-files" class="nav-link" data-scroll-target="#identifier-files"><span class="header-section-number">1.3</span> Identifier Files:</a></li>
+  <li><a href="#set-booster-files" id="toc-set-booster-files" class="nav-link" data-scroll-target="#set-booster-files"><span class="header-section-number">1.4</span> Set Booster Files:</a></li>
+  <li><a href="#meta-file" id="toc-meta-file" class="nav-link" data-scroll-target="#meta-file"><span class="header-section-number">1.5</span> Meta File:</a></li>
+  </ul></li>
+  <li><a href="#unique-identifiers" id="toc-unique-identifiers" class="nav-link" data-scroll-target="#unique-identifiers"><span class="header-section-number">2</span> Unique Identifiers</a>
+  <ul class="collapse">
+  <li><a href="#mtgjson" id="toc-mtgjson" class="nav-link" data-scroll-target="#mtgjson"><span class="header-section-number">2.1</span> MTGJSON</a></li>
+  <li><a href="#wotc-gatherer" id="toc-wotc-gatherer" class="nav-link" data-scroll-target="#wotc-gatherer"><span class="header-section-number">2.2</span> WOTC Gatherer</a></li>
+  <li><a href="#scryfall" id="toc-scryfall" class="nav-link" data-scroll-target="#scryfall"><span class="header-section-number">2.3</span> Scryfall</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -119,38 +156,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p># Summary</p>
 <p>An introduction to the <a href="https://mtgjson.com/">MTGJSON</a> card data, including reviewing the data files and column features.</p>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<section id="introduction" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">0.1</span> Introduction</h2>
 <p>I will use the data from <a href="https://mtgjson.com/downloads/all-files/">MTGJSON</a>. The <code>AllPrintings</code> card data comes in various formats, such as json, sql, csv, and parquet.</p>
 <p>I will use the <a href="https://parquet.apache.org/">parquet format</a>, since that is the most performant format for data analysis. It has high compression, fast load times, and can query directly on disk. This minimizes both disk space and memory usage.</p>
 <p>I will also use the <code>AllPrices</code> data for economic analysis. This is only available in the json format.</p>
 </section>
-<section id="downloads" class="level2">
-<h2 class="anchored" data-anchor-id="downloads">Downloads</h2>
+<section id="downloads" class="level2" data-number="0.2">
+<h2 data-number="0.2" class="anchored" data-anchor-id="downloads"><span class="header-section-number">0.2</span> Downloads</h2>
 <p>See notebook <a href="../../notebooks/01-mtgjson-data/01-10-get-data.html">01-10-get-data.ipynb</a> to fetch the data.</p>
 </section>
-<section id="review-allprintings-tables" class="level1">
-<h1>Review AllPrintings Tables</h1>
+<section id="review-allprintings-tables" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Review AllPrintings Tables</h1>
 <p>We have 18 parquet files associated with the card data, let’t take a quick tour.</p>
 <div id="cell-4" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Setup Notebook</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> os.path.basename(os.getcwd()) <span class="op">!=</span> <span class="st">"mtg-modeling"</span>:</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    get_ipython().run_line_magic(<span class="st">"run"</span>, <span class="st">'-i "../../scripts/notebook_header.py"'</span>)  <span class="co"># type: ignore</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Changed working directory to: d:\mtg-modeling</code></pre>
 </div>
 </div>
 <div id="cell-5" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># list of files</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>save_path <span class="op">=</span> Path(<span class="st">"data/raw/mtgjson"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>file_base <span class="op">=</span> <span class="st">"AllPrintingsParquetFiles"</span>  <span class="co"># extension added later</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>final_path <span class="op">=</span> save_path <span class="op">/</span> file_base</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>path <span class="op">=</span> final_path</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>files <span class="op">=</span> os.listdir(path)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>files.sort()</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>['cardForeignData.parquet',
  'cardIdentifiers.parquet',
@@ -170,8 +194,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  'tokens.parquet']</code></pre>
 </div>
 </div>
-<section id="card-files" class="level2">
-<h2 class="anchored" data-anchor-id="card-files">Card Files:</h2>
+<section id="card-files" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="card-files"><span class="header-section-number">1.1</span> Card Files:</h2>
 <ul>
 <li><code>cards.parquet</code>: The primary file that contains card data, such as card name, mana cost, type, and text.</li>
 <li><code>tokens.parquet</code>: Same for tokens.</li>
@@ -182,22 +206,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>cardRulings.parquet</code>: The rulings for cards.</li>
 </ul>
 </section>
-<section id="set-files" class="level2">
-<h2 class="anchored" data-anchor-id="set-files">Set Files:</h2>
+<section id="set-files" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="set-files"><span class="header-section-number">1.2</span> Set Files:</h2>
 <ul>
 <li><code>sets.parquet</code>: Data on various released sets, such as set code (10E, OTJ…), set size, and release date.</li>
 <li><code>setTranslations.parquet</code>: Translations for set names in various languages.</li>
 </ul>
 </section>
-<section id="identifier-files" class="level2">
-<h2 class="anchored" data-anchor-id="identifier-files">Identifier Files:</h2>
+<section id="identifier-files" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="identifier-files"><span class="header-section-number">1.3</span> Identifier Files:</h2>
 <ul>
 <li><code>cardIdentifiers.parquet</code>: Identifiers for various MTG data platforms (TCG Collector, Scryfall, Cardmarket…).</li>
 <li><code>tokenIdentifiers.parquet</code>: Same for tokens.</li>
 </ul>
 </section>
-<section id="set-booster-files" class="level2">
-<h2 class="anchored" data-anchor-id="set-booster-files">Set Booster Files:</h2>
+<section id="set-booster-files" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="set-booster-files"><span class="header-section-number">1.4</span> Set Booster Files:</h2>
 <ul>
 <li><code>setBoosterContents.parquet</code>: For booster packs, different mixes of sheet composition (1 theList + 13 others versus 0 theList + 14 others).</li>
 <li><code>setBoosterContentWeights.parquet</code>: The weight of each booster mix (1 in 10 boosters has theList).</li>
@@ -205,18 +229,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>setBoosterSheetCards.parquet</code>: Card composition of each sheet, including counts.</li>
 </ul>
 </section>
-<section id="meta-file" class="level2">
-<h2 class="anchored" data-anchor-id="meta-file">Meta File:</h2>
+<section id="meta-file" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="meta-file"><span class="header-section-number">1.5</span> Meta File:</h2>
 <ul>
 <li><code>meta.parquet</code>: Version and date for current MTGJSON build.</li>
 </ul>
 </section>
 </section>
-<section id="unique-identifiers" class="level1">
-<h1>Unique Identifiers</h1>
+<section id="unique-identifiers" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Unique Identifiers</h1>
 <p>Most of the files have a <code>uuid</code>. This is the universally unique identifier (UUID v5) for each card printing. It is the primary key for the <code>cards.parquet</code> file and will be used to join data across tables.</p>
-<section id="mtgjson" class="level2">
-<h2 class="anchored" data-anchor-id="mtgjson">MTGJSON</h2>
+<section id="mtgjson" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="mtgjson"><span class="header-section-number">2.1</span> MTGJSON</h2>
 <ul>
 <li><code>uuid</code>:
 <ul>
@@ -226,8 +250,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="wotc-gatherer" class="level2">
-<h2 class="anchored" data-anchor-id="wotc-gatherer">WOTC Gatherer</h2>
+<section id="wotc-gatherer" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="wotc-gatherer"><span class="header-section-number">2.2</span> WOTC Gatherer</h2>
 <ul>
 <li><code>multiverseId</code>: The WOTC card identifier used their <a href="https://gatherer.wizards.com">Gatherer</a> card database.
 <ul>
@@ -237,8 +261,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul></li>
 </ul>
 </section>
-<section id="scryfall" class="level2">
-<h2 class="anchored" data-anchor-id="scryfall">Scryfall</h2>
+<section id="scryfall" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="scryfall"><span class="header-section-number">2.3</span> Scryfall</h2>
 <ul>
 <li><code>scryfallId</code>: The <a href="https://scryfall.com/">Scryfall</a> uuid. It has different rules than the MTGJSON uuid, such as faces of DFCs are not unique.
 <ul>
@@ -253,6 +277,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 
 </main> <!-- /main -->
+<footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">
+    © <span id="current-year"></span> Joshua Meehl. All rights reserved. This website is unofficial Fan Content permitted under the Fan Content Policy of Wizards of the Coast. It is not
+    sponsored, endorsed, or affiliated with Wizards of the Coast.
+</footer>
+<script>
+    const baseYear = 2024;
+    const currentYear = new Date().getFullYear();
+    const displayYear = currentYear > baseYear ? `${baseYear}-${currentYear}` : `${baseYear}`;
+    document.getElementById('current-year').textContent = displayYear;
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Summary</title>
+<title>Summary – The Data Mage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,44 +20,11 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -73,11 +40,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -103,14 +70,87 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">The Data Mage</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Home</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">About</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../notebooks\02-draft-data\02-00-draft-data-intro.html"> 
+<span class="menu-text">Set Analysis</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/meehljd/mtg-modeling"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/meehl/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#intorduction-to-causality" id="toc-intorduction-to-causality" class="nav-link active" data-scroll-target="#intorduction-to-causality"><span class="header-section-number">1</span> Intorduction to Causality</a></li>
+  <li><a href="#card-impact-in-draft-play" id="toc-card-impact-in-draft-play" class="nav-link" data-scroll-target="#card-impact-in-draft-play"><span class="header-section-number">2</span> Card Impact in Draft Play</a>
+  <ul class="collapse">
+  <li><a href="#card-impact" id="toc-card-impact" class="nav-link" data-scroll-target="#card-impact"><span class="header-section-number">2.1</span> Card Impact</a></li>
+  <li><a href="#card-success" id="toc-card-success" class="nav-link" data-scroll-target="#card-success"><span class="header-section-number">2.2</span> Card Success</a></li>
+  <li><a href="#card-attributes" id="toc-card-attributes" class="nav-link" data-scroll-target="#card-attributes"><span class="header-section-number">2.3</span> Card Attributes</a></li>
+  <li><a href="#context-within-deck-composition" id="toc-context-within-deck-composition" class="nav-link" data-scroll-target="#context-within-deck-composition"><span class="header-section-number">2.4</span> Context within Deck Composition</a></li>
+  <li><a href="#player-skill" id="toc-player-skill" class="nav-link" data-scroll-target="#player-skill"><span class="header-section-number">2.5</span> Player Skill</a></li>
+  <li><a href="#board-state" id="toc-board-state" class="nav-link" data-scroll-target="#board-state"><span class="header-section-number">2.6</span> Board State</a></li>
+  <li><a href="#opponents" id="toc-opponents" class="nav-link" data-scroll-target="#opponents"><span class="header-section-number">2.7</span> Opponents</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">2.8</span> Conclusion</a></li>
+  </ul></li>
+  <li><a href="#secondary-market-card-value" id="toc-secondary-market-card-value" class="nav-link" data-scroll-target="#secondary-market-card-value"><span class="header-section-number">3</span> Secondary Market Card Value</a>
+  <ul class="collapse">
+  <li><a href="#supply-and-demand" id="toc-supply-and-demand" class="nav-link" data-scroll-target="#supply-and-demand"><span class="header-section-number">3.1</span> Supply and Demand</a></li>
+  <li><a href="#print-supply" id="toc-print-supply" class="nav-link" data-scroll-target="#print-supply"><span class="header-section-number">3.2</span> Print Supply</a></li>
+  <li><a href="#market-hype" id="toc-market-hype" class="nav-link" data-scroll-target="#market-hype"><span class="header-section-number">3.3</span> Market Hype</a></li>
+  <li><a href="#conclusion-1" id="toc-conclusion-1" class="nav-link" data-scroll-target="#conclusion-1"><span class="header-section-number">3.4</span> Conclusion</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -134,36 +174,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Exploring the causal relationships involved in gameplay and card economics, such as card impact in draft play and secondary market card value.</p>
-<section id="intorduction-to-causality" class="level1">
-<h1>Intorduction to Causality</h1>
+<section id="intorduction-to-causality" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Intorduction to Causality</h1>
 <p>To make better decisions with our statistical and ML models, I will explore the causal relationships for both winning MTG. This analysis will be informal and exploratory. I will use the <a href="https://mixtape.scunning.com/03-directed_acyclical_graphs">directed acyclic graph (DAG) framework</a> to identify potential causal relationships between card attributes and win rate.</p>
 <p>Later, we may do more formal causal inference using the <a href="https://microsoft.github.io/dowhy/">doWhy</a> and <a href="https://google.github.io/CausalImpact/CausalImpact.html">CausalImpact</a> libraries and test for identifiability, consistency, and robustness of our causal models.</p>
 <p>For a more in-depth discussion of causality in data science, refer to the works of <a href="https://en.wikipedia.org/wiki/Judea_Pearl">Judea Pearl</a> or <a href="https://xcelab.net/rm/statistical-rethinking/">Richard McElreath</a>.</p>
 <hr>
 </section>
-<section id="card-impact-in-draft-play" class="level1">
-<h1>Card Impact in Draft Play</h1>
+<section id="card-impact-in-draft-play" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Card Impact in Draft Play</h1>
 <p>Let’s look at the causal relationship between a card and it ability to affect a player’s success in draft play.</p>
-<section id="card-impact" class="level2">
-<h2 class="anchored" data-anchor-id="card-impact">Card Impact</h2>
+<section id="card-impact" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="card-impact"><span class="header-section-number">2.1</span> Card Impact</h2>
 <p>I will use the term <strong>impact</strong> to describe the ability of a card to contribute to winning a game. The impact of the card is the abstract concept that we are trying to measure. The impact of a card is not directly observable, but we can infer it from the a player’s success with or without the card in the play deck.</p>
 <p>Common terms for card impact can be <strong>power level</strong> or <strong>playability</strong>. These terms are often used interchangeably, but I will use impact to describe the abstract concept of a card’s ability to contribute to winning a game.</p>
 <p>While impact can not be directly measured or observed, the card’s rarity (common, uncommon, rare, mythic rare) is often used as a proxy for the cards impact. This is an imperfect measure of impact and ideally I will find a more reliable means of modeling impact.</p>
 <p>I’ll start a DAG with the impact. Since the impact can not be directly measured or observed, I mark it with a dashed line to indicate it is a <strong>latent variable</strong>.</p>
 <div id="cell-4" class="cell" data-execution_count="45">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> graphviz <span class="im">import</span> Digraph</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> Image</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize a directed graph</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>dot <span class="op">=</span> Digraph(comment<span class="op">=</span><span class="st">'Card Impact'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>dot.attr(rankdir<span class="op">=</span><span class="st">'LR'</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the impact node</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>dot.node(name<span class="op">=</span><span class="st">'I'</span>, label<span class="op">=</span><span class="st">'Impact'</span>, shape<span class="op">=</span><span class="st">'oval'</span>, style<span class="op">=</span><span class="st">'dashed'</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Render and display the graph in Jupyter Notebook</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Image(dot.render(filename<span class="op">=</span><span class="st">'../../images/dags/dags'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>, cleanup<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="45">
 <div>
 <figure class="figure">
@@ -173,21 +200,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="card-success" class="level2">
-<h2 class="anchored" data-anchor-id="card-success">Card Success</h2>
+<section id="card-success" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="card-success"><span class="header-section-number">2.2</span> Card Success</h2>
 <p>I am calling the outcome of using a card in a deck that card’s <strong>success</strong>. This abstract concept can take many forms. The obvious one is the <strong>win rate</strong> of a deck containing the card and can be expanded to a player’s <strong>win record</strong> when using a given deck. Other forms can be the card’s <strong>pick rate</strong> in a draft or the card’s <strong>play rate</strong> from the hand. When looking at replay data, one can also examine resource trade-off, such as the <strong>card parity</strong> - how many cards are consumed by the player versus the opponent when playing a given card.</p>
 <p>The <strong>win rate</strong> can further be refined, such as the <strong>starting hand win rate</strong>, the <strong>non-starting hand win rate</strong>, and the <strong>not in hand win rate</strong> indicating the win rate if a card is played from the starting hand, played when not in starting hand, or never played.</p>
 <p>I infer that impact of the played cards will effect the success of the game. I’ll update the DAG to reflect this.</p>
 <div id="cell-6" class="cell" data-execution_count="46">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add success node</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>dot.node(name<span class="op">=</span><span class="st">'S'</span>, label<span class="op">=</span><span class="st">'Success'</span>, shape<span class="op">=</span><span class="st">'oval'</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define edges for fields and relationships</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'I'</span>, head_name<span class="op">=</span><span class="st">'S'</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Render and display the graph in Jupyter Notebook</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>Image(dot.render(filename<span class="op">=</span><span class="st">'../../images/dags/dags'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>, cleanup<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="46">
 <div>
 <figure class="figure">
@@ -197,17 +215,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="card-attributes" class="level2">
-<h2 class="anchored" data-anchor-id="card-attributes">Card Attributes</h2>
+<section id="card-attributes" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="card-attributes"><span class="header-section-number">2.3</span> Card Attributes</h2>
 <p>A card’s attributes are the aspect of the card that affect playability. I will only include items that directly affect a card’s impact.</p>
 <p>Attributes affecting Impact: - <strong>Mana Cost</strong> - <strong>Card Type</strong> - (creature, instant, etc.) - <strong>Power/Toughness</strong> - <strong>Keywords</strong> - <strong>Text Description</strong></p>
 <p>A lot of attributes do not affect a card’s impact, but are used as proxies for impact.</p>
 <p>Proxy Attributes: - <strong>Rarity</strong> - While the rarity itself does not affect a card’s impact, more rare cards often correlate with higher card impact. But changing or removing the rarity symbol on a card would have no mechanical affect. - <strong>Card Name</strong> - perhaps a bit philosophical, the name itself does not affect a card’s impact. One can have mechanically equivalent cards with different names (<em>“…a black lotus by any other name…”</em>). - <strong>Set</strong> - often used as a proxy, as some sets are seen as more powerful that others. - <strong>Variant Art</strong> - affects collectablity and price, but not gameplay.</p>
 <p>The DAG is updated to show how attributes affect impact.</p>
 <div id="cell-9" class="cell" data-execution_count="47">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dot.node(name<span class="op">=</span><span class="st">'A'</span>, label<span class="op">=</span><span class="st">'Attributes'</span>, shape<span class="op">=</span><span class="st">'oval'</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'A'</span>, head_name<span class="op">=</span><span class="st">'I'</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Image(dot.render(filename<span class="op">=</span><span class="st">'../../images/dags/dags'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>, cleanup<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="47">
 <div>
 <figure class="figure">
@@ -217,15 +232,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="context-within-deck-composition" class="level2">
-<h2 class="anchored" data-anchor-id="context-within-deck-composition">Context within Deck Composition</h2>
+<section id="context-within-deck-composition" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="context-within-deck-composition"><span class="header-section-number">2.4</span> Context within Deck Composition</h2>
 <p>If a card interacts well with the other cards in it’s deck, that will increase the card’s impact in a game.</p>
 <p>An obvious example of this interaction is the problem of adding a mythic rare green card will to a deck without green mana. This card will not be playable and it will act as dead-weight in the deck. This card would have negative impact on game success.</p>
 <p>Conversely, a card that adds bonuses to tokens in a deck with lots of token generation would have a large positive impact. Below I update the DAG to reflect this relationship.</p>
 <div id="cell-11" class="cell" data-execution_count="48">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dot.node(name<span class="op">=</span><span class="st">'D'</span>, label<span class="op">=</span><span class="st">'Deck'</span>, shape<span class="op">=</span><span class="st">'oval'</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'D'</span>, head_name<span class="op">=</span><span class="st">'I'</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Image(dot.render(filename<span class="op">=</span><span class="st">'../../images/dags/dags'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>, cleanup<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="48">
 <div>
 <figure class="figure">
@@ -235,16 +247,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="player-skill" class="level2">
-<h2 class="anchored" data-anchor-id="player-skill">Player Skill</h2>
+<section id="player-skill" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="player-skill"><span class="header-section-number">2.5</span> Player Skill</h2>
 <p>A card’s impact is situational, with a highly skill player will using a card in ways to maximize this impact. This can be done in drafting, deck building, and gameplay.</p>
 <p>A low skilled player with high impact cards could have game success equal to a high skilled player with low impact cards. Increasing both skill and impact should increase success.</p>
 <p>Since a player’s skill can affect both deck composition and situational card impact, the DAG is updated accordingly. We can’t directly observe a player’s skill, so it is indicated as a latent variable.</p>
 <div id="cell-13" class="cell" data-execution_count="49">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dot.node(name<span class="op">=</span><span class="st">'P'</span>, label<span class="op">=</span><span class="st">'Player'</span>, shape<span class="op">=</span><span class="st">'oval'</span>, style<span class="op">=</span><span class="st">'dashed'</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'P'</span>, head_name<span class="op">=</span><span class="st">'I'</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'P'</span>, head_name<span class="op">=</span><span class="st">'D'</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>Image(dot.render(filename<span class="op">=</span><span class="st">'../../images/dags/dags'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>, cleanup<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="49">
 <div>
 <figure class="figure">
@@ -254,17 +262,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="board-state" class="level2">
-<h2 class="anchored" data-anchor-id="board-state">Board State</h2>
+<section id="board-state" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="board-state"><span class="header-section-number">2.6</span> Board State</h2>
 <p>The board state also affects a card’s impact. A card that gives bonuses to all tokens in play has much higher impact when the player has many tokens in play.</p>
 <p>The board state can be both permanent resources (creatures, life, cards in hand) and temporary resources (untapped lands, untapped creatures).</p>
 <p>The current board state affects a card’s impact. The card can then affect the future board state. This results in a causal loop that isn’t well suited for the DAG approach, so I will only consider the current board state on card impact.</p>
 <p>A player’s skill also affects the board state, with skilled players building states that better favor cards to be played.</p>
 <div id="cell-15" class="cell" data-execution_count="50">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>dot.node(name<span class="op">=</span><span class="st">'B'</span>, label<span class="op">=</span><span class="st">'Board State'</span>, shape<span class="op">=</span><span class="st">'oval'</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'B'</span>, head_name<span class="op">=</span><span class="st">'I'</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'P'</span>, head_name<span class="op">=</span><span class="st">'B'</span>)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>Image(dot.render(filename<span class="op">=</span><span class="st">'../../images/dags/dags'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>, cleanup<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="50">
 <div>
 <figure class="figure">
@@ -274,13 +278,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="opponents" class="level2">
-<h2 class="anchored" data-anchor-id="opponents">Opponents</h2>
+<section id="opponents" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="opponents"><span class="header-section-number">2.7</span> Opponents</h2>
 <p>Since this is a competitive game, the <strong>opponent</strong> will also affect the current board state. Factors such as the opponent’s skill and deck composition will impact the state of the board. An <strong>opponent</strong> has latent attributes, such as skill.</p>
 <div id="cell-17" class="cell" data-execution_count="51">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dot.node(name<span class="op">=</span><span class="st">'O'</span>, label<span class="op">=</span><span class="st">'Opponent'</span>, shape<span class="op">=</span><span class="st">'oval'</span>, style<span class="op">=</span><span class="st">'dashed'</span>)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'O'</span>, head_name<span class="op">=</span><span class="st">'B'</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>Image(dot.render(filename<span class="op">=</span><span class="st">'../../images/dags/dags'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>, cleanup<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="51">
 <div>
 <figure class="figure">
@@ -290,23 +291,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<section id="conclusion" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="conclusion"><span class="header-section-number">2.8</span> Conclusion</h2>
 <p>We can see above that a lot of factors affect a card’s impact on gameplay success. The card’s attributes, the deck composition, and board state are all observable, so we will build models that account for this. Conversely, the player’s skill and the opponent’s skill and deck are unobserved, and will be more challenging to model.</p>
 <p>The first step will to do some <a href="../10-wrangle+eda">exploratory data analysis</a>. I will then develop some models to explore these causal relationship and infer the latent variables, such as card impact and player skill.</p>
 <hr>
 </section>
 </section>
-<section id="secondary-market-card-value" class="level1">
-<h1>Secondary Market Card Value</h1>
+<section id="secondary-market-card-value" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Secondary Market Card Value</h1>
 <p>In a separate analysis, I will explore the economic causal relationships in the secondary market for card singles.</p>
 <p>I assume there is some relationship between a card’s <strong>impact</strong> in gameplay and the card’s <strong>value</strong> on the secondary market. Below is a DAG with both nodes added. We can observe price, but not card impact.</p>
 <div id="cell-20" class="cell" data-execution_count="52">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>dot <span class="op">=</span> Digraph(comment<span class="op">=</span><span class="st">'Card Value'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>dot.attr(rankdir<span class="op">=</span><span class="st">'LR'</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>dot.node(name<span class="op">=</span><span class="st">'I'</span>, label<span class="op">=</span><span class="st">'Impact'</span>, shape<span class="op">=</span><span class="st">'oval'</span>, style<span class="op">=</span><span class="st">'dashed'</span>)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>dot.node(name<span class="op">=</span><span class="st">'V'</span>, label<span class="op">=</span><span class="st">'Value'</span>, shape<span class="op">=</span><span class="st">'oval'</span>)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>Image(dot.render(filename<span class="op">=</span><span class="st">'../../images/dags/dags'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>, cleanup<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="52">
 <div>
 <figure class="figure">
@@ -315,18 +311,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<section id="supply-and-demand" class="level2">
-<h2 class="anchored" data-anchor-id="supply-and-demand">Supply and Demand</h2>
+<section id="supply-and-demand" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="supply-and-demand"><span class="header-section-number">3.1</span> Supply and Demand</h2>
 <p>The conventional wisdom in economics is that <strong>demand</strong> pressure to acquire the card will positively affect price. Conversely, increased <strong>supply</strong> of a card for a fixed demand will drive down price.</p>
 <p>Both supply and demand are unobserved phenomenon.</p>
 <p>A card’s impact in gameplay will affect demand. Higher impact cards will typically be in higher demand.</p>
 <div id="cell-22" class="cell" data-execution_count="53">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dot.node(name<span class="op">=</span><span class="st">'S'</span>, label<span class="op">=</span><span class="st">'Supply'</span>, shape<span class="op">=</span><span class="st">'oval'</span>, style<span class="op">=</span><span class="st">'dashed'</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>dot.node(name<span class="op">=</span><span class="st">'D'</span>, label<span class="op">=</span><span class="st">'Demand'</span>, shape<span class="op">=</span><span class="st">'oval'</span>, style<span class="op">=</span><span class="st">'dashed'</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'I'</span>, head_name<span class="op">=</span><span class="st">'D'</span>)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'S'</span>, head_name<span class="op">=</span><span class="st">'V'</span>)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'D'</span>, head_name<span class="op">=</span><span class="st">'V'</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>Image(dot.render(filename<span class="op">=</span><span class="st">'../../images/dags/dags'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>, cleanup<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="53">
 <div>
 <figure class="figure">
@@ -336,16 +326,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="print-supply" class="level2">
-<h2 class="anchored" data-anchor-id="print-supply">Print Supply</h2>
+<section id="print-supply" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="print-supply"><span class="header-section-number">3.2</span> Print Supply</h2>
 <p>How does a card’s <strong>rarity</strong> work in this DAG? In the context of a given set, we know high rarity cards are printed less.</p>
 <p><strong>Reprints</strong> of a card in new sets will increase supply.</p>
 <p>Across sets, we will assume that more rare cards will be reprinted less frequently. This assumption should be tested.</p>
 <p>Both rarity and reprints can be combined into a card’s <strong>print quantity</strong>, which is the primary market supply controlled by WOTC.</p>
 <div id="cell-25" class="cell" data-execution_count="54">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dot.node(name<span class="op">=</span><span class="st">'P'</span>, label<span class="op">=</span><span class="st">'Print Quantity'</span>, shape<span class="op">=</span><span class="st">'oval'</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'P'</span>, head_name<span class="op">=</span><span class="st">'S'</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>Image(dot.render(filename<span class="op">=</span><span class="st">'../../images/dags/dags'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>, cleanup<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="54">
 <div>
 <figure class="figure">
@@ -355,16 +342,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="market-hype" class="level2">
-<h2 class="anchored" data-anchor-id="market-hype">Market Hype</h2>
+<section id="market-hype" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="market-hype"><span class="header-section-number">3.3</span> Market Hype</h2>
 <p>There is also a element of market <strong>hype</strong> that impacts the supply and demand of card. This can be from the card’s use in a high-profile tournament, popularity with collectors of an alternate art piece, or financial market bear and bull feedback.</p>
 <p>Regardless of the source, a given card value may be misaligned from it’s gameplay impact and primary print supply.</p>
 <p>Hype is also a latent variable.</p>
 <div id="cell-27" class="cell" data-execution_count="55">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>dot.node(name<span class="op">=</span><span class="st">'H'</span>, label<span class="op">=</span><span class="st">'Hype'</span>, shape<span class="op">=</span><span class="st">'oval'</span>, style<span class="op">=</span><span class="st">'dashed'</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'H'</span>, head_name<span class="op">=</span><span class="st">'D'</span>)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>dot.edge(tail_name<span class="op">=</span><span class="st">'H'</span>, head_name<span class="op">=</span><span class="st">'S'</span>)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>Image(dot.render(filename<span class="op">=</span><span class="st">'../../images/dags/dags'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>, cleanup<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="55">
 <div>
 <figure class="figure">
@@ -374,8 +357,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="conclusion-1" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion-1">Conclusion</h2>
+<section id="conclusion-1" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="conclusion-1"><span class="header-section-number">3.4</span> Conclusion</h2>
 <p>As can be seen above, secondary market demand and supply, card gameplay impact, and market hype are all unobserved. This one reason financial markets are so hard to model.</p>
 <p>The print quantity of a given card is proprietary information, with data on number of card sheet printings and booster pack composition not public data. We can infer this information by estimating card sheet composition, booster deck composition, and retail sales quantities.</p>
 <p>Finally, all of these factors vary as a function of time. Reprintings, hype, and value will change over time, as we well know. Even the card’s impact on gameplay will change as new sets are released and old ones are phased out of formats such as Standard.</p>
@@ -386,6 +369,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 
 </main> <!-- /main -->
+<footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">
+    © <span id="current-year"></span> Joshua Meehl. All rights reserved. This website is unofficial Fan Content permitted under the Fan Content Policy of Wizards of the Coast. It is not
+    sponsored, endorsed, or affiliated with Wizards of the Coast.
+</footer>
+<script>
+    const baseYear = 2024;
+    const currentYear = new Date().getFullYear();
+    const displayYear = currentYear > baseYear ? `${baseYear}-${currentYear}` : `${baseYear}`;
+    document.getElementById('current-year').textContent = displayYear;
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

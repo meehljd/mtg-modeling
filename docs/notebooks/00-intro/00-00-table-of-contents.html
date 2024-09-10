@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Table of Contents</title>
+<title>Table of Contents – The Data Mage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,44 +20,11 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
@@ -73,11 +40,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -103,14 +70,63 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">The Data Mage</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">Home</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+<span class="menu-text">About</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../notebooks\02-draft-data\02-00-draft-data-intro.html"> 
+<span class="menu-text">Set Analysis</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/meehljd/mtg-modeling"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/meehl/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -145,10 +161,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>01 MTGJSON DATA</strong>
 <ul>
 <li>01 00 <a href="../../notebooks/01-mtgjson-data/01-00-mtgjson-data-intro.html">MTGJSON DATA INTRO</a>: An introduction to the <a href="https://mtgjson.com/">MTGJSON</a> card data, including reviewing the data files and column features.</li>
-<li>01 10! <a href="../01-mtgjson-data/01-10!-legacy-query.ipynb">LEGACY QUERY</a></li>
-<li>01 10 <a href="../01-mtgjson-data/01-10-get-card-data.ipynb">GET CARD DATA</a>: The code to acquire and pre-process the data to use for future analysis.</li>
-<li>01 20! <a href="../01-mtgjson-data/01-20!-wrangle-joins.ipynb">WRANGLE JOINS</a></li>
-<li>01 20 <a href="../../notebooks/01-mtgjson-data/01-20-card-data-wrangle.html">CARD DATA WRANGLE</a>: The code to wrangle the data. Deal with NAs, join data frames, etc.</li>
+<li>01 10 <a href="../../notebooks/01-mtgjson-data/01-10-get-data.html">GET DATA</a>: The code to acquire and pre-process the card data to use for future analysis.</li>
+<li>01 20 <a href="../../notebooks/01-mtgjson-data/01-20-card-data-wrangle.html">CARD DATA WRANGLE</a>: Wrangle the all card data. Joins set data as well. Then selects Standard Legal cards and other interesting data sets.</li>
+<li>01 21 <a href="../../notebooks/01-mtgjson-data/01-21-booster-data-wrangle.html">BOOSTER DATA WRANGLE</a>: Wrangle the booster set data.</li>
+<li>01 22 <a href="../../notebooks/01-mtgjson-data/01-22-price-data-wrangle.html">PRICE DATA WRANGLE</a>: The code to acquire and pre-process the all price data to use for future analysis.</li>
 <li>01 30 <a href="../../notebooks/01-mtgjson-data/01-30-card-features-eda.html">CARD FEATURES EDA</a>: Exploratory data analysis of basic card features (e.g.&nbsp;power and toughness)</li>
 </ul></li>
 <li><strong>02 DRAFT DATA</strong>
@@ -156,20 +172,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>02 00 <a href="../../notebooks/02-draft-data/02-00-draft-data-intro.html">DRAFT DATA INTRO</a>: An introduction to the <a href="https://www.17lands.com/">17lands</a> draft gameplay data, including reviewing the data files and column features.</li>
 <li>02 10 <a href="../../notebooks/02-draft-data/02-10-get-draft-data.html">GET DRAFT DATA</a>: The code to acquire and pre-process the data to use for future analysis.</li>
 <li>02 20 <a href="../../notebooks/02-draft-data/02-20-draft-data-wrangle.html">DRAFT DATA WRANGLE</a>: The code to wrangle the data. Deal with NAs, join data frames, etc.</li>
-<li>02 30 <a href="../02-draft-data/02-30-draft-eda.ipynb">DRAFT EDA</a>: Exploratory data analysis of draft data (e.g.&nbsp;win rates)</li>
+<li>02 30 <a href="../../notebooks/02-draft-data/02-30-draft-eda-BLB-games.html">DRAFT EDA BLB GAMES</a></li>
+<li>02 31 <a href="../../notebooks/02-draft-data/02-31-draft-eda-OTJ-games.html">DRAFT EDA OTJ GAMES</a></li>
+<li>02 40 <a href="../../notebooks/02-draft-data/02-40-draft-card-eda-BLB.html">DRAFT CARD EDA BLB</a></li>
 </ul></li>
 <li><strong>03 NETWORK DATA</strong>
 <ul>
 <li>03 XX <a href="../../notebooks/03-network-data/03-XX-wrangle-network.html">WRANGLE NETWORK</a>: Create the card-deck network data.</li>
 </ul></li>
 </ul>
-<div id="cell-2" class="cell" data-execution="{&quot;iopub.execute_input&quot;:&quot;2024-08-19T04:30:23.123827Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-08-19T04:30:23.123567Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-08-19T04:30:23.126560Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-08-19T04:30:23.126070Z&quot;}" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 
 
 
 </main> <!-- /main -->
+<footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">
+    © <span id="current-year"></span> Joshua Meehl. All rights reserved. This website is unofficial Fan Content permitted under the Fan Content Policy of Wizards of the Coast. It is not
+    sponsored, endorsed, or affiliated with Wizards of the Coast.
+</footer>
+<script>
+    const baseYear = 2024;
+    const currentYear = new Date().getFullYear();
+    const displayYear = currentYear > baseYear ? `${baseYear}-${currentYear}` : `${baseYear}`;
+    document.getElementById('current-year').textContent = displayYear;
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

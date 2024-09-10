@@ -101,9 +101,8 @@ ul.task-list li input[type="checkbox"] {
     </span>
   </li>  
   <li class="nav-item">
-    <span class="nav-link">
-<span class="menu-text">Set Analysis</span>
-    </span>
+    <a class="nav-link" href="../../notebooks\02-draft-data\02-00-draft-data-intro.html"> 
+<span class="menu-text">Set Analysis</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -187,11 +186,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>Define Paths</p>
 <p>Convert the csv file to parquet if needed.</p>
+<div id="cell-9" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-stdout">
+<pre><code>Converted data\raw\17lands\game_data\PremierDraft\game_data_public.OTJ.PremierDraft.csv to parquet</code></pre>
+</div>
+</div>
 <p>Scan file into a lazy frame.</p>
 <p>Parse column names, such as the card name and the card state.</p>
 <div id="cell-13" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>(1380, 1355, 25)</code></pre>
+<pre><code>(1905, 1880, 25)</code></pre>
 </div>
 </div>
 <p>Check for extra underscores in card names.</p>
@@ -205,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
   white-space: pre-wrap;
 }
 </style>
-<small>shape: (2, 20)</small>
+<small>shape: (1, 20)</small>
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
@@ -240,7 +244,7 @@ ul.task-list li input[type="checkbox"] {
 <th>i64</th>
 <th>i64</th>
 <th>str</th>
-<th>str</th>
+<th>f64</th>
 <th>str</th>
 <th>str</th>
 <th>bool</th>
@@ -255,48 +259,26 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>"BLB"</td>
+<td>"OTJ"</td>
 <td>"PremierDraft"</td>
-<td>"19e2e5ee33d84b01888f4215aeff9c…</td>
-<td>"2024-08-01 22:14:29"</td>
-<td>"2024-08-02 15:37:05"</td>
-<td>0</td>
-<td>7</td>
-<td>2</td>
-<td>"platinum"</td>
-<td>"None"</td>
-<td>"BR"</td>
-<td>null</td>
-<td>true</td>
-<td>0</td>
-<td>0</td>
-<td>"UG"</td>
-<td>13</td>
-<td>true</td>
-<td>100</td>
-<td>0.56</td>
-</tr>
-<tr class="even">
-<td>"BLB"</td>
-<td>"PremierDraft"</td>
-<td>"dd424f45c9fb44f2929aa0e6d900ed…</td>
-<td>"2024-08-06 21:03:27"</td>
-<td>"2024-08-07 23:03:23"</td>
-<td>0</td>
+<td>"2324bdf9a7c34d70b970ad50c359b1…</td>
+<td>"2024-05-25 08:26:14"</td>
+<td>"2024-05-25 19:51:42"</td>
+<td>1</td>
 <td>6</td>
 <td>2</td>
 <td>"platinum"</td>
-<td>"None"</td>
-<td>"UG"</td>
 <td>null</td>
+<td>"UBR"</td>
+<td>"G"</td>
 <td>false</td>
 <td>0</td>
-<td>1</td>
+<td>0</td>
 <td>"UB"</td>
-<td>7</td>
+<td>8</td>
 <td>false</td>
 <td>100</td>
-<td>0.56</td>
+<td>0.46</td>
 </tr>
 </tbody>
 </table>
@@ -352,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
 <th>i64</th>
 <th>i64</th>
 <th>str</th>
-<th>str</th>
+<th>f64</th>
 <th>str</th>
 <th>str</th>
 <th>bool</th>
@@ -367,48 +349,48 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>"BLB"</td>
+<td>"OTJ"</td>
 <td>"PremierDraft"</td>
-<td>"deaa4cdcd3e84d8e8b5a0ea34a0f9d…</td>
-<td>2024-07-30 22:30:39</td>
-<td>2024-07-30 22:58:45</td>
+<td>"a067b94d44374400842c97a6e684b5…</td>
+<td>2024-04-16 16:55:03</td>
+<td>2024-04-16 17:21:22</td>
 <td>0</td>
 <td>1</td>
 <td>1</td>
-<td>"gold"</td>
-<td>"None"</td>
-<td>"BG"</td>
-<td>"WR"</td>
-<td>true</td>
+<td>"bronze"</td>
+<td>null</td>
+<td>"WU"</td>
+<td>"B"</td>
+<td>false</td>
 <td>0</td>
 <td>1</td>
-<td>"RG"</td>
-<td>5</td>
+<td>"U"</td>
+<td>9</td>
 <td>true</td>
-<td>10</td>
-<td>0.54</td>
+<td>50</td>
+<td>0.58</td>
 </tr>
 <tr class="even">
-<td>"BLB"</td>
+<td>"OTJ"</td>
 <td>"PremierDraft"</td>
-<td>"deaa4cdcd3e84d8e8b5a0ea34a0f9d…</td>
-<td>2024-07-30 22:30:39</td>
-<td>2024-07-30 23:13:12</td>
+<td>"a067b94d44374400842c97a6e684b5…</td>
+<td>2024-04-16 16:55:03</td>
+<td>2024-04-16 17:37:41</td>
 <td>0</td>
 <td>2</td>
 <td>1</td>
-<td>"gold"</td>
-<td>"None"</td>
-<td>"BG"</td>
-<td>"WR"</td>
+<td>"bronze"</td>
+<td>null</td>
+<td>"WU"</td>
+<td>"B"</td>
 <td>true</td>
 <td>0</td>
 <td>0</td>
-<td>"WG"</td>
-<td>10</td>
+<td>"BR"</td>
+<td>11</td>
 <td>true</td>
-<td>10</td>
-<td>0.54</td>
+<td>50</td>
+<td>0.58</td>
 </tr>
 </tbody>
 </table>
@@ -460,7 +442,7 @@ ul.task-list li input[type="checkbox"] {
 <th>u32</th>
 <th>f64</th>
 <th>str</th>
-<th>str</th>
+<th>f64</th>
 <th>str</th>
 <th>str</th>
 <th>str</th>
@@ -476,109 +458,109 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>"25f0adf414204fd69cc93a361eca42…</td>
-<td>2</td>
+<td>"ded9a34cda89457284b5adbd384e1b…</td>
+<td>0</td>
+<td>8</td>
+<td>8</td>
+<td>5</td>
+<td>0.625</td>
+<td>"diamond"</td>
+<td>null</td>
+<td>"URG"</td>
+<td>"WBR"</td>
+<td>"B"</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>7.75</td>
+<td>2024-04-19 22:36:54</td>
+<td>2024-04-19 23:03:57</td>
+<td>2024-04-20 04:35:10</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>"2603abb8bf9c49919fefe57011b6fa…</td>
+<td>1</td>
+<td>6</td>
+<td>6</td>
+<td>3</td>
+<td>0.5</td>
+<td>"gold"</td>
+<td>null</td>
+<td>"UB"</td>
+<td>"WUG"</td>
+<td>"RG"</td>
+<td>3</td>
+<td>1</td>
+<td>3</td>
+<td>8.833333</td>
+<td>2024-04-29 10:30:21</td>
+<td>2024-04-29 10:55:07</td>
+<td>2024-04-29 13:03:15</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>"b931aaa00d7e418288a6ce6dae0c90…</td>
+<td>0</td>
 <td>4</td>
 <td>4</td>
 <td>1</td>
 <td>0.25</td>
-<td>"gold"</td>
-<td>"None"</td>
-<td>"BR"</td>
-<td>"WB"</td>
-<td>"UG"</td>
-<td>3</td>
-<td>0</td>
-<td>1</td>
-<td>10.75</td>
-<td>2024-08-05 17:25:06</td>
-<td>2024-08-05 17:52:05</td>
-<td>2024-08-05 18:36:03</td>
-<td>3</td>
-</tr>
-<tr class="even">
-<td>"8a90660af4104999bc39382bbc6e3a…</td>
-<td>0</td>
-<td>9</td>
-<td>9</td>
-<td>6</td>
-<td>0.666667</td>
-<td>"mythic"</td>
-<td>"None"</td>
-<td>"BG"</td>
-<td>"BG"</td>
-<td>null</td>
-<td>4</td>
-<td>2</td>
-<td>0</td>
-<td>9.222222</td>
-<td>2024-08-14 20:59:54</td>
-<td>2024-08-14 21:30:38</td>
-<td>2024-08-14 22:55:21</td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>"1bbbf35893c14dc7bdc1feb1f2c330…</td>
-<td>0</td>
-<td>5</td>
-<td>5</td>
-<td>2</td>
-<td>0.4</td>
 <td>"platinum"</td>
-<td>"None"</td>
-<td>"WR"</td>
-<td>"UB"</td>
-<td>"G"</td>
-<td>5</td>
+<td>null</td>
+<td>"BG"</td>
+<td>"WBRG"</td>
+<td>null</td>
+<td>2</td>
 <td>1</td>
-<td>1</td>
-<td>10.4</td>
-<td>2024-08-14 02:43:40</td>
-<td>2024-08-14 03:02:41</td>
-<td>2024-08-14 03:45:41</td>
+<td>0</td>
+<td>8.75</td>
+<td>2024-04-21 11:40:12</td>
+<td>2024-04-21 12:00:49</td>
+<td>2024-04-21 16:20:01</td>
 <td>3</td>
 </tr>
 <tr class="even">
-<td>"43d91ca15020407db217609ad000d7…</td>
+<td>"8bf53792894d49b5b1ac2db9bb12d3…</td>
 <td>0</td>
 <td>6</td>
 <td>6</td>
 <td>3</td>
 <td>0.5</td>
-<td>"diamond"</td>
-<td>"None"</td>
-<td>"RG"</td>
-<td>"WU"</td>
+<td>"platinum"</td>
 <td>null</td>
-<td>5</td>
-<td>2</td>
+<td>"UR"</td>
+<td>"BR"</td>
+<td>"BG"</td>
+<td>4</td>
 <td>0</td>
-<td>9.166667</td>
-<td>2024-08-07 11:38:29</td>
-<td>2024-08-07 12:07:52</td>
-<td>2024-08-07 13:02:34</td>
+<td>1</td>
+<td>7.833333</td>
+<td>2024-04-25 05:20:00</td>
+<td>2024-04-25 05:45:10</td>
+<td>2024-04-25 06:29:02</td>
 <td>3</td>
 </tr>
 <tr class="odd">
-<td>"0e838dcb611e45aa8cb08ed5595223…</td>
+<td>"46357dffe9ff40cb94342770fb6d16…</td>
 <td>0</td>
-<td>5</td>
-<td>5</td>
+<td>7</td>
+<td>7</td>
 <td>4</td>
-<td>0.8</td>
+<td>0.571429</td>
 <td>"platinum"</td>
-<td>"None"</td>
-<td>"BG"</td>
-<td>"UR"</td>
 <td>null</td>
-<td>2</td>
+<td>"WB"</td>
+<td>"UBR"</td>
+<td>"G"</td>
+<td>3</td>
+<td>4</td>
 <td>0</td>
-<td>0</td>
-<td>9.2</td>
-<td>2024-08-04 20:09:27</td>
-<td>2024-08-04 20:39:22</td>
-<td>2024-08-04 21:13:01</td>
-<td>1</td>
+<td>9.428571</td>
+<td>2024-05-13 21:32:55</td>
+<td>2024-05-13 21:59:14</td>
+<td>2024-05-13 22:46:09</td>
+<td>3</td>
 </tr>
 </tbody>
 </table>
@@ -597,7 +579,7 @@ ul.task-list li input[type="checkbox"] {
   white-space: pre-wrap;
 }
 </style>
-<small>shape: (5, 1_384)</small>
+<small>shape: (5, 1_909)</small>
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
@@ -630,52 +612,52 @@ ul.task-list li input[type="checkbox"] {
 <th data-quarto-table-cell-role="th">tutored_Swamp</th>
 <th data-quarto-table-cell-role="th">deck_Swamp</th>
 <th data-quarto-table-cell-role="th">sideboard_Swamp</th>
-<th data-quarto-table-cell-role="th">opening_hand_Agate Assault</th>
-<th data-quarto-table-cell-role="th">drawn_Agate Assault</th>
-<th data-quarto-table-cell-role="th">tutored_Agate Assault</th>
-<th data-quarto-table-cell-role="th">deck_Agate Assault</th>
-<th data-quarto-table-cell-role="th">sideboard_Agate Assault</th>
-<th data-quarto-table-cell-role="th">opening_hand_Agate-Blade Assassin</th>
-<th data-quarto-table-cell-role="th">drawn_Agate-Blade Assassin</th>
-<th data-quarto-table-cell-role="th">tutored_Agate-Blade Assassin</th>
+<th data-quarto-table-cell-role="th">opening_hand_Abraded Bluffs</th>
+<th data-quarto-table-cell-role="th">drawn_Abraded Bluffs</th>
+<th data-quarto-table-cell-role="th">tutored_Abraded Bluffs</th>
+<th data-quarto-table-cell-role="th">deck_Abraded Bluffs</th>
+<th data-quarto-table-cell-role="th">sideboard_Abraded Bluffs</th>
+<th data-quarto-table-cell-role="th">opening_hand_Abrupt Decay</th>
+<th data-quarto-table-cell-role="th">drawn_Abrupt Decay</th>
+<th data-quarto-table-cell-role="th">tutored_Abrupt Decay</th>
 <th data-quarto-table-cell-role="th">…</th>
-<th data-quarto-table-cell-role="th">deck_Whiskerquill Scribe</th>
-<th data-quarto-table-cell-role="th">sideboard_Whiskerquill Scribe</th>
-<th data-quarto-table-cell-role="th">opening_hand_Whiskervale Forerunner</th>
-<th data-quarto-table-cell-role="th">drawn_Whiskervale Forerunner</th>
-<th data-quarto-table-cell-role="th">tutored_Whiskervale Forerunner</th>
-<th data-quarto-table-cell-role="th">deck_Whiskervale Forerunner</th>
-<th data-quarto-table-cell-role="th">sideboard_Whiskervale Forerunner</th>
-<th data-quarto-table-cell-role="th">opening_hand_Wick's Patrol</th>
-<th data-quarto-table-cell-role="th">drawn_Wick's Patrol</th>
-<th data-quarto-table-cell-role="th">tutored_Wick's Patrol</th>
-<th data-quarto-table-cell-role="th">deck_Wick's Patrol</th>
-<th data-quarto-table-cell-role="th">sideboard_Wick's Patrol</th>
-<th data-quarto-table-cell-role="th">opening_hand_Wick, the Whorled Mind</th>
-<th data-quarto-table-cell-role="th">drawn_Wick, the Whorled Mind</th>
-<th data-quarto-table-cell-role="th">tutored_Wick, the Whorled Mind</th>
-<th data-quarto-table-cell-role="th">deck_Wick, the Whorled Mind</th>
-<th data-quarto-table-cell-role="th">sideboard_Wick, the Whorled Mind</th>
-<th data-quarto-table-cell-role="th">opening_hand_Wildfire Howl</th>
-<th data-quarto-table-cell-role="th">drawn_Wildfire Howl</th>
-<th data-quarto-table-cell-role="th">tutored_Wildfire Howl</th>
-<th data-quarto-table-cell-role="th">deck_Wildfire Howl</th>
-<th data-quarto-table-cell-role="th">sideboard_Wildfire Howl</th>
-<th data-quarto-table-cell-role="th">opening_hand_Wishing Well</th>
-<th data-quarto-table-cell-role="th">drawn_Wishing Well</th>
-<th data-quarto-table-cell-role="th">tutored_Wishing Well</th>
-<th data-quarto-table-cell-role="th">deck_Wishing Well</th>
-<th data-quarto-table-cell-role="th">sideboard_Wishing Well</th>
-<th data-quarto-table-cell-role="th">opening_hand_Ygra, Eater of All</th>
-<th data-quarto-table-cell-role="th">drawn_Ygra, Eater of All</th>
-<th data-quarto-table-cell-role="th">tutored_Ygra, Eater of All</th>
-<th data-quarto-table-cell-role="th">deck_Ygra, Eater of All</th>
-<th data-quarto-table-cell-role="th">sideboard_Ygra, Eater of All</th>
-<th data-quarto-table-cell-role="th">opening_hand_Zoraline, Cosmos Caller</th>
-<th data-quarto-table-cell-role="th">drawn_Zoraline, Cosmos Caller</th>
-<th data-quarto-table-cell-role="th">tutored_Zoraline, Cosmos Caller</th>
-<th data-quarto-table-cell-role="th">deck_Zoraline, Cosmos Caller</th>
-<th data-quarto-table-cell-role="th">sideboard_Zoraline, Cosmos Caller</th>
+<th data-quarto-table-cell-role="th">deck_Voidslime</th>
+<th data-quarto-table-cell-role="th">sideboard_Voidslime</th>
+<th data-quarto-table-cell-role="th">opening_hand_Voracious Varmint</th>
+<th data-quarto-table-cell-role="th">drawn_Voracious Varmint</th>
+<th data-quarto-table-cell-role="th">tutored_Voracious Varmint</th>
+<th data-quarto-table-cell-role="th">deck_Voracious Varmint</th>
+<th data-quarto-table-cell-role="th">sideboard_Voracious Varmint</th>
+<th data-quarto-table-cell-role="th">opening_hand_Vraska Joins Up</th>
+<th data-quarto-table-cell-role="th">drawn_Vraska Joins Up</th>
+<th data-quarto-table-cell-role="th">tutored_Vraska Joins Up</th>
+<th data-quarto-table-cell-role="th">deck_Vraska Joins Up</th>
+<th data-quarto-table-cell-role="th">sideboard_Vraska Joins Up</th>
+<th data-quarto-table-cell-role="th">opening_hand_Vraska, the Silencer</th>
+<th data-quarto-table-cell-role="th">drawn_Vraska, the Silencer</th>
+<th data-quarto-table-cell-role="th">tutored_Vraska, the Silencer</th>
+<th data-quarto-table-cell-role="th">deck_Vraska, the Silencer</th>
+<th data-quarto-table-cell-role="th">sideboard_Vraska, the Silencer</th>
+<th data-quarto-table-cell-role="th">opening_hand_Wanted Griffin</th>
+<th data-quarto-table-cell-role="th">drawn_Wanted Griffin</th>
+<th data-quarto-table-cell-role="th">tutored_Wanted Griffin</th>
+<th data-quarto-table-cell-role="th">deck_Wanted Griffin</th>
+<th data-quarto-table-cell-role="th">sideboard_Wanted Griffin</th>
+<th data-quarto-table-cell-role="th">opening_hand_Worldwalker Helm</th>
+<th data-quarto-table-cell-role="th">drawn_Worldwalker Helm</th>
+<th data-quarto-table-cell-role="th">tutored_Worldwalker Helm</th>
+<th data-quarto-table-cell-role="th">deck_Worldwalker Helm</th>
+<th data-quarto-table-cell-role="th">sideboard_Worldwalker Helm</th>
+<th data-quarto-table-cell-role="th">opening_hand_Wrangler of the Damned</th>
+<th data-quarto-table-cell-role="th">drawn_Wrangler of the Damned</th>
+<th data-quarto-table-cell-role="th">tutored_Wrangler of the Damned</th>
+<th data-quarto-table-cell-role="th">deck_Wrangler of the Damned</th>
+<th data-quarto-table-cell-role="th">sideboard_Wrangler of the Damned</th>
+<th data-quarto-table-cell-role="th">opening_hand_Wylie Duke, Atiin Hero</th>
+<th data-quarto-table-cell-role="th">drawn_Wylie Duke, Atiin Hero</th>
+<th data-quarto-table-cell-role="th">tutored_Wylie Duke, Atiin Hero</th>
+<th data-quarto-table-cell-role="th">deck_Wylie Duke, Atiin Hero</th>
+<th data-quarto-table-cell-role="th">sideboard_Wylie Duke, Atiin Hero</th>
 </tr>
 <tr class="odd">
 <th>str</th>
@@ -757,34 +739,34 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>"deaa4cdcd3e84d8e8b5a0ea34a0f9d…</td>
+<td>"a067b94d44374400842c97a6e684b5…</td>
 <td>1</td>
 <td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 <td>0</td>
 <td>2</td>
-<td>1</td>
-<td>0</td>
-<td>9</td>
 <td>0</td>
 <td>0</td>
+<td>5</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>8</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -796,36 +778,36 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 <td>…</td>
 <td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 <td>1</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
+<td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -834,24 +816,19 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 </tr>
 <tr class="even">
-<td>"deaa4cdcd3e84d8e8b5a0ea34a0f9d…</td>
+<td>"a067b94d44374400842c97a6e684b5…</td>
 <td>2</td>
 <td>1</td>
 <td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
 <td>3</td>
-<td>1</td>
 <td>0</td>
-<td>9</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
+<td>6</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -861,7 +838,12 @@ ul.task-list li input[type="checkbox"] {
 <td>1</td>
 <td>1</td>
 <td>0</td>
-<td>8</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -873,7 +855,6 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 <td>…</td>
 <td>0</td>
-<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -900,9 +881,10 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>1</td>
 <td>0</td>
-<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -911,25 +893,9 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 </tr>
 <tr class="odd">
-<td>"deaa4cdcd3e84d8e8b5a0ea34a0f9d…</td>
+<td>"a067b94d44374400842c97a6e684b5…</td>
 <td>3</td>
 <td>1</td>
-<td>0</td>
-<td>2</td>
-<td>3</td>
-<td>0</td>
-<td>9</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -937,8 +903,24 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 <td>0</td>
 <td>1</td>
+<td>1</td>
 <td>0</td>
-<td>8</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>0</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -950,7 +932,6 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 <td>…</td>
 <td>0</td>
-<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -977,9 +958,10 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>1</td>
 <td>0</td>
 <td>1</td>
+<td>0</td>
+<td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -988,34 +970,34 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 </tr>
 <tr class="even">
-<td>"deaa4cdcd3e84d8e8b5a0ea34a0f9d…</td>
+<td>"a067b94d44374400842c97a6e684b5…</td>
 <td>4</td>
 <td>1</td>
 <td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 <td>1</td>
-<td>3</td>
+<td>1</td>
 <td>0</td>
-<td>9</td>
-<td>0</td>
-<td>0</td>
+<td>6</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>5</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>2</td>
-<td>2</td>
-<td>0</td>
-<td>8</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -1027,7 +1009,6 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 <td>…</td>
 <td>0</td>
-<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -1052,11 +1033,12 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>1</td>
 <td>0</td>
 <td>0</td>
 <td>1</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -1065,34 +1047,34 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 </tr>
 <tr class="odd">
-<td>"deaa4cdcd3e84d8e8b5a0ea34a0f9d…</td>
+<td>"a067b94d44374400842c97a6e684b5…</td>
 <td>5</td>
 <td>1</td>
 <td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
 <td>3</td>
-<td>2</td>
 <td>0</td>
-<td>9</td>
-<td>0</td>
+<td>5</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>2</td>
-<td>0</td>
-<td>8</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -1104,9 +1086,6 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 <td>…</td>
 <td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -1134,6 +1113,9 @@ ul.task-list li input[type="checkbox"] {
 <td>0</td>
 <td>0</td>
 <td>1</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -1158,7 +1140,7 @@ ul.task-list li input[type="checkbox"] {
   white-space: pre-wrap;
 }
 </style>
-<small>shape: (1, 20)</small>
+<small>shape: (1, 21)</small>
 <table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
@@ -1171,6 +1153,7 @@ ul.task-list li input[type="checkbox"] {
 <th data-quarto-table-cell-role="th">n_mul</th>
 <th data-quarto-table-cell-role="th">n_opp_mul</th>
 <th data-quarto-table-cell-role="th">mean_turns</th>
+<th data-quarto-table-cell-role="th">total_turns</th>
 <th data-quarto-table-cell-role="th">max_turns</th>
 <th data-quarto-table-cell-role="th">min_turns</th>
 <th data-quarto-table-cell-role="th">n_drafts</th>
@@ -1195,6 +1178,7 @@ ul.task-list li input[type="checkbox"] {
 <th>f64</th>
 <th>i64</th>
 <th>i64</th>
+<th>i64</th>
 <th>u32</th>
 <th>i64</th>
 <th>f64</th>
@@ -1208,26 +1192,27 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>2024-07-30 15:41:04</td>
-<td>2024-08-18 23:59:52</td>
+<td>2024-04-16 15:29:27</td>
+<td>2024-05-27 23:59:43</td>
 <td>2</td>
-<td>0.547108</td>
-<td>0.500285</td>
-<td>679966</td>
-<td>92172</td>
-<td>96719</td>
-<td>8.88899</td>
-<td>33</td>
+<td>0.541419</td>
+<td>0.500298</td>
+<td>1172393</td>
+<td>140631</td>
+<td>149323</td>
+<td>9.202935</td>
+<td>10789457</td>
+<td>32</td>
 <td>1</td>
-<td>116804</td>
-<td>680693</td>
-<td>5.827651</td>
-<td>5.821427</td>
-<td>276</td>
-<td>7</td>
-<td>22.164273</td>
-<td>37</td>
-<td>11</td>
+<td>202232</td>
+<td>1173550</td>
+<td>5.802989</td>
+<td>5.797267</td>
+<td>381</td>
+<td>8</td>
+<td>20.335398</td>
+<td>47</td>
+<td>5</td>
 </tr>
 </tbody>
 </table>
@@ -1240,23 +1225,14 @@ ul.task-list li input[type="checkbox"] {
 
 </main> <!-- /main -->
 <footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">
-
     © <span id="current-year"></span> Joshua Meehl. All rights reserved. This website is unofficial Fan Content permitted under the Fan Content Policy of Wizards of the Coast. It is not
-
     sponsored, endorsed, or affiliated with Wizards of the Coast.
-
 </footer>
-
 <script>
-
     const baseYear = 2024;
-
     const currentYear = new Date().getFullYear();
-
     const displayYear = currentYear > baseYear ? `${baseYear}-${currentYear}` : `${baseYear}`;
-
     document.getElementById('current-year').textContent = displayYear;
-
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

@@ -43,6 +43,3 @@ jupyter: python3
 link-citations: true
 code-fold: true
 share: true
-
-resources:
-  - CNAME

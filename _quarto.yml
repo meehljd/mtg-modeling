@@ -11,7 +11,7 @@ website:
       - text: "About"
         # href: about.qmd
       - text: "Set Analysis"
-        # href: projects.qmd
+        href: notebooks\02-draft-data\02-00-draft-data-intro.html
     right:
       - icon: github
         href: https://github.com/meehljd/mtg-modeling

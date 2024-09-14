@@ -94,7 +94,8 @@ def add_heatmap_symbols(scale=0.75):
     add_tick_symbols(orient="y", scale=scale)
     add_tick_symbols(orient="x", scale=scale, x_top=True)
 
-def add_timeseries_symbols(data, x_col, y_col, label_col, loc, scale=0.05):
+
+def add_timeseries_symbols(data, x_col, y_col, label_col, locs, scale=0.035):
     """Adds icons to the time series lines."""
     fig = plt.gcf()
     ax = plt.gca()
@@ -103,32 +104,41 @@ def add_timeseries_symbols(data, x_col, y_col, label_col, loc, scale=0.05):
     x_lims = ax.get_xlim()
     fig_lims = fig.get_size_inches()
 
-    mask = data[x_col] == loc
-    labels = data.loc[mask].sort_values(y_col, ascending=False)
+    if not isinstance(locs, list):
+        locs = [locs]
 
-    w = (x_lims[1] - x_lims[0]) * scale
-    h = (y_lims[1] - y_lims[0]) * scale * fig_lims[0] / fig_lims[1]
-    for i, row in labels.iterrows():
-        icon = _load_image(label_to_icon[row[label_col]])
-        x = mdates.date2num(row[x_col])
-        y = row[y_col] - y_lims[1] * 0.0
-        ax.imshow(
-            icon,
-            extent=(
-                x - w / 2,
-                x + w / 2,
-                y - h / 2,
-                y + h / 2,
-            ),
-            aspect="auto",  # Preserve aspect ratio of the image
-            zorder=5,  # Draw images above plot lines
-        )
+    for loc in locs:
+        if loc == 'first':
+            loc = data[x_col].min()
+        elif loc == 'last':
+            loc = data[x_col].max()
+
+        mask = data[x_col] == loc
+        labels = data.loc[mask].sort_values(y_col, ascending=False)
+
+        w = (x_lims[1] - x_lims[0]) * scale
+        h = (y_lims[1] - y_lims[0]) * scale * fig_lims[0] / fig_lims[1]
+        for i, row in labels.iterrows():
+            icon = _load_image(label_to_icon[row[label_col]])
+            x = mdates.date2num(row[x_col])
+            y = row[y_col] - y_lims[1] * 0.0
+            ax.imshow(
+                icon,
+                extent=(
+                    x - w / 2,
+                    x + w / 2,
+                    y - h / 2,
+                    y + h / 2,
+                ),
+                aspect="auto",  # Preserve aspect ratio of the image
+                zorder=5,  # Draw images above plot lines
+            )
 
     ax.set_ylim(y_lims)
     ax.set_xlim(x_lims)
 
 
-def add_plot_symbols(data, x_col, y_col, label_col, scale=0.05):
+def add_plot_symbols(data, x_col, y_col, label_col, scale=0.045):
     """Adds icons to the time series lines."""
     fig = plt.gcf()
     ax = plt.gca()

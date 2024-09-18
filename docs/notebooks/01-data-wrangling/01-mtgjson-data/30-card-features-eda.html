@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Summary – The Data Mage</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">The Data Mage</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html"> 
+<span class="menu-text">Set Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../notebooks/00-intro/10-introduction.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/meehljd/mtg-modeling"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/meehl/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#explore-card-table" id="toc-explore-card-table" class="nav-link active" data-scroll-target="#explore-card-table"><span class="header-section-number">1</span> Explore Card Table</a>
+  <ul class="collapse">
+  <li><a href="#exploring-data-features" id="toc-exploring-data-features" class="nav-link" data-scroll-target="#exploring-data-features"><span class="header-section-number">1.1</span> Exploring Data Features</a></li>
+  <li><a href="#identifiers" id="toc-identifiers" class="nav-link" data-scroll-target="#identifiers"><span class="header-section-number">1.2</span> Identifiers</a></li>
+  <li><a href="#boosters" id="toc-boosters" class="nav-link" data-scroll-target="#boosters"><span class="header-section-number">1.3</span> Boosters</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Summary</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Exploratory data analysis of basic card features (e.g.&nbsp;power and toughness)</p>
+<section id="explore-card-table" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Explore Card Table</h1>
+<p>Time to load up the card data (<code>cards.parquet</code>) and take a look at the columns and data types. We will explore the various data columns.</p>
+<p>The file has 96,216 records of cards, with each having 78 data fields.</p>
+<div id="cell-4" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-stdout">
+<pre><code>Loaded DF of shape: (96296, 78)
+
+Columns: Index(['artist', 'artistIds', 'asciiName', 'attractionLights', 'availability',
+       'boosterTypes', 'borderColor', 'cardParts', 'colorIdentity',
+       'colorIndicator', 'colors', 'defense', 'duelDeck', 'edhrecRank',
+       'edhrecSaltiness', 'faceConvertedManaCost', 'faceFlavorName',
+       'faceManaValue', 'faceName', 'finishes', 'flavorName', 'flavorText',
+       'frameEffects', 'frameVersion', 'hand', 'hasAlternativeDeckLimit',
+       'hasContentWarning', 'hasFoil', 'hasNonFoil', 'isAlternative',
+       'isFullArt', 'isFunny', 'isOnlineOnly', 'isOversized', 'isPromo',
+       'isRebalanced', 'isReprint', 'isReserved', 'isStarter',
+       'isStorySpotlight', 'isTextless', 'isTimeshifted', 'keywords',
+       'language', 'layout', 'leadershipSkills', 'life', 'loyalty', 'manaCost',
+       'manaValue', 'name', 'number', 'originalPrintings',
+       'originalReleaseDate', 'originalText', 'originalType', 'otherFaceIds',
+       'power', 'printings', 'promoTypes', 'rarity', 'rebalancedPrintings',
+       'relatedCards', 'securityStamp', 'setCode', 'side', 'signature',
+       'sourceProducts', 'subsets', 'subtypes', 'supertypes', 'text',
+       'toughness', 'type', 'types', 'uuid', 'variations', 'watermark'],
+      dtype='object')</code></pre>
+</div>
+</div>
+<section id="exploring-data-features" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="exploring-data-features"><span class="header-section-number">1.1</span> Exploring Data Features</h2>
+<p>Here I’ll explore the various data feature is the card data.</p>
+<section id="identifier-features" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="identifier-features"><span class="header-section-number">1.1.1</span> Identifier Features</h3>
+<ul>
+<li><code>uuid</code>:</li>
+<li>Also see the <code>cardIdentifiers.parquet</code> file</li>
+</ul>
+</section>
+<section id="name-features" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="name-features"><span class="header-section-number">1.1.2</span> Name Features</h3>
+<ul>
+<li><code>asciiName</code>: Name with only legal ASCII characters. Only populated if non-ASCII characters in <code>name</code></li>
+<li><code>flavorName</code>: Promotion name, with true name underneath, such as Cabal Coffers with the flavor name: <a href="https://scryfall.com/card/ltc/360/cabal-coffers">Minas Morgul</a></li>
+<li><code>name</code>: Name of the cards. Multi-faced cards include a <code>//</code> delimiter.</li>
+<li><code>number</code>: Card number in the set</li>
+<li><code>setCode</code>: The set code a card is in</li>
+<li>Also see the <code>sets.parquet</code> file for set data.</li>
+</ul>
+<section id="ascii-name" class="level4" data-number="1.1.2.1">
+<h4 data-number="1.1.2.1" class="anchored" data-anchor-id="ascii-name"><span class="header-section-number">1.1.2.1</span> ASCII Name</h4>
+<p>Look at the <code>name</code> and <code>asciiName</code> columns to see if there are any differences.</p>
+<div id="cell-9" class="cell">
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">asciiName</th>
+<th data-quarto-table-cell-role="th">name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">41669</td>
+<td>Nazgul</td>
+<td>Nazgûl</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="set-code" class="level4" data-number="1.1.2.2">
+<h4 data-number="1.1.2.2" class="anchored" data-anchor-id="set-code"><span class="header-section-number">1.1.2.2</span> Set Code</h4>
+<p>Here is the sets with the top 10 highest counts of <code>uuid</code>s.</p>
+<div id="cell-11" class="cell">
+<div class="cell-output cell-output-display">
+<pre><code>setCode
+PLST    4853
+PRM     3200
+SLD     1612
+WHO     1186
+PIP     1076
+CMM     1068
+CLB      972
+LTR      856
+J22      835
+PSAL     725
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<p>A histogram of the set card counts. It is bimodal with a peak around 200 cards, and a peak around 10 cards.</p>
+<div id="cell-13" class="cell">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="30-card-features-eda_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="card-name" class="level4" data-number="1.1.2.3">
+<h4 data-number="1.1.2.3" class="anchored" data-anchor-id="card-name"><span class="header-section-number">1.1.2.3</span> Card Name</h4>
+<p>See how many occurrences of each name there are in the data set.</p>
+<p>The five basic lands show up very frequently.</p>
+<div id="cell-15" class="cell">
+<div class="cell-output cell-output-display">
+<pre><code>name
+Forest      872
+Swamp       845
+Island      835
+Mountain    833
+Plains      810
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<p>Here are the next 10 frequent cards, including <code>Sol Ring</code> and <code>Swords to Plowshares</code></p>
+<div id="cell-17" class="cell">
+<div class="cell-output cell-output-display">
+<pre><code>name
+Sol Ring                92
+Swords to Plowshares    85
+Command Tower           78
+Counterspell            71
+Evolving Wilds          68
+Serra Angel             60
+Terramorphic Expanse    59
+Lightning Bolt          58
+Arcane Signet           58
+Giant Growth            57
+Disenchant              56
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<p>Plotting out the histogram of card name frequency, we can see it follows the power-law. It is nearly linear on a log-log scale.</p>
+<div id="cell-19" class="cell">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="30-card-features-eda_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="primary-play-features" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="primary-play-features"><span class="header-section-number">1.1.3</span> Primary Play Features</h3>
+<ul>
+<li><code>keywords</code>: A list of keywords on the card</li>
+<li><code>power</code>: The power of a creature card</li>
+<li><code>rarity</code>: The rarity of the card</li>
+<li><code>toughness</code>: The toughness of a creature card</li>
+</ul>
+<section id="keywords" class="level4" data-number="1.1.3.1">
+<h4 data-number="1.1.3.1" class="anchored" data-anchor-id="keywords"><span class="header-section-number">1.1.3.1</span> Keywords</h4>
+<p>Get count of all keywords in the data. There are 588 unique keywords. We can see <code>flying</code> takes the lead, with <code>enchant</code> and <code>trample</code> also being popular.</p>
+<p>We’ll adjust the data to only look at one of each unique name and removing alterative art cards.</p>
+<div id="cell-23" class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Total Unique Keywords: 586
+Keywords w/ &gt;250 Counts: 18
+Keywords w/ &lt;10 Count: 349</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>keywords
+Flying          2746
+Enchant         1175
+Trample          816
+Haste            566
+Vigilance        544
+Equip            494
+Flash            493
+Mill             469
+Scry             396
+First strike     349
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<p>Here we see that most keywords are infrequent, with only 18 keywords appearing more than 250 times.</p>
+<div id="cell-25" class="cell">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="30-card-features-eda_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="rarity" class="level4" data-number="1.1.3.2">
+<h4 data-number="1.1.3.2" class="anchored" data-anchor-id="rarity"><span class="header-section-number">1.1.3.2</span> Rarity</h4>
+<p>We can see that for <code>uuid</code>s, the <code>rare</code> is the most common type.</p>
+<div id="cell-27" class="cell">
+<div class="cell-output cell-output-display">
+<pre><code>rarity
+rare        35408
+common      28389
+uncommon    23844
+mythic       8179
+special       387
+bonus           9
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<p>We clean this up by only selecting one instance of each name, and removing alterative art cards.</p>
+<p>The number of cards per rarity is fairly uniform except for <code>mythic</code> which is much lower. Note that this is the number of uniquely named cards, not print frequency.</p>
+<div id="cell-29" class="cell">
+<div class="cell-output cell-output-display">
+<pre><code>rarity
+common      9941
+rare        9256
+uncommon    8657
+mythic      1788
+special        9
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<div id="cell-30" class="cell">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="30-card-features-eda_files/figure-html/cell-15-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="power-toughness" class="level4" data-number="1.1.3.3">
+<h4 data-number="1.1.3.3" class="anchored" data-anchor-id="power-toughness"><span class="header-section-number">1.1.3.3</span> Power &amp; Toughness</h4>
+<div id="cell-33" class="cell">
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Axes: xlabel='value', ylabel='count'&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="30-card-features-eda_files/figure-html/cell-17-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-34" class="cell">
+<div class="cell-output cell-output-display">
+<pre><code>name
+"Ach! Hans, Run!"                 None
+"Brims" Barone, Midway Mobster       5
+"Lifetime" Pass Holder               2
+"Name Sticker" Goblin                2
+"Rumors of My Death . . ."        None
+                                  ... 
+Éomer, King of Rohan                 2
+Éomer, Marshal of Rohan              4
+Éowyn, Fearless Knight               3
+Éowyn, Lady of Rohan                 2
+Éowyn, Shieldmaiden                  5
+Name: power, Length: 29651, dtype: object</code></pre>
+</div>
+</div>
+<div id="cell-35" class="cell">
+<div class="cell-output cell-output-display">
+<pre><code>&lt;Axes: xlabel='power', ylabel='toughness'&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="30-card-features-eda_files/figure-html/cell-19-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="color-mana-features" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="color-mana-features"><span class="header-section-number">1.1.4</span> Color &amp; Mana Features</h3>
+<ul>
+<li><code>colorIdentity</code></li>
+<li><code>colorIndicator</code></li>
+<li><code>colors</code></li>
+<li><code>manaCost</code></li>
+<li><code>manaValue</code></li>
+</ul>
+</section>
+<section id="card-type-features" class="level3" data-number="1.1.5">
+<h3 data-number="1.1.5" class="anchored" data-anchor-id="card-type-features"><span class="header-section-number">1.1.5</span> Card Type Features</h3>
+<ul>
+<li><code>subsets</code></li>
+<li><code>subtypes</code></li>
+<li><code>supertypes</code></li>
+<li><code>type</code></li>
+<li><code>types</code></li>
+</ul>
+</section>
+<section id="text-features" class="level3" data-number="1.1.6">
+<h3 data-number="1.1.6" class="anchored" data-anchor-id="text-features"><span class="header-section-number">1.1.6</span> Text Features</h3>
+<ul>
+<li><code>flavorText</code>:</li>
+<li><code>hasContentWarning</code>: Cards that have sensitive content. See this <a href="https://magic.wizards.com/en/articles/archive/news/depictions-racism-magic-2020-06-10">article</a> for more.</li>
+<li><code>language</code>: The language the text is written in.</li>
+<li><code>isFunny</code>: Is a funny card, like in ‘Un-sets’</li>
+<li><code>isStorySpotlight</code>: A <a href="https://mtg.fandom.com/wiki/Story_Spotlight">Story Spotlight</a> card. Marked as “Story Spotlight” with sequence number in lower border.</li>
+<li><code>isTextless</code>: The card does not have a textbox</li>
+<li><code>text</code>: The rules text in the textbox.</li>
+<li>Also see the <code>cardRulings.parquet</code> file for ruling text</li>
+<li>Also see the <code>cardForeignData.parquet</code> file foreign language translations</li>
+</ul>
+</section>
+<section id="special-play-features" class="level3" data-number="1.1.7">
+<h3 data-number="1.1.7" class="anchored" data-anchor-id="special-play-features"><span class="header-section-number">1.1.7</span> Special Play Features</h3>
+<ul>
+<li><code>attractionLights</code>: List of attraction lights found on cards, such as Unfinity attraction ride cards</li>
+<li><code>defense</code>: Used by <code>Battle - Siege</code> type cards, such as <code>Invasion of Gobakhan // Lightshield Array</code></li>
+<li><code>hand</code>: Adjusts starting hand value. Used by <code>Vanguard</code> type cards.</li>
+<li><code>hasAlternativeDeckLimit</code>: Allows for more than 4 copies in a deck</li>
+<li><code>leadershipSkills</code>: Legality of a card to be a commander in various formats</li>
+<li><code>loyalty</code>: Used by planeswalkers</li>
+<li><code>life</code>: Adjusts starting life value. Used by <code>Vanguard</code> type cards.</li>
+<li><code>relatedCards</code>: A list of card names associated to a card, such as <code>Sword of Dungeons &amp; Dragons</code> and <code>Dragon</code></li>
+</ul>
+</section>
+<section id="card-layout-variant-features" class="level3" data-number="1.1.8">
+<h3 data-number="1.1.8" class="anchored" data-anchor-id="card-layout-variant-features"><span class="header-section-number">1.1.8</span> Card Layout Variant Features</h3>
+<ul>
+<li><code>cardParts</code>: List of multiple card parts for <a href="https://mtg.fandom.com/wiki/Meld?so=search">meld</a> layouts, such as <code>Brisela, Voice of Nightmares</code> + <code>Bruna, the Fading Light // Brisela, Voice of Nightmares</code></li>
+<li><code>faceConvertedManaCost</code></li>
+<li><code>faceFlavorName</code></li>
+<li><code>faceManaValue</code></li>
+<li><code>faceName</code></li>
+<li><code>layout</code>: Non-standard card layouts, such as split, flip, or transform</li>
+<li><code>otherFaceIds</code>: <code>uuid</code> of other faces of the card, such as double-faced cards.</li>
+<li><code>side</code>: Identifier on side of card for given face, such as <code>a</code> or <code>b</code></li>
+</ul>
+</section>
+<section id="performance-features" class="level3" data-number="1.1.9">
+<h3 data-number="1.1.9" class="anchored" data-anchor-id="performance-features"><span class="header-section-number">1.1.9</span> Performance Features</h3>
+<ul>
+<li><code>edhrecRank</code></li>
+<li><code>edhrecSaltiness</code></li>
+</ul>
+</section>
+<section id="legal-features" class="level3" data-number="1.1.10">
+<h3 data-number="1.1.10" class="anchored" data-anchor-id="legal-features"><span class="header-section-number">1.1.10</span> Legal Features</h3>
+<ul>
+<li>Also see the <code>cardLegalities.parquet</code> file for format legalities</li>
+</ul>
+</section>
+<section id="visual-collector-features" class="level3" data-number="1.1.11">
+<h3 data-number="1.1.11" class="anchored" data-anchor-id="visual-collector-features"><span class="header-section-number">1.1.11</span> Visual &amp; Collector Features</h3>
+<ul>
+<li><code>artist</code></li>
+<li><code>artistIds</code></li>
+<li><code>borderColor</code>: Boarder color of card, such as black, white, or silver</li>
+<li><code>finishes</code>: Card finish, such as foil, non-foil, or etched</li>
+<li><code>frameEffects</code>: Non-standard effects, such as etched or extended art</li>
+<li><code>frameVersion</code>: Version of frame such as 1993 or 2015</li>
+<li><code>hasFoil</code></li>
+<li><code>hasNonFoil</code></li>
+<li><code>isAlternative</code></li>
+<li><code>isFullArt</code></li>
+<li><code>isOversized</code></li>
+<li><code>isTimeshifted</code>: <a href="https://mtg.fandom.com/wiki/Timeshifted">Timeshifted</a> is a current card with a retro frame.</li>
+<li><code>signature</code></li>
+<li><code>variations</code>: <code>uuid</code>s of other cards that are alternate printings of the card in the same set.</li>
+<li><code>watermark</code>: Name of <a href="https://mtg.fandom.com/wiki/Watermark">watermark</a> on the card</li>
+</ul>
+</section>
+<section id="printing-features" class="level3" data-number="1.1.12">
+<h3 data-number="1.1.12" class="anchored" data-anchor-id="printing-features"><span class="header-section-number">1.1.12</span> Printing Features</h3>
+<ul>
+<li><code>availability</code>: A lest of card’s available printing types, such as paper, arena, etc.</li>
+<li><code>isOnlineOnly</code></li>
+<li><code>isPromo</code></li>
+<li><code>isRebalanced</code></li>
+<li><code>isReprint</code></li>
+<li><code>isReserved</code></li>
+<li><code>printings</code></li>
+<li><code>promoTypes</code></li>
+<li><code>rebalancedPrintings</code></li>
+<li><code>securityStamp</code>: Security stamp, such as acorn, heart, etc.</li>
+</ul>
+</section>
+<section id="original-printing-features" class="level3" data-number="1.1.13">
+<h3 data-number="1.1.13" class="anchored" data-anchor-id="original-printing-features"><span class="header-section-number">1.1.13</span> Original Printing Features</h3>
+<ul>
+<li><code>originalPrintings</code>: <code>uuid</code>s of original printings if its different than the original, such as rebalanced cards.</li>
+<li><code>originalReleaseDate</code>: If release date was different than the set release date.</li>
+<li><code>originalText</code></li>
+<li><code>originalType</code></li>
+</ul>
+</section>
+<section id="products-features" class="level3" data-number="1.1.14">
+<h3 data-number="1.1.14" class="anchored" data-anchor-id="products-features"><span class="header-section-number">1.1.14</span> Products Features</h3>
+<ul>
+<li><code>boosterTypes</code>: List of booster types. Default is a random booster, versus deck boosters which are deterministic.</li>
+<li><code>duelDeck</code>: Indicates which deck (‘a’ vs ‘b’) a card is in <a href="https://mtg.fandom.com/wiki/Duel_Decks">Dual Decks</a></li>
+<li><code>isStarter</code>: Is card in a starter deck product.</li>
+<li><code>sourceProducts</code>: <code>uuid</code>s of associated sealed products where card can be found.</li>
+<li>Also see the <code>cardPrices.parquet</code> file for card prices.</li>
+<li>Also see the <code>cardPurchaseUrls.parquet</code> file for card purchase URLs.</li>
+<li>Also see the <code>setBoosterContents.parquet</code> and related files for booster pack data.</li>
+</ul>
+<div id="cell-47" class="cell">
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg ansi-bold">---------------------------------------------------------------------------</span>
+
+<span class="ansi-red-fg ansi-bold">KeyError</span>                                  Traceback (most recent call last)
+
+Cell <span class="ansi-green-fg ansi-bold">In[10], line 3</span>
+
+<span class="ansi-green-fg">      1</span> mask <span style="color:rgb(98,98,98)">=</span> df[<span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">name</span><span style="color:rgb(175,0,0)">'</span>] <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">Boom // Bust</span><span style="color:rgb(175,0,0)">'</span>
+
+<span class="ansi-green-fg">      2</span> mask <span style="color:rgb(98,98,98)">&amp;</span><span style="color:rgb(98,98,98)">=</span> df[<span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">uuid</span><span style="color:rgb(175,0,0)">'</span>] <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(175,0,0)">'</span><span style="color:rgb(175,0,0)">7104f01e-0ca6-53e6-873f-ee246015174a</span><span style="color:rgb(175,0,0)">'</span>
+
+<span class="ansi-green-fg ansi-bold">----&gt; 3</span> <span class="ansi-yellow-bg">df</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">loc</span><span class="ansi-yellow-bg">[</span><span class="ansi-yellow-bg">mask</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">[</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">faceName</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">name</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">language</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">multiverseId</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">identifiers</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">uuid</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">'</span><span class="ansi-yellow-bg">]</span><span class="ansi-yellow-bg">]</span><span style="color:rgb(98,98,98)">.</span>head()
+
+
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\Josh.Meehl\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\indexing.py:1147</span>, in <span class="ansi-cyan-fg">_LocationIndexer.__getitem__</span><span class="ansi-blue-fg ansi-bold">(self, key)</span>
+
+<span class="ansi-green-fg">   1145</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_is_scalar_access(key):
+
+<span class="ansi-green-fg">   1146</span>         <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>obj<span style="color:rgb(98,98,98)">.</span>_get_value(<span style="color:rgb(98,98,98)">*</span>key, takeable<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_takeable)
+
+<span class="ansi-green-fg ansi-bold">-&gt; 1147</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_getitem_tuple</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">key</span><span class="ansi-yellow-bg">)</span>
+
+<span class="ansi-green-fg">   1148</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+
+<span class="ansi-green-fg">   1149</span>     <span style="font-style:italic;color:rgb(95,135,135)"># we by definition only have the 0th axis</span>
+
+<span class="ansi-green-fg">   1150</span>     axis <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>axis <span style="font-weight:bold;color:rgb(175,0,255)">or</span> <span style="color:rgb(98,98,98)">0</span>
+
+
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\Josh.Meehl\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\indexing.py:1339</span>, in <span class="ansi-cyan-fg">_LocIndexer._getitem_tuple</span><span class="ansi-blue-fg ansi-bold">(self, tup)</span>
+
+<span class="ansi-green-fg">   1336</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_multi_take_opportunity(tup):
+
+<span class="ansi-green-fg">   1337</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_multi_take(tup)
+
+<span class="ansi-green-fg ansi-bold">-&gt; 1339</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_getitem_tuple_same_dim</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">tup</span><span class="ansi-yellow-bg">)</span>
+
+
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\Josh.Meehl\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\indexing.py:994</span>, in <span class="ansi-cyan-fg">_LocationIndexer._getitem_tuple_same_dim</span><span class="ansi-blue-fg ansi-bold">(self, tup)</span>
+
+<span class="ansi-green-fg">    991</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> com<span style="color:rgb(98,98,98)">.</span>is_null_slice(key):
+
+<span class="ansi-green-fg">    992</span>     <span style="font-weight:bold;color:rgb(0,135,0)">continue</span>
+
+<span class="ansi-green-fg ansi-bold">--&gt; 994</span> retval <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">getattr</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">retval</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">name</span><span class="ansi-yellow-bg">)</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_getitem_axis</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">key</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">axis</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">i</span><span class="ansi-yellow-bg">)</span>
+
+<span class="ansi-green-fg">    995</span> <span style="font-style:italic;color:rgb(95,135,135)"># We should never have retval.ndim &lt; self.ndim, as that should</span>
+
+<span class="ansi-green-fg">    996</span> <span style="font-style:italic;color:rgb(95,135,135)">#  be handled by the _getitem_lowerdim call above.</span>
+
+<span class="ansi-green-fg">    997</span> <span style="font-weight:bold;color:rgb(0,135,0)">assert</span> retval<span style="color:rgb(98,98,98)">.</span>ndim <span style="color:rgb(98,98,98)">==</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>ndim
+
+
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\Josh.Meehl\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\indexing.py:1382</span>, in <span class="ansi-cyan-fg">_LocIndexer._getitem_axis</span><span class="ansi-blue-fg ansi-bold">(self, key, axis)</span>
+
+<span class="ansi-green-fg">   1379</span>     <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">hasattr</span>(key, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">ndim</span><span style="color:rgb(175,0,0)">"</span>) <span style="font-weight:bold;color:rgb(175,0,255)">and</span> key<span style="color:rgb(98,98,98)">.</span>ndim <span style="color:rgb(98,98,98)">&gt;</span> <span style="color:rgb(98,98,98)">1</span>:
+
+<span class="ansi-green-fg">   1380</span>         <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">ValueError</span>(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">Cannot index with multidimensional key</span><span style="color:rgb(175,0,0)">"</span>)
+
+<span class="ansi-green-fg ansi-bold">-&gt; 1382</span>     <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_getitem_iterable</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">key</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">axis</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">=</span><span class="ansi-yellow-bg">axis</span><span class="ansi-yellow-bg">)</span>
+
+<span class="ansi-green-fg">   1384</span> <span style="font-style:italic;color:rgb(95,135,135)"># nested tuple slicing</span>
+
+<span class="ansi-green-fg">   1385</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> is_nested_tuple(key, labels):
+
+
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\Josh.Meehl\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\indexing.py:1322</span>, in <span class="ansi-cyan-fg">_LocIndexer._getitem_iterable</span><span class="ansi-blue-fg ansi-bold">(self, key, axis)</span>
+
+<span class="ansi-green-fg">   1319</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_validate_key(key, axis)
+
+<span class="ansi-green-fg">   1321</span> <span style="font-style:italic;color:rgb(95,135,135)"># A collection of keys</span>
+
+<span class="ansi-green-fg ansi-bold">-&gt; 1322</span> keyarr, indexer <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_get_listlike_indexer</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">key</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">axis</span><span class="ansi-yellow-bg">)</span>
+
+<span class="ansi-green-fg">   1323</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>obj<span style="color:rgb(98,98,98)">.</span>_reindex_with_indexers(
+
+<span class="ansi-green-fg">   1324</span>     {axis: [keyarr, indexer]}, copy<span style="color:rgb(98,98,98)">=</span><span style="font-weight:bold;color:rgb(0,135,0)">True</span>, allow_dups<span style="color:rgb(98,98,98)">=</span><span style="font-weight:bold;color:rgb(0,135,0)">True</span>
+
+<span class="ansi-green-fg">   1325</span> )
+
+
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\Josh.Meehl\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\indexing.py:1520</span>, in <span class="ansi-cyan-fg">_LocIndexer._get_listlike_indexer</span><span class="ansi-blue-fg ansi-bold">(self, key, axis)</span>
+
+<span class="ansi-green-fg">   1517</span> ax <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>obj<span style="color:rgb(98,98,98)">.</span>_get_axis(axis)
+
+<span class="ansi-green-fg">   1518</span> axis_name <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>obj<span style="color:rgb(98,98,98)">.</span>_get_axis_name(axis)
+
+<span class="ansi-green-fg ansi-bold">-&gt; 1520</span> keyarr, indexer <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">ax</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_get_indexer_strict</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">key</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">axis_name</span><span class="ansi-yellow-bg">)</span>
+
+<span class="ansi-green-fg">   1522</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> keyarr, indexer
+
+
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\Josh.Meehl\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\indexes\base.py:6114</span>, in <span class="ansi-cyan-fg">Index._get_indexer_strict</span><span class="ansi-blue-fg ansi-bold">(self, key, axis_name)</span>
+
+<span class="ansi-green-fg">   6111</span> <span style="font-weight:bold;color:rgb(0,135,0)">else</span>:
+
+<span class="ansi-green-fg">   6112</span>     keyarr, indexer, new_indexer <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>_reindex_non_unique(keyarr)
+
+<span class="ansi-green-fg ansi-bold">-&gt; 6114</span> <span style="color:rgb(0,135,0)" class="ansi-yellow-bg">self</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">.</span><span class="ansi-yellow-bg">_raise_if_missing</span><span class="ansi-yellow-bg">(</span><span class="ansi-yellow-bg">keyarr</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">indexer</span><span class="ansi-yellow-bg">,</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">axis_name</span><span class="ansi-yellow-bg">)</span>
+
+<span class="ansi-green-fg">   6116</span> keyarr <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)">self</span><span style="color:rgb(98,98,98)">.</span>take(indexer)
+
+<span class="ansi-green-fg">   6117</span> <span style="font-weight:bold;color:rgb(0,135,0)">if</span> <span style="color:rgb(0,135,0)">isinstance</span>(key, Index):
+
+<span class="ansi-green-fg">   6118</span>     <span style="font-style:italic;color:rgb(95,135,135)"># GH 42790 - Preserve name from an Index</span>
+
+
+
+File <span class="ansi-green-fg ansi-bold">c:\Users\Josh.Meehl\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\core\indexes\base.py:6178</span>, in <span class="ansi-cyan-fg">Index._raise_if_missing</span><span class="ansi-blue-fg ansi-bold">(self, key, indexer, axis_name)</span>
+
+<span class="ansi-green-fg">   6175</span>     <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">KeyError</span>(<span style="color:rgb(175,0,0)">f</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">None of [</span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>key<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span style="color:rgb(175,0,0)">] are in the [</span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>axis_name<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span style="color:rgb(175,0,0)">]</span><span style="color:rgb(175,0,0)">"</span>)
+
+<span class="ansi-green-fg">   6177</span> not_found <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(0,135,0)">list</span>(ensure_index(key)[missing_mask<span style="color:rgb(98,98,98)">.</span>nonzero()[<span style="color:rgb(98,98,98)">0</span>]]<span style="color:rgb(98,98,98)">.</span>unique())
+
+<span class="ansi-green-fg ansi-bold">-&gt; 6178</span> <span style="font-weight:bold;color:rgb(0,135,0)">raise</span> <span style="font-weight:bold;color:rgb(215,95,95)">KeyError</span>(<span style="color:rgb(175,0,0)">f</span><span style="color:rgb(175,0,0)">"</span><span style="font-weight:bold;color:rgb(175,95,135)">{</span>not_found<span style="font-weight:bold;color:rgb(175,95,135)">}</span><span style="color:rgb(175,0,0)"> not in index</span><span style="color:rgb(175,0,0)">"</span>)
+
+
+
+<span class="ansi-red-fg ansi-bold">KeyError</span>: "['multiverseId', 'identifiers'] not in index"</pre>
+</div>
+</div>
+</div>
+<p>Here we can see that each printing of the <code>Boom // Bust</code> card has a common <code>multiverseId</code> and unique <code>uuid</code> across the Boom and Bust faces.</p>
+<div id="cell-49" class="cell">
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">faceName</th>
+<th data-quarto-table-cell-role="th">name</th>
+<th data-quarto-table-cell-role="th">language</th>
+<th data-quarto-table-cell-role="th">multiverseId</th>
+<th data-quarto-table-cell-role="th">identifiers</th>
+<th data-quarto-table-cell-role="th">uuid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">285143</td>
+<td>Boom</td>
+<td>Boom // Bust</td>
+<td>German</td>
+<td>140480.0</td>
+<td>{"multiverseId": 140480, "scryfallId": "303895...</td>
+<td>7104f01e-0ca6-53e6-873f-ee246015174a</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">285151</td>
+<td>Bust</td>
+<td>Boom // Bust</td>
+<td>German</td>
+<td>140480.0</td>
+<td>{"multiverseId": 140480, "scryfallId": "303895...</td>
+<td>94a1683f-deed-5731-bc0a-894075b3fdb2</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p>Most cards are printed in 10 languages beyond english.</p>
+<div id="cell-51" class="cell">
+<div class="cell-output cell-output-display">
+<pre><code>count
+10    13194
+6      9757
+7      8048
+8      5111
+5      4187
+4      3679
+9      3237
+3      3082
+1      3009
+2      2629
+Name: count, dtype: int64</code></pre>
+</div>
+</div>
+<p>It appears that Phyrexian is not compatible with the UTF-8 character encoding!</p>
+<div id="cell-53" class="cell">
+<div class="cell-output cell-output-display">
+<pre><code>116703    |zvEZYCsDFhg.\n|besYf,GvEng,mpreLYv co,LFr2aho...
+116704    |pcEnusL.\n+Ⅰ: |co,tuhtZFsDYt,DEEtAGvEnyg,hruP...
+157935    |zvEpnrYhm.\n|su,Lecc,CF,CsYPYcs,usFPuuDs²\\²M...
+162944                                                 None
+169505    |zvEhiUIpenDk zvE&amp;EhclYvh.\n|beCEcs,FgCnUCA Fg...
+Name: text, dtype: object</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="identifiers" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="identifiers"><span class="header-section-number">1.2</span> Identifiers</h2>
+<p>The <code>cardIdentifiers.parquet</code> file contains the <a href="https://mtgjson.com/data-models/identifiers/">Identifiers</a>. These are used to map the MTGJSON card to other platforms, such as TCG Player or MTG Arena.</p>
+<p>The other platforms are:<br>
+- <a href="www.cardkingdom.com">Card Kingdom</a>: A large-scale card vender - <a href="https://www.cardsphere.com/">Card Sphere</a>: A card trading marketplace - <a href="https://www.cardmarket.com/en/Magic">Cardmarket</a>: A card marketplace - <a href="https://magic.wizards.com/en/mtgarena">MTG Arena</a>: An online environment to play MTG - <a href="https://magic.wizards.com/en/mtgo">MTG Online</a>: An online environment to play MTG - <a href="https://gatherer.wizards.com/">WOTC Gather</a>: WOTC’s official data source. - <a href="https://scryfall.com/">Scryfall</a>: Another MTG data source. Note DFC do not have unique UUIDs. - <a href="https://www.tcgplayer.com/">TGC Player</a>: A card marketplace</p>
+<p>A note on the <code>uuids</code>. The foil and non-foil versions of a card have unique <code>uuids</code>. To cross-reference the other foil type, use the <code>mtgjsonFoilVersionId</code> and <code>mtgjsonNonFoilVersionId</code> fields.</p>
+<div id="cell-55" class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Opening cardIdentifiers.parquet
+Loaded DF of shape: (96203, 21)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>cardKingdomEtchedId                                         None
+cardKingdomFoilId                                           None
+cardKingdomId                                             122720
+cardsphereFoilId                                              21
+cardsphereId                                                  22
+mcmId                                                      16166
+mcmMetaId                                                    176
+mtgArenaId                                                  None
+mtgjsonFoilVersionId        8fd4e2eb-3eb4-50ea-856b-ef638fa47f8a
+mtgjsonNonFoilVersionId                                     None
+mtgjsonV4Id                 9eb2e54c-a12b-5e88-a9c0-d8c84c52d59c
+mtgoFoilId                                                 26993
+mtgoId                                                     26992
+multiverseId                                              129465
+scryfallCardBackId          0aeebaf5-8c7d-4636-9e82-8c27447861f7
+scryfallId                  8f7980d4-da43-4d6d-ad16-14b8a34ae91d
+scryfallIllustrationId      e4d6c53f-e936-4be8-8b70-47c2be863b20
+scryfallOracleId            a2daaf32-dbfe-4618-892e-0da24f63a44a
+tcgplayerEtchedProductId                                    None
+tcgplayerProductId                                         15033
+uuid                        57aaebc1-850c-503d-9f6e-bb8d00d8bf7c
+Name: 2, dtype: object</code></pre>
+</div>
+</div>
+<div id="cell-56" class="cell">
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">mtgjsonFoilVersionId</th>
+<th data-quarto-table-cell-role="th">mtgjsonNonFoilVersionId</th>
+<th data-quarto-table-cell-role="th">uuid</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>8fd4e2eb-3eb4-50ea-856b-ef638fa47f8a</td>
+<td>None</td>
+<td>57aaebc1-850c-503d-9f6e-bb8d00d8bf7c</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>None</td>
+<td>57aaebc1-850c-503d-9f6e-bb8d00d8bf7c</td>
+<td>8fd4e2eb-3eb4-50ea-856b-ef638fa47f8a</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="boosters" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="boosters"><span class="header-section-number">1.3</span> Boosters</h2>
+<p>df = load_by_filename(“setBoosterContents.parquet”) mask = df[‘setCode’] == ‘OTJ’ mask &amp;= df[‘boosterName’] == ‘play’ mask &amp;= df[‘sheetName’] == ‘breakingNews’ df.loc[mask].head(50)</p>
+<p>df = load_by_filename(“setBoosterContentWeights.parquet”) mask = df[‘setCode’] == ‘OTJ’ mask &amp;= df[‘boosterName’] == ‘play’ df.loc[mask].head(50)</p>
+<p>df = load_by_filename(“setBoosterSheets.parquet”) mask = df[‘setCode’] == ‘OTJ’ mask &amp;= df[‘boosterName’] == ‘collector’ df.loc[mask].head(50)</p>
+<p>df = load_by_filename(“setBoosterSheetCards.parquet”) mask = df[‘setCode’] == ‘OTJ’ mask &amp;= df[‘boosterName’] == ‘play’ mask &amp;= df[‘sheetName’] == ‘breakingNews’ df.loc[mask].head(50)</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">
+    © <span id="current-year"></span> Joshua Meehl. All rights reserved. This website is unofficial Fan Content permitted under the Fan Content Policy of Wizards of the Coast. It is not
+    sponsored, endorsed, or affiliated with Wizards of the Coast.
+</footer>
+<script>
+    const baseYear = 2024;
+    const currentYear = new Date().getFullYear();
+    const displayYear = currentYear > baseYear ? `${baseYear}-${currentYear}` : `${baseYear}`;
+    document.getElementById('current-year').textContent = displayYear;
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

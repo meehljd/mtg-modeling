@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Summary – The Data Mage</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">The Data Mage</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html"> 
+<span class="menu-text">Set Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../notebooks/00-intro/10-introduction.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/meehljd/mtg-modeling"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/meehl/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
+  <ul class="collapse">
+  <li><a href="#terms" id="toc-terms" class="nav-link" data-scroll-target="#terms"><span class="header-section-number">1.1</span> Terms</a></li>
+  </ul></li>
+  <li><a href="#initial-setup" id="toc-initial-setup" class="nav-link" data-scroll-target="#initial-setup"><span class="header-section-number">2</span> Initial Setup</a></li>
+  <li><a href="#games-table" id="toc-games-table" class="nav-link" data-scroll-target="#games-table"><span class="header-section-number">3</span> Games Table</a></li>
+  <li><a href="#draft-table" id="toc-draft-table" class="nav-link" data-scroll-target="#draft-table"><span class="header-section-number">4</span> Draft Table</a></li>
+  <li><a href="#card-data" id="toc-card-data" class="nav-link" data-scroll-target="#card-data"><span class="header-section-number">5</span> Card Data</a></li>
+  <li><a href="#summary-table" id="toc-summary-table" class="nav-link" data-scroll-target="#summary-table"><span class="header-section-number">6</span> Summary Table</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Summary</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The code to wrangle the data. Deal with NAs, join data frames, etc.</p>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>This data set is very large, in both memory and in size. Each row is a game, with identifiers for the draft event and the player. The columns have information on the given draft game, with the majority are for card counts per state, such as the number of a given card in the deck or the number of a given card in the opening hand.</p>
+<p>Ideally I want to melt the data into a tall layout, with rows for each unique combination of card and game and columns for the card count states, such as deck, hand, etc. This will allow me to easily filter and group the data for analysis. Unfortunately, after attempting to wrangle in this format, I found that the data set is too large to handle in memory. I could play with making spares arrays, but I think that would be too much work for this data set.</p>
+<p>For this notebook, I will keep the data in the wide layout and aggregate down into useful tables, such as per-game and per-player summaries.</p>
+<section id="terms" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="terms"><span class="header-section-number">1.1</span> Terms</h2>
+<p>The following terms are used in the data set: - <strong>game:</strong> a single game of MTG - <strong>match:</strong> a series of games between two players. Typically best of 1 or best of 3. - <strong>draft:</strong> an initial draft event, followed by a series of matches between a group of players. - <strong>build:</strong> a instance of a deck in a draft. Can be adjusted between games.</p>
+</section>
+</section>
+<section id="initial-setup" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Initial Setup</h1>
+<p>Define Paths</p>
+<p>Convert the csv file to parquet if needed.</p>
+<p>Scan file into a lazy frame and set the schema.</p>
+<p>Parse column names, such as the card name and the card state.</p>
+<div id="cell-14" class="cell" data-execution_count="63">
+<div class="cell-output cell-output-display" data-execution_count="63">
+<pre><code>(1630, 1600, 30)</code></pre>
+</div>
+</div>
+<p>Check for extra underscores in card names.</p>
+<p>Show first few rows of the data.</p>
+<div id="cell-18" class="cell" data-execution_count="65">
+<div class="cell-output cell-output-display" data-execution_count="65">
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (0, 20)</small>
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">expansion</th>
+<th data-quarto-table-cell-role="th">event_type</th>
+<th data-quarto-table-cell-role="th">draft_id</th>
+<th data-quarto-table-cell-role="th">draft_time</th>
+<th data-quarto-table-cell-role="th">game_time</th>
+<th data-quarto-table-cell-role="th">build_index</th>
+<th data-quarto-table-cell-role="th">match_number</th>
+<th data-quarto-table-cell-role="th">game_number</th>
+<th data-quarto-table-cell-role="th">rank</th>
+<th data-quarto-table-cell-role="th">opp_rank</th>
+<th data-quarto-table-cell-role="th">main_colors</th>
+<th data-quarto-table-cell-role="th">splash_colors</th>
+<th data-quarto-table-cell-role="th">on_play</th>
+<th data-quarto-table-cell-role="th">num_mulligans</th>
+<th data-quarto-table-cell-role="th">opp_num_mulligans</th>
+<th data-quarto-table-cell-role="th">opp_colors</th>
+<th data-quarto-table-cell-role="th">num_turns</th>
+<th data-quarto-table-cell-role="th">won</th>
+<th data-quarto-table-cell-role="th">user_n_games_bucket</th>
+<th data-quarto-table-cell-role="th">user_game_win_rate_bucket</th>
+</tr>
+<tr class="odd">
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>bool</th>
+<th>i64</th>
+<th>i64</th>
+<th>str</th>
+<th>i64</th>
+<th>bool</th>
+<th>i64</th>
+<th>f64</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Convert timestamps from strings to datetimes</p>
+</section>
+<section id="games-table" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Games Table</h1>
+<p>A table of each game, excludes card data.</p>
+<p>Note that the ‘opp_rank’ does not have consistent type</p>
+<div id="cell-22" class="cell" data-execution_count="67">
+<div class="cell-output cell-output-display" data-execution_count="67">
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (2, 20)</small>
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">expansion</th>
+<th data-quarto-table-cell-role="th">event_type</th>
+<th data-quarto-table-cell-role="th">draft_id</th>
+<th data-quarto-table-cell-role="th">draft_time</th>
+<th data-quarto-table-cell-role="th">game_time</th>
+<th data-quarto-table-cell-role="th">build_index</th>
+<th data-quarto-table-cell-role="th">match_number</th>
+<th data-quarto-table-cell-role="th">game_number</th>
+<th data-quarto-table-cell-role="th">rank</th>
+<th data-quarto-table-cell-role="th">opp_rank</th>
+<th data-quarto-table-cell-role="th">main_colors</th>
+<th data-quarto-table-cell-role="th">splash_colors</th>
+<th data-quarto-table-cell-role="th">on_play</th>
+<th data-quarto-table-cell-role="th">num_mulligans</th>
+<th data-quarto-table-cell-role="th">opp_num_mulligans</th>
+<th data-quarto-table-cell-role="th">opp_colors</th>
+<th data-quarto-table-cell-role="th">num_turns</th>
+<th data-quarto-table-cell-role="th">won</th>
+<th data-quarto-table-cell-role="th">user_n_games_bucket</th>
+<th data-quarto-table-cell-role="th">user_game_win_rate_bucket</th>
+</tr>
+<tr class="odd">
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>datetime[μs]</th>
+<th>datetime[μs]</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>bool</th>
+<th>i64</th>
+<th>i64</th>
+<th>str</th>
+<th>i64</th>
+<th>bool</th>
+<th>i64</th>
+<th>f64</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"MKM"</td>
+<td>"PremierDraft"</td>
+<td>"8e1e92694dcd44e380720f2ec3d971…</td>
+<td>2024-02-06 17:48:51</td>
+<td>2024-02-06 18:41:03</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>null</td>
+<td>"None"</td>
+<td>"WB"</td>
+<td>"G"</td>
+<td>true</td>
+<td>0</td>
+<td>0</td>
+<td>"WB"</td>
+<td>9</td>
+<td>true</td>
+<td>50</td>
+<td>0.62</td>
+</tr>
+<tr class="even">
+<td>"MKM"</td>
+<td>"PremierDraft"</td>
+<td>"8e1e92694dcd44e380720f2ec3d971…</td>
+<td>2024-02-06 17:48:51</td>
+<td>2024-02-06 18:49:03</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+<td>"silver"</td>
+<td>"None"</td>
+<td>"WB"</td>
+<td>"G"</td>
+<td>true</td>
+<td>0</td>
+<td>0</td>
+<td>"RG"</td>
+<td>9</td>
+<td>true</td>
+<td>50</td>
+<td>0.62</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="draft-table" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Draft Table</h1>
+<p>A table of the aggregated draft data, excluding card data.</p>
+<div id="cell-24" class="cell" data-execution_count="68">
+<div class="cell-output cell-output-display" data-execution_count="68">
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (5, 20)</small>
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">draft_id</th>
+<th data-quarto-table-cell-role="th">expansion</th>
+<th data-quarto-table-cell-role="th">n_builds</th>
+<th data-quarto-table-cell-role="th">n_matches</th>
+<th data-quarto-table-cell-role="th">n_games</th>
+<th data-quarto-table-cell-role="th">n_wins</th>
+<th data-quarto-table-cell-role="th">win_rate</th>
+<th data-quarto-table-cell-role="th">rank</th>
+<th data-quarto-table-cell-role="th">opp_rank</th>
+<th data-quarto-table-cell-role="th">main_colors</th>
+<th data-quarto-table-cell-role="th">opp_colors</th>
+<th data-quarto-table-cell-role="th">splash_colors</th>
+<th data-quarto-table-cell-role="th">n_starts</th>
+<th data-quarto-table-cell-role="th">n_muls</th>
+<th data-quarto-table-cell-role="th">n_opp_muls</th>
+<th data-quarto-table-cell-role="th">mean_turns</th>
+<th data-quarto-table-cell-role="th">draft_time</th>
+<th data-quarto-table-cell-role="th">first_game_time</th>
+<th data-quarto-table-cell-role="th">last_game_time</th>
+<th data-quarto-table-cell-role="th">n_losses</th>
+</tr>
+<tr class="odd">
+<th>str</th>
+<th>str</th>
+<th>i64</th>
+<th>i64</th>
+<th>u32</th>
+<th>u32</th>
+<th>f64</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>str</th>
+<th>u32</th>
+<th>i64</th>
+<th>i64</th>
+<th>f64</th>
+<th>datetime[μs]</th>
+<th>datetime[μs]</th>
+<th>datetime[μs]</th>
+<th>u32</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"dd1e9b19a8bf4b6d87d58798796063…</td>
+<td>"MKM"</td>
+<td>0</td>
+<td>7</td>
+<td>7</td>
+<td>4</td>
+<td>0.571429</td>
+<td>"platinum"</td>
+<td>"None"</td>
+<td>"WU"</td>
+<td>"BG"</td>
+<td>null</td>
+<td>5</td>
+<td>0</td>
+<td>4</td>
+<td>8.428571</td>
+<td>2024-03-07 22:47:01</td>
+<td>2024-03-07 23:11:35</td>
+<td>2024-03-08 21:04:31</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>"38e6baea32d944c59235e03931ff55…</td>
+<td>"MKM"</td>
+<td>0</td>
+<td>5</td>
+<td>5</td>
+<td>2</td>
+<td>0.4</td>
+<td>"diamond"</td>
+<td>"None"</td>
+<td>"UG"</td>
+<td>"WUB"</td>
+<td>"B"</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>9.6</td>
+<td>2024-03-11 11:27:09</td>
+<td>2024-03-11 11:49:45</td>
+<td>2024-03-11 12:27:10</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>"162e396bf1a448f7b1ef9ab97e7615…</td>
+<td>"MKM"</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>0.0</td>
+<td>"platinum"</td>
+<td>"None"</td>
+<td>"UBRG"</td>
+<td>"B"</td>
+<td>"W"</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>5.333333</td>
+<td>2024-02-06 20:36:34</td>
+<td>2024-02-06 20:58:30</td>
+<td>2024-02-06 21:05:37</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>"1e15f17a131649db8fa64c2991c656…</td>
+<td>"MKM"</td>
+<td>0</td>
+<td>5</td>
+<td>5</td>
+<td>2</td>
+<td>0.4</td>
+<td>"platinum"</td>
+<td>"None"</td>
+<td>"UG"</td>
+<td>"WR"</td>
+<td>"WB"</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>9.0</td>
+<td>2024-02-15 20:12:26</td>
+<td>2024-02-15 20:37:50</td>
+<td>2024-02-16 15:11:45</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>"9f3f793e47264c7db21c6a43979c2c…</td>
+<td>"MKM"</td>
+<td>0</td>
+<td>7</td>
+<td>7</td>
+<td>4</td>
+<td>0.571429</td>
+<td>"bronze"</td>
+<td>"None"</td>
+<td>"BR"</td>
+<td>"WR"</td>
+<td>null</td>
+<td>4</td>
+<td>1</td>
+<td>1</td>
+<td>7.571429</td>
+<td>2024-02-10 18:42:08</td>
+<td>2024-02-10 19:02:46</td>
+<td>2024-02-10 20:02:53</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="card-data" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Card Data</h1>
+<div id="cell-26" class="cell" data-execution_count="69">
+<div class="cell-output cell-output-display" data-execution_count="69">
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (5, 1_635)</small>
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">expansion</th>
+<th data-quarto-table-cell-role="th">draft_id</th>
+<th data-quarto-table-cell-role="th">match_number</th>
+<th data-quarto-table-cell-role="th">game_number</th>
+<th data-quarto-table-cell-role="th">build_index</th>
+<th data-quarto-table-cell-role="th">opening_hand_Forest</th>
+<th data-quarto-table-cell-role="th">drawn_Forest</th>
+<th data-quarto-table-cell-role="th">tutored_Forest</th>
+<th data-quarto-table-cell-role="th">deck_Forest</th>
+<th data-quarto-table-cell-role="th">sideboard_Forest</th>
+<th data-quarto-table-cell-role="th">opening_hand_Island</th>
+<th data-quarto-table-cell-role="th">drawn_Island</th>
+<th data-quarto-table-cell-role="th">tutored_Island</th>
+<th data-quarto-table-cell-role="th">deck_Island</th>
+<th data-quarto-table-cell-role="th">sideboard_Island</th>
+<th data-quarto-table-cell-role="th">opening_hand_Mistveil Plains</th>
+<th data-quarto-table-cell-role="th">drawn_Mistveil Plains</th>
+<th data-quarto-table-cell-role="th">tutored_Mistveil Plains</th>
+<th data-quarto-table-cell-role="th">deck_Mistveil Plains</th>
+<th data-quarto-table-cell-role="th">sideboard_Mistveil Plains</th>
+<th data-quarto-table-cell-role="th">opening_hand_Mountain</th>
+<th data-quarto-table-cell-role="th">drawn_Mountain</th>
+<th data-quarto-table-cell-role="th">tutored_Mountain</th>
+<th data-quarto-table-cell-role="th">deck_Mountain</th>
+<th data-quarto-table-cell-role="th">sideboard_Mountain</th>
+<th data-quarto-table-cell-role="th">opening_hand_Plains</th>
+<th data-quarto-table-cell-role="th">drawn_Plains</th>
+<th data-quarto-table-cell-role="th">tutored_Plains</th>
+<th data-quarto-table-cell-role="th">deck_Plains</th>
+<th data-quarto-table-cell-role="th">sideboard_Plains</th>
+<th data-quarto-table-cell-role="th">opening_hand_Swamp</th>
+<th data-quarto-table-cell-role="th">drawn_Swamp</th>
+<th data-quarto-table-cell-role="th">tutored_Swamp</th>
+<th data-quarto-table-cell-role="th">deck_Swamp</th>
+<th data-quarto-table-cell-role="th">sideboard_Swamp</th>
+<th data-quarto-table-cell-role="th">opening_hand_A Killer Among Us</th>
+<th data-quarto-table-cell-role="th">drawn_A Killer Among Us</th>
+<th data-quarto-table-cell-role="th">…</th>
+<th data-quarto-table-cell-role="th">deck_Vitu-Ghazi Inspector</th>
+<th data-quarto-table-cell-role="th">sideboard_Vitu-Ghazi Inspector</th>
+<th data-quarto-table-cell-role="th">opening_hand_Warleader's Call</th>
+<th data-quarto-table-cell-role="th">drawn_Warleader's Call</th>
+<th data-quarto-table-cell-role="th">tutored_Warleader's Call</th>
+<th data-quarto-table-cell-role="th">deck_Warleader's Call</th>
+<th data-quarto-table-cell-role="th">sideboard_Warleader's Call</th>
+<th data-quarto-table-cell-role="th">opening_hand_Wispdrinker Vampire</th>
+<th data-quarto-table-cell-role="th">drawn_Wispdrinker Vampire</th>
+<th data-quarto-table-cell-role="th">tutored_Wispdrinker Vampire</th>
+<th data-quarto-table-cell-role="th">deck_Wispdrinker Vampire</th>
+<th data-quarto-table-cell-role="th">sideboard_Wispdrinker Vampire</th>
+<th data-quarto-table-cell-role="th">opening_hand_Wojek Investigator</th>
+<th data-quarto-table-cell-role="th">drawn_Wojek Investigator</th>
+<th data-quarto-table-cell-role="th">tutored_Wojek Investigator</th>
+<th data-quarto-table-cell-role="th">deck_Wojek Investigator</th>
+<th data-quarto-table-cell-role="th">sideboard_Wojek Investigator</th>
+<th data-quarto-table-cell-role="th">opening_hand_Worldsoul's Rage</th>
+<th data-quarto-table-cell-role="th">drawn_Worldsoul's Rage</th>
+<th data-quarto-table-cell-role="th">tutored_Worldsoul's Rage</th>
+<th data-quarto-table-cell-role="th">deck_Worldsoul's Rage</th>
+<th data-quarto-table-cell-role="th">sideboard_Worldsoul's Rage</th>
+<th data-quarto-table-cell-role="th">opening_hand_Worldspine Wurm</th>
+<th data-quarto-table-cell-role="th">drawn_Worldspine Wurm</th>
+<th data-quarto-table-cell-role="th">tutored_Worldspine Wurm</th>
+<th data-quarto-table-cell-role="th">deck_Worldspine Wurm</th>
+<th data-quarto-table-cell-role="th">sideboard_Worldspine Wurm</th>
+<th data-quarto-table-cell-role="th">opening_hand_Wrench</th>
+<th data-quarto-table-cell-role="th">drawn_Wrench</th>
+<th data-quarto-table-cell-role="th">tutored_Wrench</th>
+<th data-quarto-table-cell-role="th">deck_Wrench</th>
+<th data-quarto-table-cell-role="th">sideboard_Wrench</th>
+<th data-quarto-table-cell-role="th">opening_hand_Yarus, Roar of the Old Gods</th>
+<th data-quarto-table-cell-role="th">drawn_Yarus, Roar of the Old Gods</th>
+<th data-quarto-table-cell-role="th">tutored_Yarus, Roar of the Old Gods</th>
+<th data-quarto-table-cell-role="th">deck_Yarus, Roar of the Old Gods</th>
+<th data-quarto-table-cell-role="th">sideboard_Yarus, Roar of the Old Gods</th>
+</tr>
+<tr class="odd">
+<th>str</th>
+<th>str</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>…</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"MKM"</td>
+<td>"8e1e92694dcd44e380720f2ec3d971…</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>7</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>…</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>"MKM"</td>
+<td>"8e1e92694dcd44e380720f2ec3d971…</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>…</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>"MKM"</td>
+<td>"8e1e92694dcd44e380720f2ec3d971…</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>7</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>…</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>"MKM"</td>
+<td>"8e1e92694dcd44e380720f2ec3d971…</td>
+<td>4</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>…</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>"MKM"</td>
+<td>"8e1e92694dcd44e380720f2ec3d971…</td>
+<td>5</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>7</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>…</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="summary-table" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Summary Table</h1>
+<div id="cell-28" class="cell" data-execution_count="70">
+<div class="cell-output cell-output-display" data-execution_count="70">
+<div><style>
+.dataframe > thead > tr,
+.dataframe > tbody > tr {
+  text-align: right;
+  white-space: pre-wrap;
+}
+</style>
+<small>shape: (1, 22)</small>
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th">expansion</th>
+<th data-quarto-table-cell-role="th">first_game</th>
+<th data-quarto-table-cell-role="th">last_game</th>
+<th data-quarto-table-cell-role="th">max_games</th>
+<th data-quarto-table-cell-role="th">win_rate</th>
+<th data-quarto-table-cell-role="th">start_rate</th>
+<th data-quarto-table-cell-role="th">n_games</th>
+<th data-quarto-table-cell-role="th">n_mul</th>
+<th data-quarto-table-cell-role="th">n_opp_mul</th>
+<th data-quarto-table-cell-role="th">mean_turns</th>
+<th data-quarto-table-cell-role="th">total_turns</th>
+<th data-quarto-table-cell-role="th">max_turns</th>
+<th data-quarto-table-cell-role="th">min_turns</th>
+<th data-quarto-table-cell-role="th">n_drafts</th>
+<th data-quarto-table-cell-role="th">n_matches</th>
+<th data-quarto-table-cell-role="th">mean_matches</th>
+<th data-quarto-table-cell-role="th">n_games_per_draft</th>
+<th data-quarto-table-cell-role="th">n_cards</th>
+<th data-quarto-table-cell-role="th">max_card</th>
+<th data-quarto-table-cell-role="th">mean_land</th>
+<th data-quarto-table-cell-role="th">max_land</th>
+<th data-quarto-table-cell-role="th">min_land</th>
+</tr>
+<tr class="odd">
+<th>str</th>
+<th>datetime[μs]</th>
+<th>datetime[μs]</th>
+<th>i64</th>
+<th>f64</th>
+<th>f64</th>
+<th>u32</th>
+<th>i64</th>
+<th>i64</th>
+<th>f64</th>
+<th>i64</th>
+<th>i64</th>
+<th>i64</th>
+<th>u32</th>
+<th>i64</th>
+<th>f64</th>
+<th>f64</th>
+<th>i32</th>
+<th>i64</th>
+<th>f64</th>
+<th>i32</th>
+<th>i32</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>"MKM"</td>
+<td>2024-02-06 16:24:44</td>
+<td>2024-03-18 23:59:48</td>
+<td>1</td>
+<td>0.549798</td>
+<td>0.49982</td>
+<td>964377</td>
+<td>114014</td>
+<td>121101</td>
+<td>9.278472</td>
+<td>8947945</td>
+<td>32</td>
+<td>1</td>
+<td>165251</td>
+<td>965887</td>
+<td>5.844969</td>
+<td>5.835832</td>
+<td>326</td>
+<td>8</td>
+<td>22.525862</td>
+<td>38</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">
+    © <span id="current-year"></span> Joshua Meehl. All rights reserved. This website is unofficial Fan Content permitted under the Fan Content Policy of Wizards of the Coast. It is not
+    sponsored, endorsed, or affiliated with Wizards of the Coast.
+</footer>
+<script>
+    const baseYear = 2024;
+    const currentYear = new Date().getFullYear();
+    const displayYear = currentYear > baseYear ? `${baseYear}-${currentYear}` : `${baseYear}`;
+    document.getElementById('current-year').textContent = displayYear;
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

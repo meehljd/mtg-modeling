@@ -331,49 +331,49 @@
   {
     "objectID": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html",
     "href": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html",
-    "title": "17Lands Draft Data Analysis Overview",
+    "title": "Premier Draft Data Analysis Overview",
     "section": "",
     "text": "I have always been curious about Draft format in MTG, as it requires one to be good at the game, but also building competitive decks in a highly constrained environment. I have been analyzing the latests sets to see how they each perform in draft.\nCurrently I have analyzed the deck performance for the recent sets. Soon I will add analysis at the card level to see which cards are the most valuable in draft.\n\n\n\n\n\nSet Name\nCode\nArena Release Date\nDeck Analysis\nCard Analysis\n\n\n\n\nMurders at Karlov Manor\nMKM\n2024-02-09\nMKM Deck\n-\n\n\nOutlaws of Thunder Junction\nOTJ\n2024-04-16\nOTJ Deck\n-\n\n\nModern Horizons 3\nMH3\n2024-06-11\nMH3 Deck\n-\n\n\nBloomburrow\nBLB\n2024-07-30\nBLB Deck\n-\n\n\nDuskmourn: House of Horror\nDSK\n2024-09-24\n-\n-\n\n\n\n \n\n\n\nSome aspects of the game don’t very much between sets. These general analysis are:\n\n\n\n\n\nStarting Player"
   },
   {
     "objectID": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#set-analyzed",
     "href": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#set-analyzed",
-    "title": "17Lands Draft Data Analysis Overview",
+    "title": "Premier Draft Data Analysis Overview",
     "section": "",
     "text": "Set Name\nCode\nArena Release Date\nDeck Analysis\nCard Analysis\n\n\n\n\nMurders at Karlov Manor\nMKM\n2024-02-09\nMKM Deck\n-\n\n\nOutlaws of Thunder Junction\nOTJ\n2024-04-16\nOTJ Deck\n-\n\n\nModern Horizons 3\nMH3\n2024-06-11\nMH3 Deck\n-\n\n\nBloomburrow\nBLB\n2024-07-30\nBLB Deck\n-\n\n\nDuskmourn: House of Horror\nDSK\n2024-09-24\n-\n-"
   },
   {
     "objectID": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#other-analysis",
     "href": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#other-analysis",
-    "title": "17Lands Draft Data Analysis Overview",
+    "title": "Premier Draft Data Analysis Overview",
     "section": "",
     "text": "Some aspects of the game don’t very much between sets. These general analysis are:\n\n\n\n\n\nStarting Player"
   },
   {
     "objectID": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#data-source",
     "href": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#data-source",
-    "title": "17Lands Draft Data Analysis Overview",
+    "title": "Premier Draft Data Analysis Overview",
     "section": "3.1 Data Source",
     "text": "3.1 Data Source\n17Lands offers public datasets for download. The data is available in CSV format. The newest sets are updated regularly for a few months after initial set release."
   },
   {
     "objectID": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#data-files",
     "href": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#data-files",
-    "title": "17Lands Draft Data Analysis Overview",
+    "title": "Premier Draft Data Analysis Overview",
     "section": "3.2 Data Files",
     "text": "3.2 Data Files\nThere are 3 files types available.\n\nDraftData: Data related to the draft pool and picks.\nGameData: Data related to game play and outcomes.\nReplayData: Detailed data related to player actions in game play."
   },
   {
     "objectID": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#game-formats",
     "href": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#game-formats",
-    "title": "17Lands Draft Data Analysis Overview",
+    "title": "Premier Draft Data Analysis Overview",
     "section": "3.3 Game Formats",
     "text": "3.3 Game Formats\nThe game formats can be Draft or Sealed.\n\nDraft: A set of 8 players open a shared pool of packs and select cards to build a deck.\nSealed: A player opens a set of packs and selects cards to build a deck.\n\nThe tournament types can be Traditional or Premier.\n\nTraditional: A best of 3 match with sideboarding.\nPremier: A best of 1 match."
   },
   {
     "objectID": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#terms",
     "href": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#terms",
-    "title": "17Lands Draft Data Analysis Overview",
+    "title": "Premier Draft Data Analysis Overview",
     "section": "3.4 Terms",
     "text": "3.4 Terms\nThe following terms are used in the data set:\n\ngame: a single game of MTG\nmatch: a series of games between two players. Typically best of 1 or best of 3.\ndraft: an initial draft event, followed by a series of matches between a group of players.\nbuild: a instance of a deck in a draft. Can be adjusted between games."
   },

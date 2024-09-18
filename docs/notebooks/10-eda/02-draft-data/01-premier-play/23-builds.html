@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Josh Meehl">
-<meta name="dcterms.date" content="2024-09-03">
-<meta name="description" content="Draft set analysis for Bloomburrow">
+<meta name="dcterms.date" content="2024-09-17">
+<meta name="description" content="An analysis of number of deck re-builds on win rates">
 
-<title>Bloomburrow (BLB) Arena Draft Analysis – The Data Mage</title>
+<title>Sideboard and Deck Re-Build Draft Analysis – The Data Mage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,7 +126,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#builds" id="toc-builds" class="nav-link active" data-scroll-target="#builds"><span class="header-section-number">1</span> Builds</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#builds" id="toc-builds" class="nav-link" data-scroll-target="#builds"><span class="header-section-number">2</span> Builds</a></li>
   </ul>
 </nav>
     </div>
@@ -135,18 +136,17 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Bloomburrow (BLB) Arena Draft Analysis</h1>
+<h1 class="title">Sideboard and Deck Re-Build Draft Analysis</h1>
   <div class="quarto-categories">
     <div class="quarto-category">EDA</div>
     <div class="quarto-category">Draft</div>
-    <div class="quarto-category">BLB</div>
     <div class="quarto-category">Arena</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Draft set analysis for Bloomburrow
+    An analysis of number of deck re-builds on win rates
   </div>
 </div>
 
@@ -163,7 +163,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 3, 2024</p>
+      <p class="date">September 17, 2024</p>
     </div>
   </div>
   
@@ -175,58 +175,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="builds" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Builds</h1>
-<p>A player can rebuild their deck between games by utilizing their sideboard during a draft session. I wanted to explore how often players rebuild their decks and whether this impacts win rate. This analysis focuses on premier draft, a best-of-one format, where there is less incentive to rebuild a deck compared to a best-of-three format.</p>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>This is a quick analysis to see the impact of rebuilding draft decks is related to win rates. A player can rebuild their deck between games by utilizing their sideboard during a draft session. The theory is that better players will turn their decks, allowing for better win rates. However, with the Premier Draft on MTG Arena, matches are only best-of-one. So rebuilding is not as important as in Traditional Draft, which is best-of-three. This analysis will look at the relationship between rebuilding and win rates.</p>
+<p>This is a part of the MTG Arena draft analysis. See the <a href="../../../../notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html">Draft Introduction</a> for more information.</p>
+</section>
+<section id="builds" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Builds</h1>
 <p>In <a href="#fig-n-games-rebuilds" class="quarto-xref">Figure&nbsp;1</a>, we see that over 75% of draft sessions use the same deck build throughout. Only a tiny fraction of sessions feature more than two different builds.</p>
-<div id="cell-6" class="cell" data-execution_count="10">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[10], line 33</span>
-<span class="ansi-green-fg ansi-bold">      1</span> builds <span style="color:rgb(98,98,98)">=</span> (
-<span class="ansi-green-fg ansi-bold">      2</span>     df_draft<span style="color:rgb(98,98,98)">.</span>group_by([<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">n_builds</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">expansion</span><span style="color:rgb(175,0,0)">"</span>])
-<span class="ansi-green-fg ansi-bold">      3</span>     <span style="color:rgb(98,98,98)">.</span>agg(
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-fg ansi-bold">     11</span>     <span style="color:rgb(98,98,98)">.</span>sort(by<span style="color:rgb(98,98,98)">=</span>[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">expansion</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">n_builds</span><span style="color:rgb(175,0,0)">"</span>], descending<span style="color:rgb(98,98,98)">=</span><span style="font-weight:bold;color:rgb(0,135,0)">True</span>)
-<span class="ansi-green-fg ansi-bold">     12</span> )
-<span class="ansi-green-fg ansi-bold">     14</span> mean_win_rate <span style="color:rgb(98,98,98)">=</span> (
-<span class="ansi-green-fg ansi-bold">     15</span>     builds<span style="color:rgb(98,98,98)">.</span>group_by(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">expansion</span><span style="color:rgb(175,0,0)">"</span>)
-<span class="ansi-green-fg ansi-bold">     16</span>     <span style="color:rgb(98,98,98)">.</span>agg(
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-fg ansi-bold">     24</span>     )
-<span class="ansi-green-fg ansi-bold">     25</span> )
-<span class="ansi-green-fg ansi-bold">     27</span> builds <span style="color:rgb(98,98,98)">=</span> (
-<span class="ansi-green-fg ansi-bold">     28</span>     builds<span style="color:rgb(98,98,98)">.</span>join(mean_win_rate, on<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">expansion</span><span style="color:rgb(175,0,0)">"</span>)
-<span class="ansi-green-fg ansi-bold">     29</span>     <span style="color:rgb(98,98,98)">.</span>with_columns(
-<span class="ansi-green-fg ansi-bold">     30</span>         (pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">win_rate</span><span style="color:rgb(175,0,0)">"</span>) <span style="color:rgb(98,98,98)">/</span> pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">set_win_rate</span><span style="color:rgb(175,0,0)">"</span>))<span style="color:rgb(98,98,98)">.</span>alias(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">normalized_win_rate</span><span style="color:rgb(175,0,0)">"</span>),
-<span class="ansi-green-fg ansi-bold">     31</span>         (pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">n_games</span><span style="color:rgb(175,0,0)">"</span>) <span style="color:rgb(98,98,98)">/</span> pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">set_n_games</span><span style="color:rgb(175,0,0)">"</span>))<span style="color:rgb(98,98,98)">.</span>alias(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">normalized_pct_games</span><span style="color:rgb(175,0,0)">"</span>),
-<span class="ansi-green-fg ansi-bold">     32</span>     )
-<span class="ansi-green-fg">---&gt; 33</span>     <span style="color:rgb(98,98,98)">.</span>collect()
-<span class="ansi-green-fg ansi-bold">     34</span>     <span style="color:rgb(98,98,98)">.</span>to_pandas()
-<span class="ansi-green-fg ansi-bold">     35</span> )
-<span class="ansi-green-fg ansi-bold">     37</span> builds <span style="color:rgb(98,98,98)">=</span> builds<span style="color:rgb(98,98,98)">.</span>loc[builds[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">n_builds</span><span style="color:rgb(175,0,0)">"</span>] <span style="color:rgb(98,98,98)">&lt;</span><span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(98,98,98)">4</span>]
-
-File <span class="ansi-green-fg">~/miniconda3/envs/dl+bayes-env/lib/python3.12/site-packages/polars/lazyframe/frame.py:2027</span>, in <span class="ansi-cyan-fg">LazyFrame.collect</span><span class="ansi-blue-fg">(self, type_coercion, predicate_pushdown, projection_pushdown, simplify_expression, slice_pushdown, comm_subplan_elim, comm_subexpr_elim, cluster_with_columns, no_optimization, streaming, engine, background, _eager, **_kwargs)</span>
-<span class="ansi-green-fg ansi-bold">   2025</span> <span style="font-style:italic;color:rgb(95,135,135)"># Only for testing purposes</span>
-<span class="ansi-green-fg ansi-bold">   2026</span> callback <span style="color:rgb(98,98,98)">=</span> _kwargs<span style="color:rgb(98,98,98)">.</span>get(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">post_opt_callback</span><span style="color:rgb(175,0,0)">"</span>, callback)
-<span class="ansi-green-fg">-&gt; 2027</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> wrap_df(ldf<span style="color:rgb(98,98,98)">.</span>collect(callback))
-
-<span class="ansi-red-fg">FileNotFoundError</span>: No such file or directory (os error 2): data/processed/17lands/game_data/premier_draft/All_Sets_Game_PD_Drafts.parquet
-
-This error occurred with the following context stack:
-    [1] 'parquet scan' failed
-    [2] 'group_by' input failed to resolve
-    [3] 'with_columns' input failed to resolve
-    [4] 'sort' input failed to resolve
-    [5] 'join left' input failed to resolve
-    [6] 'with_columns' input failed to resolve
-</pre>
-</div>
-</div>
-</div>
-<div id="cell-fig-n-games-rebuilds" class="cell" data-execution_count="6">
+<div id="cell-fig-n-games-rebuilds" class="cell" data-execution_count="23">
 <div class="cell-output cell-output-display">
 <div id="fig-n-games-rebuilds" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -234,14 +191,14 @@ This error occurred with the following context stack:
 <img src="23-builds_files/figure-html/fig-n-games-rebuilds-output-1.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-n-games-rebuilds-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: The proportion of games for the number of rebuilds.
+Figure&nbsp;1: The proportion of games for the number of rebuilds. Error bars are across sets.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>In <a href="#fig-rebuilds-wins" class="quarto-xref">Figure&nbsp;2</a>, we observe the relationship between win rate and the number of rebuilds. Decks with more rebuilds tend to have lower win rates, but it’s unclear whether players are rebuilding more to salvage a poorly drafted deck or if rebuilding itself is a suboptimal strategy.</p>
-<div id="cell-fig-rebuilds-wins" class="cell" data-execution_count="8">
+<div id="cell-fig-rebuilds-wins" class="cell" data-execution_count="25">
 <div class="cell-output cell-output-display">
 <div id="fig-rebuilds-wins" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -249,7 +206,7 @@ Figure&nbsp;1: The proportion of games for the number of rebuilds.
 <img src="23-builds_files/figure-html/fig-rebuilds-wins-output-1.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rebuilds-wins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: The win rate for a number of deck rebuilds.
+Figure&nbsp;2: The win rate for a number of deck rebuilds. Error bars are across sets.
 </figcaption>
 </figure>
 </div>

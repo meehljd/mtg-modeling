@@ -67,35 +67,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -152,14 +123,15 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#data-science" id="toc-data-science" class="nav-link active" data-scroll-target="#data-science"><span class="header-section-number">1</span> Data Science</a></li>
-  <li><a href="#play-format" id="toc-play-format" class="nav-link" data-scroll-target="#play-format"><span class="header-section-number">2</span> Play Format</a></li>
+  <li><a href="#data-science-applications" id="toc-data-science-applications" class="nav-link active" data-scroll-target="#data-science-applications"><span class="header-section-number">1</span> Data Science Applications</a></li>
+  <li><a href="#focus-on-limited-formats" id="toc-focus-on-limited-formats" class="nav-link" data-scroll-target="#focus-on-limited-formats"><span class="header-section-number">2</span> Focus on Limited Formats</a></li>
   <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources"><span class="header-section-number">3</span> Data Sources</a>
   <ul class="collapse">
-  <li><a href="#card-data-sources" id="toc-card-data-sources" class="nav-link" data-scroll-target="#card-data-sources"><span class="header-section-number">3.1</span> Card Data Sources</a></li>
-  <li><a href="#draft-play-data-sources" id="toc-draft-play-data-sources" class="nav-link" data-scroll-target="#draft-play-data-sources"><span class="header-section-number">3.2</span> Draft Play Data Sources</a></li>
+  <li><a href="#card-data" id="toc-card-data" class="nav-link" data-scroll-target="#card-data"><span class="header-section-number">3.1</span> Card Data</a></li>
+  <li><a href="#draft-play-data" id="toc-draft-play-data" class="nav-link" data-scroll-target="#draft-play-data"><span class="header-section-number">3.2</span> Draft Play Data</a></li>
   </ul></li>
-  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code"><span class="header-section-number">4</span> Code</a></li>
+  <li><a href="#code-availability" id="toc-code-availability" class="nav-link" data-scroll-target="#code-availability"><span class="header-section-number">4</span> Code Availability</a></li>
+  <li><a href="#join-the-journey" id="toc-join-the-journey" class="nav-link" data-scroll-target="#join-the-journey"><span class="header-section-number">5</span> Join the Journey</a></li>
   </ul>
 </nav>
     </div>
@@ -185,53 +157,61 @@ window.Quarto = {
 </header>
 
 
-<p>The <em>Data Mage</em> site is an exploration of applying data science to Magic: The Gathering (MTG). MTG is a collectible card game known for its popularity, long history, and intricate gameplay. MTG offers a wealth of data and countless opportunities for analysis.</p>
-<p>Although I’m not an MTG expert, I played briefly in 1999-2000 and recently returned to the game after my son became interested. This project is a way for me to deepen my understanding of MTG and provide insights that others might find useful.</p>
-<p>I’ll analyze three main aspects of MTG: <strong>gameplay</strong>, <strong>collecting</strong>, and <strong>economics</strong>.</p>
-<p>Given the complexity of gameplay, my analysis will cover various perspectives: aggregate win rates, micro-level decisions like combat resolution and mulligan choices, and evaluations of components such as card mana efficiency. We will also explore the <strong>metagame</strong>, including deck building, play formats, and drafting strategies</p>
-<p>The collecting aspect of MTG is vast, with nearly 100,000 cards printed over the game’s history. I’ll examine this by looking into aspects like the probability distributions of collector booster packs.</p>
-<p>Finally, the economics of MTG, particularly the secondary market for singles, is of great interest to me. I’ll focus on predicting card prices and analyzing price trends for new sets.</p>
+<p>Welcome to Data Mage, a journey into the world of Magic: The Gathering (MTG) through the lens of data science. MTG is a collectible card game celebrated for its popularity, rich history, and intricate gameplay, offering a treasure trove of data ripe for analysis.</p>
+<p>Recently I’ve rekindled my interest in MTG. I was big into MTG during middle school from 1998-2000. After a long hiatus, I have caught MTG fever with my son and we’ve been playing avidly for the last year. I’ve embarked on this project to deepen my understanding of the game and share insights that others might find valuable.</p>
+<p>This exploration will delve into three main facets of MTG: <strong>gameplay</strong>, <strong>collecting</strong>, and <strong>economics</strong>.</p>
+<p>In terms of gameplay, I’ll analyze various perspectives—from aggregate win rates to micro-level decisions like combat resolution and mulligan choices, as well as evaluations of components such as card mana efficiency. We’ll also delve into the metagame, including deck building, play formats, and drafting strategies.</p>
+<p>The collecting aspect is vast, with nearly 100,000 cards printed over the game’s history. I’ll examine this realm by exploring elements like the probability distributions of collector booster packs.</p>
+<p>Finally, the economics of MTG, particularly the secondary market for singles, is of great interest. I’ll focus on predicting card prices and analyzing price trends for new sets.</p>
 <p>Currently I have some <a href="./notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html">set analysis</a> for MTG Arena draft.</p>
-<hr>
-<section id="data-science" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Data Science</h1>
-<p>MTG can be fodder for may aspects data science. Here is a sampler of concepts I would like to explore:</p>
+<section id="data-science-applications" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Data Science Applications</h1>
+<p>Magic: The Gathering offers a fascinating playground for data science exploration. Here are some concepts I’m excited to delve into:</p>
 <ul>
-<li><strong>Regression:</strong> Predict card’s expected mana cost given its attributes and keywords.</li>
-<li><strong>LLMs:</strong> Generate numeric representations from card descriptions with encoder LLMs. Use representations for predictive tasks.</li>
-<li><strong>Network Science:</strong> Bipartite graphs of deck-card relationships. Identify communities in card one-mode projection.</li>
-<li><strong>Graph Neural Networks:</strong> Predict deck win rate with given card compositions.</li>
-<li><strong>Bayesian Inference:</strong> Posterior distribution of a booster pack’s value given the pack composition and secondary market prices.</li>
-<li><strong>Time-Series Analysis:</strong> Predict card price on secondary market <span class="math inline">\(d\)</span> days after set release.</li>
-<li><strong>Hidden Markov Models:</strong> Estimation of board state. For example, estimate the states from <a href="https://magic.wizards.com/en/news/feature/quadrant-theory-2014-08-20">Quadrant Theory</a>. These states are ‘opening’, ‘parity’, ‘winning’, or ‘losing’ state.</li>
-<li><strong>Reinforcement Learning:</strong> Maximize the outcome of combat stage, given the board state of potentially attacking and defending creatures.</li>
-<li><strong>Optimization</strong>: Optimize win rate of a deck, given constraints such as maximum market cost or number of mythic rares.</li>
-<li><strong>Game Theory</strong>: For mulligans, calculate the expected value of hands using utility theory.</li>
+<li><strong>Exploratory Data Analysis:</strong> Understand the distribution of card attributes, mana costs, and rarities. I have analysis by draft sets <a href="./notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html">here</a>.</li>
+<li><strong>Regression Analysis:</strong> Predicting a card’s expected mana cost based on its attributes and keywords, helping to understand the balance and design of cards.</li>
+<li><strong>Large Language Models (LLMs):</strong> Using encoder LLMs to generate numeric representations from card descriptions, which can be leveraged for various predictive tasks.</li>
+<li><strong>Network Science:</strong> Analyzing the relationships between decks and cards using bipartite graphs, and identifying communities within the card network through one-mode projections.</li>
+<li><strong>Graph Neural Networks:</strong> Predicting a deck’s win rate based on its card composition, utilizing advanced neural network architectures designed for graph data.</li>
+<li><strong>Bayesian Inference:</strong> Estimating the posterior distribution of a booster pack’s value given its composition and secondary market prices, providing insights into pack value.</li>
+<li><strong>Time-Series Analysis:</strong> Forecasting card prices on the secondary market days after a set’s release to understand and anticipate market trends.</li>
+<li><strong>Hidden Markov Models:</strong> Estimating the game board state by identifying phases like ‘opening’, ‘parity’, ‘winning’, or ‘losing’ using concepts like <a href="https://magic.wizards.com/en/news/feature/quadrant-theory-2014-08-20">Quadrant Theory</a>.</li>
+<li><strong>Reinforcement Learning:</strong> Maximizing combat outcomes by making optimal decisions during the combat phase, given the board state of attacking and defending creatures.</li>
+<li><strong>Optimization:</strong> Enhancing deck win rates by optimizing card selection under constraints like maximum budget or rarity limits.</li>
+<li><strong>Game Theory:</strong> Applying utility theory to calculate the expected value of hands during mulligan decisions, improving strategic choices.</li>
 </ul>
-<hr>
 </section>
-<section id="play-format" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Play Format</h1>
-<p>For game play, I will look at limited formats, such as Draft and Sealed Deck. Constructed formats, such as Standard, Modern, and Legacy, are out of scope for now. This is due to the complexity of the metagame and the vast number of cards available for deck construction.</p>
-<p>Draft play also allows us to study three types of player skill. First, there is the skill of drafting the best cards from the draft pool based on one’s currently drafted cards. Second, there is the skill of deck construction from the drafted cards. Third, there is the skill of playing the deck in a tournament setting.</p>
-<p>Sealed and constructed formats are also interesting, but exclude the drafting skill. Constructed formats also require a deep understanding of the metagame, which is out of scope for now.</p>
+<section id="focus-on-limited-formats" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Focus on Limited Formats</h1>
+<p>In my analyses, I’ll concentrate on limited formats such as Draft and Sealed Deck. Constructed formats like Standard, Modern, and Legacy are currently beyond the scope of this project due to their complex metagame and the vast number of cards available for deck construction.</p>
+<p>Draft play offers a unique opportunity to study multiple facets of player skill:</p>
+<ol type="1">
+<li>Drafting Skill: Selecting the best cards from the draft pool based on the cards you’ve already picked.</li>
+<li>Deck Construction Skill: Building an effective deck from your drafted cards.</li>
+<li>Gameplay Skill: Playing the deck effectively in a tournament setting.</li>
+</ol>
+<p>While Sealed and Constructed formats are also intriguing, they exclude the drafting component. Additionally, Constructed formats require an in-depth understanding of the metagame, which I’m setting aside for now to maintain a manageable scope.</p>
 </section>
 <section id="data-sources" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Data Sources</h1>
-<section id="card-data-sources" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="card-data-sources"><span class="header-section-number">3.1</span> Card Data Sources</h2>
-<p>I’ll use the card data generously made available by the tireless folks at the open-source project <a href="https://mtgjson.com/">MTGJSON</a>. MTGJSON provides a comprehensive database of MTG cards, including card attributes, card text, and card prices. The data is available in JSON format, which I’ll convert to a pandas DataFrame for analysis.</p>
-<p>MTGJSON sources a lot of data from <a href="https://scryfall.com/docs/api">Scryfall</a>, which has an excellent webapp for exploring MTG card data.</p>
-<p>MTGJSON sources the booster pack composition data from. The source code provided by <a href="https://github.com/taw">taw</a> on <a href="https://github.com/taw/magic-search-engine?tab=readme-ov-file">github</a> contains estimated booster pack composition probabilities. He also provides a webapp at <a href="https://mtg.wtf/">mtg.wtf</a>. Note that booster pack composition is proprietary information of Wizards of the Coast, and the above probabilities are estimates.</p>
+<section id="card-data" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="card-data"><span class="header-section-number">3.1</span> Card Data</h2>
+<p>I’m utilizing card data generously provided by the tireless team behind the open-source project <a href="https://mtgjson.com/">MTGJSON</a>. MTGJSON offers a comprehensive database of MTG cards, including attributes, text, and prices. The data is available in JSON format, which I’ll convert into pandas DataFrames for analysis.</p>
+<p>MTGJSON sources much of its data from <a href="https://scryfall.com/docs/api">Scryfall</a>, which also hosts an excellent web app for exploring MTG card information.</p>
+<p>For booster pack composition data, MTGJSON references estimates provided by <a href="https://github.com/taw">taw</a> in his <a href="https://github.com/taw/magic-search-engine?tab=readme-ov-file">GitHub repository</a>. Taw also offers a web app at <a href="https://mtg.wtf/">mtg.wtf</a>. Please note that booster pack compositions are proprietary information of Wizards of the Coast, and these probabilities are estimated.</p>
 </section>
-<section id="draft-play-data-sources" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="draft-play-data-sources"><span class="header-section-number">3.2</span> Draft Play Data Sources</h2>
-<p>For draft play, I will used data from <a href="https://www.17lands.com/public_datasets">17lands</a>. They compile data from their user base to provide draft pick data. The data includes the draft pick order, the cards picked, and the win rate of the deck.</p>
+<section id="draft-play-data" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="draft-play-data"><span class="header-section-number">3.2</span> Draft Play Data</h2>
+<p>For draft play analysis, I’ll use data from <a href="https://www.17lands.com/public_datasets">17Lands</a>. They compile data from their user base to provide detailed draft pick information, including pick order, cards selected, and deck win rates.</p>
 </section>
 </section>
-<section id="code" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Code</h1>
-<p>Anyone interested in looking at the code for these analyses can find it in the <a href="https://github.com/meehljd/mtg-modeling">github repository</a></p>
+<section id="code-availability" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Code Availability</h1>
+<p>If you’re interested in exploring the code behind these analyses, feel free to check out my <a href="https://github.com/meehljd/mtg-modeling">GitHub repository</a>.</p>
+</section>
+<section id="join-the-journey" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Join the Journey</h1>
+<p>I invite you to follow along as I explore the intersections of data science and Magic: The Gathering. Whether you’re a data enthusiast, a seasoned planeswalker, or someone curious about the fusion of analytics and gaming, there’s something here for you. Stay tuned for updates, and feel free to reach out with thoughts or collaborations.</p>
 
 
 </section>

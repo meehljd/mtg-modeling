@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Josh Meehl">
-<meta name="dcterms.date" content="2024-09-03">
-<meta name="description" content="Draft set analysis for Bloomburrow">
+<meta name="dcterms.date" content="2024-09-10">
+<meta name="description" content="Draft set analysis for mulligans on win rates">
 
-<title>Bloomburrow (BLB) Arena Draft Analysis – The Data Mage</title>
+<title>Mulligan Arena Draft Analysis – The Data Mage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -150,26 +150,35 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#mulligan-distribution" id="toc-mulligan-distribution" class="nav-link" data-scroll-target="#mulligan-distribution"><span class="header-section-number">2</span> Mulligan Distribution</a></li>
+  <li><a href="#probability-distributions---poisson" id="toc-probability-distributions---poisson" class="nav-link" data-scroll-target="#probability-distributions---poisson"><span class="header-section-number">3</span> Probability Distributions - Poisson</a></li>
+  <li><a href="#mulligan-win-rate" id="toc-mulligan-win-rate" class="nav-link" data-scroll-target="#mulligan-win-rate"><span class="header-section-number">4</span> Mulligan Win Rate</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">5</span> Conclusion</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Bloomburrow (BLB) Arena Draft Analysis</h1>
+<h1 class="title">Mulligan Arena Draft Analysis</h1>
   <div class="quarto-categories">
     <div class="quarto-category">EDA</div>
     <div class="quarto-category">Draft</div>
-    <div class="quarto-category">BLB</div>
     <div class="quarto-category">Arena</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Draft set analysis for Bloomburrow
+    Draft set analysis for mulligans on win rates
   </div>
 </div>
 
@@ -186,7 +195,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 3, 2024</p>
+      <p class="date">September 10, 2024</p>
     </div>
   </div>
   
@@ -198,35 +207,16 @@ window.Quarto = {
 </header>
 
 
-<p>Mulligans are a crucial strategy in MTG. If a player’s starting hand is not ideal, they can draw a new one, each time with one fewer card. This process can be repeated as needed, creating a challenging trade-off between a poor hand and a smaller one.</p>
-<p>In <a href="#fig-mulligan-distro" class="quarto-xref">Figure&nbsp;1</a>, we observe the distribution of mulligans by the number of re-draws. Most players do not take a mulligan; about 12% take one mulligan, and 2% take two. Very few players take three or more mulligans, with only two instances of a player taking five mulligans, resulting in a starting hand of just two cards.</p>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>Mulligans are a crucial strategy in MTG. If a player’s starting hand is not ideal, they can draw a new one, each time with one fewer card. This process can be repeated as needed, creating a challenging trade-off between a poor hand and a smaller one. We will see if the number of mulligans is related to win rate.</p>
+<p>This is a part of the MTG Arena draft analysis. See the <a href="../../../../notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html">Draft Introduction</a> for more information.</p>
+</section>
+<section id="mulligan-distribution" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Mulligan Distribution</h1>
+<p>In <a href="#fig-mulligan-distro" class="quarto-xref">Figure&nbsp;1</a>, we observe the distribution of mulligans by the number of re-draws. Most players do not take a mulligan; about 11% take one mulligan, and 0.5% take two. Very few players take three or more mulligans.</p>
 <p>We also see that 17Lands players are slightly less likely to take mulligans compared to their opponents, likely due to a combination of superior deck construction and more informed mulligan decisions.</p>
-<div id="cell-6" class="cell" data-execution_count="5">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[5], line 3</span>
-<span class="ansi-green-fg ansi-bold">      1</span> df_games <span style="color:rgb(98,98,98)">=</span> pl<span style="color:rgb(98,98,98)">.</span>scan_parquet(game_file)
-<span class="ansi-green-fg">----&gt; 3</span> sum_df <span style="color:rgb(98,98,98)">=</span> df_summary<span style="color:rgb(98,98,98)">.</span>collect()<span style="color:rgb(98,98,98)">.</span>to_pandas()
-<span class="ansi-green-fg ansi-bold">      4</span> mean_mulligan_rate <span style="color:rgb(98,98,98)">=</span> (sum_df[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">n_mul</span><span style="color:rgb(175,0,0)">"</span>] <span style="color:rgb(98,98,98)">/</span> sum_df[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">n_games</span><span style="color:rgb(175,0,0)">"</span>])<span style="color:rgb(98,98,98)">.</span>values[<span style="color:rgb(98,98,98)">0</span>]
-<span class="ansi-green-fg ansi-bold">      6</span> df_mul <span style="color:rgb(98,98,98)">=</span> df_games<span style="color:rgb(98,98,98)">.</span>unpivot(
-<span class="ansi-green-fg ansi-bold">      7</span>     index<span style="color:rgb(98,98,98)">=</span>[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">num_mulligans</span><span style="color:rgb(175,0,0)">"</span>],
-<span class="ansi-green-fg ansi-bold">      8</span>     on<span style="color:rgb(98,98,98)">=</span>[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">num_mulligans</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">opp_num_mulligans</span><span style="color:rgb(175,0,0)">"</span>],
-<span class="ansi-green-fg ansi-bold">      9</span>     variable_name<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">Player</span><span style="color:rgb(175,0,0)">"</span>,
-<span class="ansi-green-fg ansi-bold">     10</span>     value_name<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">mulligan_count</span><span style="color:rgb(175,0,0)">"</span>,
-<span class="ansi-green-fg ansi-bold">     11</span> )
-
-File <span class="ansi-green-fg">~/miniconda3/envs/dl+bayes-env/lib/python3.12/site-packages/polars/lazyframe/frame.py:2027</span>, in <span class="ansi-cyan-fg">LazyFrame.collect</span><span class="ansi-blue-fg">(self, type_coercion, predicate_pushdown, projection_pushdown, simplify_expression, slice_pushdown, comm_subplan_elim, comm_subexpr_elim, cluster_with_columns, no_optimization, streaming, engine, background, _eager, **_kwargs)</span>
-<span class="ansi-green-fg ansi-bold">   2025</span> <span style="font-style:italic;color:rgb(95,135,135)"># Only for testing purposes</span>
-<span class="ansi-green-fg ansi-bold">   2026</span> callback <span style="color:rgb(98,98,98)">=</span> _kwargs<span style="color:rgb(98,98,98)">.</span>get(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">post_opt_callback</span><span style="color:rgb(175,0,0)">"</span>, callback)
-<span class="ansi-green-fg">-&gt; 2027</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> wrap_df(ldf<span style="color:rgb(98,98,98)">.</span>collect(callback))
-
-<span class="ansi-red-fg">FileNotFoundError</span>: No such file or directory (os error 2): data/processed/17lands/game_data/premier_draft/All_Sets_Game_PD_Summary.parquet</pre>
-</div>
-</div>
-</div>
-<div id="cell-fig-mulligan-distro" class="cell" data-execution_count="8">
+<div id="cell-fig-mulligan-distro" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div id="fig-mulligan-distro" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -240,75 +230,32 @@ Figure&nbsp;1: Distribution of Mulligans.
 </div>
 </div>
 </div>
+</section>
+<section id="probability-distributions---poisson" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Probability Distributions - Poisson</h1>
 <p>A side note on probability distributions: the player mulligan distributions appear to resemble Poisson distributions, with the number of mulligans taken being a discrete event.</p>
-<p>Using the mean number of mulligans per game, 0.136, I performed random sampling from a Poisson distribution with <span class="math inline">\(\lambda=0.136\)</span>. The results, shown in <a href="#fig-mulligan-poisson" class="quarto-xref">Figure&nbsp;2</a>, closely match the actual data, though the real data shows a slightly higher number of games with one mulligan and slightly fewer for other values.</p>
+<p>Using the mean number of mulligans per game, 0.118, I performed random sampling from a Poisson distribution with <span class="math inline">\(\lambda=0.118\)</span>. The results, shown in <a href="#fig-mulligan-poisson" class="quarto-xref">Figure&nbsp;2</a>, closely match the actual data, though the real data shows a slightly higher number of games with one mulligan and slightly fewer for other values.</p>
 <p>We can further investigate this pattern when we explore the card data to identify random draw events that correlate with mulligan decisions, such as the number of lands in the starting hand.</p>
-<div id="cell-9" class="cell" data-execution_count="9">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg ansi-bold">In[9], line 4</span>
-<span class="ansi-green-fg">      1</span> n_games <span style="color:rgb(98,98,98)">=</span> df_games<span style="color:rgb(98,98,98)">.</span>collect()<span style="color:rgb(98,98,98)">.</span>shape[<span style="color:rgb(98,98,98)">0</span>]
-<span class="ansi-green-fg">      3</span> df_games <span style="color:rgb(98,98,98)">=</span> df_games<span style="color:rgb(98,98,98)">.</span>with_columns(
-<span class="ansi-green-fg ansi-bold">----&gt; 4</span>     pl<span style="color:rgb(98,98,98)">.</span>Series(<span class="ansi-yellow-bg">np</span><span style="color:rgb(98,98,98)">.</span>random<span style="color:rgb(98,98,98)">.</span>poisson(lam<span style="color:rgb(98,98,98)">=</span>mean_mulligan_rate, size<span style="color:rgb(98,98,98)">=</span>n_games))<span style="color:rgb(98,98,98)">.</span>alias(
-<span class="ansi-green-fg">      5</span>         <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">sampled_mul</span><span style="color:rgb(175,0,0)">"</span>
-<span class="ansi-green-fg">      6</span>     )
-<span class="ansi-green-fg">      7</span> )
-<span class="ansi-green-fg">      9</span> df_mul_sample <span style="color:rgb(98,98,98)">=</span> df_games<span style="color:rgb(98,98,98)">.</span>unpivot(
-<span class="ansi-green-fg">     10</span>     index<span style="color:rgb(98,98,98)">=</span>[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">draft_id</span><span style="color:rgb(175,0,0)">"</span>],
-<span class="ansi-green-fg">     11</span>     on<span style="color:rgb(98,98,98)">=</span>[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">num_mulligans</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">sampled_mul</span><span style="color:rgb(175,0,0)">"</span>],
-<span class="ansi-green-fg">     12</span>     variable_name<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">Distribution</span><span style="color:rgb(175,0,0)">"</span>,
-<span class="ansi-green-fg">     13</span>     value_name<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">mulligan_count</span><span style="color:rgb(175,0,0)">"</span>,
-<span class="ansi-green-fg">     14</span> )
-<span class="ansi-green-fg">     17</span> df_mul_sample <span style="color:rgb(98,98,98)">=</span> df_mul_sample<span style="color:rgb(98,98,98)">.</span>collect()<span style="color:rgb(98,98,98)">.</span>to_pandas()
-
-<span class="ansi-red-fg ansi-bold">NameError</span>: name 'np' is not defined</pre>
-</div>
-</div>
-</div>
-<div id="fig-mulligan-poisson" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="10">
+<div id="cell-fig-mulligan-poisson" class="cell" data-execution_count="17">
+<div class="cell-output cell-output-display">
+<div id="fig-mulligan-poisson" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-mulligan-poisson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg ansi-bold">In[10], line 10</span>
-<span class="ansi-green-fg">      1</span> <span style="font-style:italic;color:rgb(95,135,135)"># | label: fig-mulligan-poisson</span>
-<span class="ansi-green-fg">      2</span> <span style="font-style:italic;color:rgb(95,135,135)"># | fig-cap: "Distribution of Player Mulligans vs Poisson Distribution."</span>
-<span class="ansi-green-fg">      4</span> custom_palette <span style="color:rgb(98,98,98)">=</span> {
-<span class="ansi-green-fg">      5</span>     <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">num_mulligans</span><span style="color:rgb(175,0,0)">"</span>: <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">#1f77b4</span><span style="color:rgb(175,0,0)">"</span>,
-<span class="ansi-green-fg">      6</span>     <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">sampled_mul</span><span style="color:rgb(175,0,0)">"</span>: <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">#2ca02c</span><span style="color:rgb(175,0,0)">"</span>,
-<span class="ansi-green-fg">      7</span> }
-<span class="ansi-green-fg">      9</span> g <span style="color:rgb(98,98,98)">=</span> sns<span style="color:rgb(98,98,98)">.</span>displot(
-<span class="ansi-green-fg ansi-bold">---&gt; 10</span>     data<span style="color:rgb(98,98,98)">=</span><span class="ansi-yellow-bg">df_mul_sample</span>,
-<span class="ansi-green-fg">     11</span>     y<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">mulligan_count</span><span style="color:rgb(175,0,0)">"</span>,
-<span class="ansi-green-fg">     12</span>     hue<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">Distribution</span><span style="color:rgb(175,0,0)">"</span>,
-<span class="ansi-green-fg">     13</span>     multiple<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">dodge</span><span style="color:rgb(175,0,0)">"</span>,
-<span class="ansi-green-fg">     14</span>     stat<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">proportion</span><span style="color:rgb(175,0,0)">"</span>,
-<span class="ansi-green-fg">     15</span>     common_norm<span style="color:rgb(98,98,98)">=</span><span style="font-weight:bold;color:rgb(0,135,0)">False</span>,
-<span class="ansi-green-fg">     16</span>     discrete<span style="color:rgb(98,98,98)">=</span><span style="font-weight:bold;color:rgb(0,135,0)">True</span>,
-<span class="ansi-green-fg">     17</span>     shrink<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(98,98,98)">0.8</span>,
-<span class="ansi-green-fg">     18</span>     element<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">bars</span><span style="color:rgb(175,0,0)">"</span>,
-<span class="ansi-green-fg">     19</span>     palette<span style="color:rgb(98,98,98)">=</span>custom_palette,
-<span class="ansi-green-fg">     20</span> )
-<span class="ansi-green-fg">     22</span> plt<span style="color:rgb(98,98,98)">.</span>gca()<span style="color:rgb(98,98,98)">.</span>set(xlim<span style="color:rgb(98,98,98)">=</span>(<span style="color:rgb(98,98,98)">0</span>, <span style="color:rgb(98,98,98)">1</span>))
-<span class="ansi-green-fg">     23</span> anno<span style="color:rgb(98,98,98)">.</span>set_labels_to_percent()
-
-<span class="ansi-red-fg ansi-bold">NameError</span>: name 'df_mul_sample' is not defined</pre>
+<img src="21-mulligans_files/figure-html/fig-mulligan-poisson-output-1.png" class="img-fluid figure-img">
 </div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-mulligan-poisson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mulligan-poisson-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Distribution of Player Mulligans vs Poisson Distribution.
 </figcaption>
 </figure>
 </div>
+</div>
+</div>
+</section>
+<section id="mulligan-win-rate" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Mulligan Win Rate</h1>
 <p>We now examine the outcomes of games where mulligans occur. In <a href="#fig-player-vs-opponent-mulligan-wins" class="quarto-xref">Figure&nbsp;3</a>, we see a clear near-linear relationship between the number of mulligans and win rates, with win rates decreasing by approximately 15% for each mulligan taken.</p>
-<p>When comparing 17Lands players to their opponents, the rate of win decay is consistent, maintaining an 8-9% gap in favor of 17Lands players at each mulligan level.</p>
-<p>This data does not reveal the causal relationship between mulligans and win rates. It’s unclear whether mulligans are inherently detrimental or simply indicative of bad starting hands that would have had an even lower probability of winning. This question could be further explored using card data to assess the quality of starting hands that led to mulligans.</p>
-<div id="cell-fig-player-vs-opponent-mulligan-wins" class="cell" data-execution_count="12">
+<p>When comparing 17Lands players to their opponents, the rate of win decay is consistent, maintaining an 7-9% gap in favor of 17Lands players at each mulligan level.</p>
+<div id="cell-fig-player-vs-opponent-mulligan-wins" class="cell" data-execution_count="21">
 <div class="cell-output cell-output-display">
 <div id="fig-player-vs-opponent-mulligan-wins" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -322,8 +269,13 @@ Figure&nbsp;3: Win Rates for Players and Opponents by Mulligans.
 </div>
 </div>
 </div>
+</section>
+<section id="conclusion" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Conclusion</h1>
+<p>The data shows that less mulligans are correlated with higher win rates. This data does not reveal the causal relationship between mulligans and win rates. It’s unclear whether mulligans are inherently detrimental or simply indicative of bad starting hands that would have had an even lower probability of winning. This question could be further explored using card data to assess the quality of starting hands that led to mulligans.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <footer style="text-align: center; padding: 10px 0; font-size: 0.8em; color: #666;">

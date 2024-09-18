@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Josh Meehl">
-<meta name="dcterms.date" content="2024-09-03">
-<meta name="description" content="Draft set analysis for Bloomburrow">
+<meta name="dcterms.date" content="2024-09-18">
+<meta name="description" content="An analysis of the starting player win rates.">
 
-<title>Bloomburrow (BLB) Arena Draft Analysis – The Data Mage</title>
+<title>Starting Player Draft Analysis – The Data Mage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,7 +126,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#starting-player" id="toc-starting-player" class="nav-link active" data-scroll-target="#starting-player"><span class="header-section-number">1</span> Starting Player</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#starting-player" id="toc-starting-player" class="nav-link" data-scroll-target="#starting-player"><span class="header-section-number">2</span> Starting Player</a></li>
+  <li><a href="#advantage-per-set" id="toc-advantage-per-set" class="nav-link" data-scroll-target="#advantage-per-set"><span class="header-section-number">3</span> Advantage per Set</a></li>
+  <li><a href="#spread-of-win-rates" id="toc-spread-of-win-rates" class="nav-link" data-scroll-target="#spread-of-win-rates"><span class="header-section-number">4</span> Spread of Win Rates</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">5</span> Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -135,18 +139,17 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Bloomburrow (BLB) Arena Draft Analysis</h1>
+<h1 class="title">Starting Player Draft Analysis</h1>
   <div class="quarto-categories">
     <div class="quarto-category">EDA</div>
     <div class="quarto-category">Draft</div>
-    <div class="quarto-category">BLB</div>
     <div class="quarto-category">Arena</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Draft set analysis for Bloomburrow
+    An analysis of the starting player win rates.
   </div>
 </div>
 
@@ -163,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 3, 2024</p>
+      <p class="date">September 18, 2024</p>
     </div>
   </div>
   
@@ -175,52 +178,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="starting-player" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Starting Player</h1>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>This is a quick analysis to see the impact of being the first to play in a game has a distinct advantage. In MTG, to balance the advantage of first to play, the first player forgoes drawing a card on their first turn. This analysis will see if this effect is enough to balance out the advantage of going first.</p>
+<p>This is a part of the MTG Arena draft analysis. See the <a href="../../../../notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html">Draft Introduction</a> for more information.</p>
+</section>
+<section id="starting-player" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Starting Player</h1>
 <p>To assess the impact of going first or second, I plotted the win rates for each scenario. As shown in <a href="#fig-starting-win-rate" class="quarto-xref">Figure&nbsp;1</a>, the win rate is significantly higher for the player who starts, with nearly a 7% advantage.</p>
-<div id="cell-6" class="cell" data-execution_count="5">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[5], line 23</span>
-<span class="ansi-green-fg ansi-bold">      1</span> starting <span style="color:rgb(98,98,98)">=</span> (
-<span class="ansi-green-fg ansi-bold">      2</span>     df_game<span style="color:rgb(98,98,98)">.</span>group_by([<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">on_play</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">expansion</span><span style="color:rgb(175,0,0)">"</span>])
-<span class="ansi-green-fg ansi-bold">      3</span>     <span style="color:rgb(98,98,98)">.</span>agg(
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-fg ansi-bold">     11</span>     <span style="color:rgb(98,98,98)">.</span>sort(by<span style="color:rgb(98,98,98)">=</span>[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">expansion</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">on_play</span><span style="color:rgb(175,0,0)">"</span>], descending<span style="color:rgb(98,98,98)">=</span>[<span style="font-weight:bold;color:rgb(0,135,0)">False</span>, <span style="font-weight:bold;color:rgb(0,135,0)">True</span>])
-<span class="ansi-green-fg ansi-bold">     12</span> )
-<span class="ansi-green-fg ansi-bold">     14</span> mean_win_rate <span style="color:rgb(98,98,98)">=</span> starting<span style="color:rgb(98,98,98)">.</span>group_by(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">expansion</span><span style="color:rgb(175,0,0)">"</span>)<span style="color:rgb(98,98,98)">.</span>agg(
-<span class="ansi-green-fg ansi-bold">     15</span>     pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">win_rate</span><span style="color:rgb(175,0,0)">"</span>)<span style="color:rgb(98,98,98)">.</span>mean()<span style="color:rgb(98,98,98)">.</span>alias(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">mean_win_rate</span><span style="color:rgb(175,0,0)">"</span>)
-<span class="ansi-green-fg ansi-bold">     16</span> )
-<span class="ansi-green-fg ansi-bold">     18</span> starting <span style="color:rgb(98,98,98)">=</span> (
-<span class="ansi-green-fg ansi-bold">     19</span>     starting<span style="color:rgb(98,98,98)">.</span>join(mean_win_rate, on<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">expansion</span><span style="color:rgb(175,0,0)">"</span>)
-<span class="ansi-green-fg ansi-bold">     20</span>     <span style="color:rgb(98,98,98)">.</span>with_columns(
-<span class="ansi-green-fg ansi-bold">     21</span>         (pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">win_rate</span><span style="color:rgb(175,0,0)">"</span>) <span style="color:rgb(98,98,98)">/</span> pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">mean_win_rate</span><span style="color:rgb(175,0,0)">"</span>) <span style="color:rgb(98,98,98)">-</span> <span style="color:rgb(98,98,98)">1</span>)<span style="color:rgb(98,98,98)">.</span>alias(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">normalized_win_rate</span><span style="color:rgb(175,0,0)">"</span>)
-<span class="ansi-green-fg ansi-bold">     22</span>     )
-<span class="ansi-green-fg">---&gt; 23</span>     <span style="color:rgb(98,98,98)">.</span>collect()
-<span class="ansi-green-fg ansi-bold">     24</span>     <span style="color:rgb(98,98,98)">.</span>to_pandas()
-<span class="ansi-green-fg ansi-bold">     25</span> )
-
-File <span class="ansi-green-fg">~/miniconda3/envs/dl+bayes-env/lib/python3.12/site-packages/polars/lazyframe/frame.py:2027</span>, in <span class="ansi-cyan-fg">LazyFrame.collect</span><span class="ansi-blue-fg">(self, type_coercion, predicate_pushdown, projection_pushdown, simplify_expression, slice_pushdown, comm_subplan_elim, comm_subexpr_elim, cluster_with_columns, no_optimization, streaming, engine, background, _eager, **_kwargs)</span>
-<span class="ansi-green-fg ansi-bold">   2025</span> <span style="font-style:italic;color:rgb(95,135,135)"># Only for testing purposes</span>
-<span class="ansi-green-fg ansi-bold">   2026</span> callback <span style="color:rgb(98,98,98)">=</span> _kwargs<span style="color:rgb(98,98,98)">.</span>get(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">post_opt_callback</span><span style="color:rgb(175,0,0)">"</span>, callback)
-<span class="ansi-green-fg">-&gt; 2027</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> wrap_df(ldf<span style="color:rgb(98,98,98)">.</span>collect(callback))
-
-<span class="ansi-red-fg">FileNotFoundError</span>: No such file or directory (os error 2): data/processed/17lands/game_data/premier_draft/All_Sets_Game_PD_Games.parquet
-
-This error occurred with the following context stack:
-    [1] 'parquet scan' failed
-    [2] 'group_by' input failed to resolve
-    [3] 'with_columns' input failed to resolve
-    [4] 'sort' input failed to resolve
-    [5] 'join left' input failed to resolve
-    [6] 'with_columns' input failed to resolve
-</pre>
-</div>
-</div>
-</div>
-<div id="cell-fig-starting-win-rate" class="cell" data-execution_count="6">
+<p>This data is for 17Lands players, who have a high average win rate compared to the general MTG Arena population.</p>
+<div id="cell-fig-starting-win-rate" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-display">
 <div id="fig-starting-win-rate" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -228,26 +195,56 @@ This error occurred with the following context stack:
 <img src="24-starting-player_files/figure-html/fig-starting-win-rate-output-1.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-starting-win-rate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: The win rate for starting versus non-starting player.
+Figure&nbsp;1: The win rate of 1st versus 2nd player.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<div id="cell-fig-starting-win-rate2" class="cell" data-execution_count="7">
+</section>
+<section id="advantage-per-set" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Advantage per Set</h1>
+<p>To see if the advantage of going first is consistent across all sets, I plotted the win rate for first player for each draft set. As shown in <a href="#fig-starting-set-win-rate" class="quarto-xref">Figure&nbsp;2</a>, the advantage of going first does vary between sets, but the first player has a distinct advantage in all sets.</p>
+<p>Note that 17Lands players have a high win rate</p>
+<div id="cell-fig-starting-set-win-rate" class="cell" data-execution_count="17">
 <div class="cell-output cell-output-display">
-<div id="fig-starting-win-rate2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-starting-set-win-rate" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-starting-win-rate2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="24-starting-player_files/figure-html/fig-starting-win-rate2-output-1.png" class="img-fluid figure-img">
+<div aria-describedby="fig-starting-set-win-rate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="24-starting-player_files/figure-html/fig-starting-set-win-rate-output-1.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-starting-win-rate2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: The win rate for starting versus non-starting player.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-starting-set-win-rate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: The win rate for the first player by set.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
+</section>
+<section id="spread-of-win-rates" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Spread of Win Rates</h1>
+<p>To account for the set differences in win rates for the 17Lands players, I plotted the spread of win rates for each set. As shown in <a href="#fig-starting-set-win-rate-spread" class="quarto-xref">Figure&nbsp;3</a>, the spread of win rates being 5.5% for OTJ and up to 7.5% for MH3.</p>
+<p>One reason MH3 may be more sensitive to the starting player is that the set has a faster play rate, with almost 1 turn less per game compared to the other sets analyzed. See the <a href="../../../../notebooks/10-eda/02-draft-data/01-premier-play/22-turns.html">Game Length</a> analysis for more information.</p>
+<div id="cell-fig-starting-set-win-rate-spread" class="cell" data-execution_count="18">
+<div class="cell-output cell-output-display">
+<div id="fig-starting-set-win-rate-spread" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-starting-set-win-rate-spread-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="24-starting-player_files/figure-html/fig-starting-set-win-rate-spread-output-1.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-starting-set-win-rate-spread-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Difference in win rates between first player and second player.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusion" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Conclusion</h1>
+<p>We have seen that the starting player has a distinct advantage in MTG Arena draft games. This advantage is consistent across all sets analyzed, with the first player having a 5.5% to 7.5% advantage. This disadvantage of not drawing a card on the first turn is not enough to balance out the advantage of going first.</p>
+<p>Aspects affecting this advantage could be the rate of play, with short games having a higher advantage for the starting player. This could be due to the first player being able to get ahead in tempo and maintain that advantage throughout the game.</p>
+<p>Future analysis will look and player rank, game length, and tempo to see if these factors affect the advantage of going first.</p>
 
 
 </section>

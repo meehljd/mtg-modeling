@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Josh Meehl">
-<meta name="dcterms.date" content="2024-09-03">
-<meta name="description" content="Draft set analysis for Bloomburrow">
+<meta name="dcterms.date" content="2024-09-10">
+<meta name="description" content="Draft set analysis for rate of play">
 
-<title>Bloomburrow (BLB) Arena Draft Analysis – The Data Mage</title>
+<title>Rate of Play Draft Analysis – The Data Mage</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -126,7 +126,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#turn-counts" id="toc-turn-counts" class="nav-link active" data-scroll-target="#turn-counts"><span class="header-section-number">1</span> Turn Counts</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#turn-counts" id="toc-turn-counts" class="nav-link" data-scroll-target="#turn-counts"><span class="header-section-number">2</span> Turn Counts</a></li>
+  <li><a href="#win-rate-by-turn-count" id="toc-win-rate-by-turn-count" class="nav-link" data-scroll-target="#win-rate-by-turn-count"><span class="header-section-number">3</span> Win Rate by Turn Count</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">4</span> Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -135,18 +138,17 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Bloomburrow (BLB) Arena Draft Analysis</h1>
+<h1 class="title">Rate of Play Draft Analysis</h1>
   <div class="quarto-categories">
     <div class="quarto-category">EDA</div>
     <div class="quarto-category">Draft</div>
-    <div class="quarto-category">BLB</div>
     <div class="quarto-category">Arena</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Draft set analysis for Bloomburrow
+    Draft set analysis for rate of play
   </div>
 </div>
 
@@ -163,7 +165,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 3, 2024</p>
+      <p class="date">September 10, 2024</p>
     </div>
   </div>
   
@@ -175,59 +177,16 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="turn-counts" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Turn Counts</h1>
-<p>The number of turns in a game is an important metric for assessing the speed of a set. In <a href="#fig-turns-per-game" class="quarto-xref">Figure&nbsp;1</a>, we see the distribution of turn counts for the Bloomburrow set, with an average of 8.9 turns per game.</p>
-<p>Similar to the distribution seen in <a href="../../../../notebooks/10-eda/02-draft-data/01-premier-play/21-mulligans.html">mulligan</a> analysis, this turn distribution appears to resemble a Poisson distribution.</p>
-<div id="cell-6" class="cell" data-execution_count="5">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[5], line 31</span>
-<span class="ansi-green-fg ansi-bold">      1</span> turns <span style="color:rgb(98,98,98)">=</span> (
-<span class="ansi-green-fg ansi-bold">      2</span>     df_games<span style="color:rgb(98,98,98)">.</span>group_by([<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">num_turns</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">expansion</span><span style="color:rgb(175,0,0)">"</span>])
-<span class="ansi-green-fg ansi-bold">      3</span>     <span style="color:rgb(98,98,98)">.</span>agg(
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-fg ansi-bold">      9</span>     <span style="color:rgb(98,98,98)">.</span>sort(by<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">num_turns</span><span style="color:rgb(175,0,0)">"</span>, descending<span style="color:rgb(98,98,98)">=</span><span style="font-weight:bold;color:rgb(0,135,0)">True</span>)
-<span class="ansi-green-fg ansi-bold">     10</span> )
-<span class="ansi-green-fg ansi-bold">     12</span> mean_win_rate <span style="color:rgb(98,98,98)">=</span> (
-<span class="ansi-green-fg ansi-bold">     13</span>     turns<span style="color:rgb(98,98,98)">.</span>group_by(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">expansion</span><span style="color:rgb(175,0,0)">"</span>)
-<span class="ansi-green-fg ansi-bold">     14</span>     <span style="color:rgb(98,98,98)">.</span>agg(
-<span class="ansi-green-fg">   (...)</span>
-<span class="ansi-green-fg ansi-bold">     22</span>     )
-<span class="ansi-green-fg ansi-bold">     23</span> )
-<span class="ansi-green-fg ansi-bold">     25</span> turns <span style="color:rgb(98,98,98)">=</span> (
-<span class="ansi-green-fg ansi-bold">     26</span>     turns<span style="color:rgb(98,98,98)">.</span>join(mean_win_rate, on<span style="color:rgb(98,98,98)">=</span><span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">expansion</span><span style="color:rgb(175,0,0)">"</span>)
-<span class="ansi-green-fg ansi-bold">     27</span>     <span style="color:rgb(98,98,98)">.</span>with_columns(
-<span class="ansi-green-fg ansi-bold">     28</span>         (pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">win_rate</span><span style="color:rgb(175,0,0)">"</span>) <span style="color:rgb(98,98,98)">/</span> pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">set_win_rate</span><span style="color:rgb(175,0,0)">"</span>))<span style="color:rgb(98,98,98)">.</span>alias(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">normalized_win_rate</span><span style="color:rgb(175,0,0)">"</span>),
-<span class="ansi-green-fg ansi-bold">     29</span>         (pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">n_games</span><span style="color:rgb(175,0,0)">"</span>) <span style="color:rgb(98,98,98)">/</span> pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">set_n_games</span><span style="color:rgb(175,0,0)">"</span>))<span style="color:rgb(98,98,98)">.</span>alias(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">normalized_pct_games</span><span style="color:rgb(175,0,0)">"</span>),
-<span class="ansi-green-fg ansi-bold">     30</span>     )
-<span class="ansi-green-fg">---&gt; 31</span>     <span style="color:rgb(98,98,98)">.</span>collect()
-<span class="ansi-green-fg ansi-bold">     32</span>     <span style="color:rgb(98,98,98)">.</span>to_pandas()
-<span class="ansi-green-fg ansi-bold">     33</span> )
-<span class="ansi-green-fg ansi-bold">     35</span> filtered_turns <span style="color:rgb(98,98,98)">=</span> turns<span style="color:rgb(98,98,98)">.</span>loc[turns[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">pct_games</span><span style="color:rgb(175,0,0)">"</span>] <span style="color:rgb(98,98,98)">&gt;</span> <span style="color:rgb(98,98,98)">0.001</span>]
-<span class="ansi-green-fg ansi-bold">     36</span> mean_win_rate <span style="color:rgb(98,98,98)">=</span> df_games<span style="color:rgb(98,98,98)">.</span>select(pl<span style="color:rgb(98,98,98)">.</span>col(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">num_turns</span><span style="color:rgb(175,0,0)">"</span>)<span style="color:rgb(98,98,98)">.</span>mean())<span style="color:rgb(98,98,98)">.</span>collect()<span style="color:rgb(98,98,98)">.</span>to_numpy()[<span style="color:rgb(98,98,98)">0</span>][<span style="color:rgb(98,98,98)">0</span>]
-
-File <span class="ansi-green-fg">~/miniconda3/envs/dl+bayes-env/lib/python3.12/site-packages/polars/lazyframe/frame.py:2027</span>, in <span class="ansi-cyan-fg">LazyFrame.collect</span><span class="ansi-blue-fg">(self, type_coercion, predicate_pushdown, projection_pushdown, simplify_expression, slice_pushdown, comm_subplan_elim, comm_subexpr_elim, cluster_with_columns, no_optimization, streaming, engine, background, _eager, **_kwargs)</span>
-<span class="ansi-green-fg ansi-bold">   2025</span> <span style="font-style:italic;color:rgb(95,135,135)"># Only for testing purposes</span>
-<span class="ansi-green-fg ansi-bold">   2026</span> callback <span style="color:rgb(98,98,98)">=</span> _kwargs<span style="color:rgb(98,98,98)">.</span>get(<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">post_opt_callback</span><span style="color:rgb(175,0,0)">"</span>, callback)
-<span class="ansi-green-fg">-&gt; 2027</span> <span style="font-weight:bold;color:rgb(0,135,0)">return</span> wrap_df(ldf<span style="color:rgb(98,98,98)">.</span>collect(callback))
-
-<span class="ansi-red-fg">FileNotFoundError</span>: No such file or directory (os error 2): data/processed/17lands/game_data/premier_draft/All_Sets_Game_PD_Games.parquet
-
-This error occurred with the following context stack:
-    [1] 'parquet scan' failed
-    [2] 'group_by' input failed to resolve
-    [3] 'with_columns' input failed to resolve
-    [4] 'sort' input failed to resolve
-    [5] 'join left' input failed to resolve
-    [6] 'with_columns' input failed to resolve
-</pre>
-</div>
-</div>
-</div>
-<div id="cell-fig-turns-per-game" class="cell" data-execution_count="10">
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>The speed of play can say a lot about a set’s game design and the players skills. Here we will look at the number of turns for games in the Dominion dataset. We will look at the distribution of the number of turns per set to see if there are any trends.</p>
+<p>This is a part of the MTG Arena draft analysis. See the <a href="../../../../notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html">Draft Introduction</a> for more information.</p>
+</section>
+<section id="turn-counts" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Turn Counts</h1>
+<p>The number of turns in a game is an important metric for assessing the speed of a set. In <a href="#fig-turns-per-game" class="quarto-xref">Figure&nbsp;1</a>, we see the distribution of turn counts across sets. The most common number of turns is 8, with a median of 9 turns. The distribution is right-skewed, with a long tail of games that last 15 or more turns.</p>
+<p>The MH3 set has the fastest play by far, with an average 8.4 turns per game. The other sets are around 9 turns per game on average.</p>
+<div id="cell-fig-turns-per-game" class="cell" data-execution_count="28">
 <div class="cell-output cell-output-display">
 <div id="fig-turns-per-game" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -241,8 +200,11 @@ Figure&nbsp;1: The distribution of number of turns per game.
 </div>
 </div>
 </div>
-<p>I’m also interested in how 17Lands players perform relative to the number of turns. In <a href="#fig-turns-wins" class="quarto-xref">Figure&nbsp;2</a>, we observe that players are more likely to win games that end quickly. The win rate is 55-60% for games that conclude in fewer than 8 turns, dropping to 50-55% for games that last longer.</p>
-<div id="cell-fig-turns-wins" class="cell" data-execution_count="9">
+</section>
+<section id="win-rate-by-turn-count" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Win Rate by Turn Count</h1>
+<p>I’m also interested in how 17Lands players perform relative to the number of turns. In <a href="#fig-turns-wins" class="quarto-xref">Figure&nbsp;2</a>, we observe that players are more likely to win games that end quickly. The win rate is 55-60% for games that conclude in fewer than 8 turns, dropping to 50-55% for games that last longer. The faster games may have a higher mix of decks that have a strong early game, or players who are better at closing out games quickly.</p>
+<div id="cell-fig-turns-wins" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div id="fig-turns-wins" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -256,6 +218,10 @@ Figure&nbsp;2: The win rate versus number of turns.
 </div>
 </div>
 </div>
+</section>
+<section id="conclusion" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Conclusion</h1>
+<p>We can see that each set has a different speed of play, with MH3 being the fastest. This is not surprising, since MH3 is supposed to be at a higher power level than the other sets. We also see that 17Lands players are more likely to win games that end quickly.</p>
 
 
 </section>

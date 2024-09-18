@@ -354,7 +354,7 @@
     "href": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html",
     "title": "Premier Draft Data Analysis Overview",
     "section": "",
-    "text": "I have always been curious about Draft format in MTG, as it requires one to be good at the game, but also building competitive decks in a highly constrained environment. I have been analyzing the latests sets to see how they each perform in draft.\nCurrently I have analyzed the deck performance for the recent sets. Soon I will add analysis at the card level to see which cards are the most valuable in draft.\n\n\n\n\n\nSet Name\nCode\nArena Release Date\nDeck Analysis\nCard Analysis\n\n\n\n\nMurders at Karlov Manor\nMKM\n2024-02-07\nMKM Deck\n-\n\n\nOutlaws of Thunder Junction\nOTJ\n2024-04-16\nOTJ Deck\n-\n\n\nModern Horizons 3\nMH3\n2024-06-11\nMH3 Deck\n-\n\n\nBloomburrow\nBLB\n2024-07-30\nBLB Deck\n-\n\n\nDuskmourn: House of Horror\nDSK\n2024-09-24\n-\n-\n\n\n\n \n\n\n\nSome aspects of the game don’t very much between sets. These general analysis are:\n\n\n\n\n\nStarting Player"
+    "text": "I have always been curious about Draft format in MTG, as it requires one to be good at the game, but also building competitive decks in a highly constrained environment. I have been analyzing the latests sets to see how they each perform in draft.\nCurrently I have analyzed the deck performance for the recent sets. Soon I will add analysis at the card level to see which cards are the most valuable in draft.\n\n\n\n\n\nSet Name\nCode\nArena Release Date\nDeck Analysis\nCard Analysis\n\n\n\n\nMurders at Karlov Manor\nMKM\n2024-02-07\nMKM Deck\n-\n\n\nOutlaws of Thunder Junction\nOTJ\n2024-04-16\nOTJ Deck\n-\n\n\nModern Horizons 3\nMH3\n2024-06-11\nMH3 Deck\n-\n\n\nBloomburrow\nBLB\n2024-07-30\nBLB Deck\n-\n\n\nDuskmourn: House of Horror\nDSK\n2024-09-24\n-\n-\n\n\n\n \n\n\n\nSome aspects of the game don’t very much between sets. These general analysis are:\n\nPlayer Rank\nMulligans\nTurns\nBuilds\nStarting Player"
   },
   {
     "objectID": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#set-analyzed",
@@ -368,7 +368,7 @@
     "href": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#other-analysis",
     "title": "Premier Draft Data Analysis Overview",
     "section": "",
-    "text": "Some aspects of the game don’t very much between sets. These general analysis are:\n\n\n\n\n\nStarting Player"
+    "text": "Some aspects of the game don’t very much between sets. These general analysis are:\n\nPlayer Rank\nMulligans\nTurns\nBuilds\nStarting Player"
   },
   {
     "objectID": "notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html#data-source",

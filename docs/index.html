@@ -191,6 +191,7 @@ window.Quarto = {
 <p>Given the complexity of gameplay, my analysis will cover various perspectives: aggregate win rates, micro-level decisions like combat resolution and mulligan choices, and evaluations of components such as card mana efficiency. We will also explore the <strong>metagame</strong>, including deck building, play formats, and drafting strategies</p>
 <p>The collecting aspect of MTG is vast, with nearly 100,000 cards printed over the game’s history. I’ll examine this by looking into aspects like the probability distributions of collector booster packs.</p>
 <p>Finally, the economics of MTG, particularly the secondary market for singles, is of great interest to me. I’ll focus on predicting card prices and analyzing price trends for new sets.</p>
+<p>Currently I have some <a href="./notebooks/10-eda/02-draft-data/01-premier-play/00-intro.html">set analysis</a> for MTG Arena draft.</p>
 <hr>
 <section id="data-science" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Data Science</h1>
@@ -222,12 +223,10 @@ window.Quarto = {
 <p>I’ll use the card data generously made available by the tireless folks at the open-source project <a href="https://mtgjson.com/">MTGJSON</a>. MTGJSON provides a comprehensive database of MTG cards, including card attributes, card text, and card prices. The data is available in JSON format, which I’ll convert to a pandas DataFrame for analysis.</p>
 <p>MTGJSON sources a lot of data from <a href="https://scryfall.com/docs/api">Scryfall</a>, which has an excellent webapp for exploring MTG card data.</p>
 <p>MTGJSON sources the booster pack composition data from. The source code provided by <a href="https://github.com/taw">taw</a> on <a href="https://github.com/taw/magic-search-engine?tab=readme-ov-file">github</a> contains estimated booster pack composition probabilities. He also provides a webapp at <a href="https://mtg.wtf/">mtg.wtf</a>. Note that booster pack composition is proprietary information of Wizards of the Coast, and the above probabilities are estimates.</p>
-<p>See the <a href="./notebooks/01-data-wrangling/01-mtgjson-data/00-mtgjson-data-intro.html">MTGJSON Data Introduction</a> notebook for more details on the data sources.</p>
 </section>
 <section id="draft-play-data-sources" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="draft-play-data-sources"><span class="header-section-number">3.2</span> Draft Play Data Sources</h2>
 <p>For draft play, I will used data from <a href="https://www.17lands.com/public_datasets">17lands</a>. They compile data from their user base to provide draft pick data. The data includes the draft pick order, the cards picked, and the win rate of the deck.</p>
-<p>See the <a href="./notebooks/01-data-wrangling/02-draft-data/01-premier-play/20-draft-data-wrangle.html">Draft Data Introduction</a> notebook for more information on the draft data.</p>
 </section>
 </section>
 <section id="code" class="level1" data-number="4">

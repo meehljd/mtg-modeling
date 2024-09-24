@@ -27,7 +27,9 @@ format:
     toc-depth: 2
     # css: styles.css
     include-after-body: _includes/_footer.html
-
+    analytics: 
+      google: G-W1YKM7R5E6
+      
 number-sections: true
 
 # LANGUAGE & CODE EXECUTION

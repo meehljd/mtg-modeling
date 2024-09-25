@@ -282,23 +282,23 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Introduction",
+    "title": "The Data Mage",
     "section": "",
     "text": "Welcome to Data Mage, a journey into the world of Magic: The Gathering (MTG) through the lens of data science. MTG is a collectible card game celebrated for its popularity, rich history, and intricate gameplay, offering a treasure trove of data ripe for analysis.\nRecently I’ve rekindled my interest in MTG. I was big into MTG during middle school from 1998-2000. After a long hiatus, I have caught MTG fever with my son and we’ve been playing avidly for the last year. I’ve embarked on this project to deepen my understanding of the game and share insights that others might find valuable.\nThis exploration will delve into three main facets of MTG: gameplay, collecting, and economics.\nIn terms of gameplay, I’ll analyze various perspectives—from aggregate win rates to micro-level decisions like combat resolution and mulligan choices, as well as evaluations of components such as card mana efficiency. We’ll also delve into the metagame, including deck building, play formats, and drafting strategies.\nThe collecting aspect is vast, with nearly 100,000 cards printed over the game’s history. I’ll examine this realm by exploring elements like the probability distributions of collector booster packs.\nFinally, the economics of MTG, particularly the secondary market for singles, is of great interest. I’ll focus on predicting card prices and analyzing price trends for new sets.\nCurrently I have some set analysis for MTG Arena draft."
   },
   {
     "objectID": "index.html#card-data",
     "href": "index.html#card-data",
-    "title": "Introduction",
-    "section": "3.1 Card Data",
-    "text": "3.1 Card Data\nI’m utilizing card data generously provided by the tireless team behind the open-source project MTGJSON. MTGJSON offers a comprehensive database of MTG cards, including attributes, text, and prices. The data is available in JSON format, which I’ll convert into pandas DataFrames for analysis.\nMTGJSON sources much of its data from Scryfall, which also hosts an excellent web app for exploring MTG card information.\nFor booster pack composition data, MTGJSON references estimates provided by taw in his GitHub repository. Taw also offers a web app at mtg.wtf. Please note that booster pack compositions are proprietary information of Wizards of the Coast, and these probabilities are estimated."
+    "title": "The Data Mage",
+    "section": "4.1 Card Data",
+    "text": "4.1 Card Data\nI’m utilizing card data generously provided by the tireless team behind the open-source project MTGJSON. MTGJSON offers a comprehensive database of MTG cards, including attributes, text, and prices. The data is available in JSON format, which I’ll convert into pandas DataFrames for analysis.\nMTGJSON sources much of its data from Scryfall, which also hosts an excellent web app for exploring MTG card information.\nFor booster pack composition data, MTGJSON references estimates provided by taw in his GitHub repository. Taw also offers a web app at mtg.wtf. Please note that booster pack compositions are proprietary information of Wizards of the Coast, and these probabilities are estimated."
   },
   {
     "objectID": "index.html#draft-play-data",
     "href": "index.html#draft-play-data",
-    "title": "Introduction",
-    "section": "3.2 Draft Play Data",
-    "text": "3.2 Draft Play Data\nFor draft play analysis, I’ll use data from 17Lands. They compile data from their user base to provide detailed draft pick information, including pick order, cards selected, and deck win rates."
+    "title": "The Data Mage",
+    "section": "4.2 Draft Play Data",
+    "text": "4.2 Draft Play Data\nFor draft play analysis, I’ll use data from 17Lands. They compile data from their user base to provide detailed draft pick information, including pick order, cards selected, and deck win rates."
   },
   {
     "objectID": "notebooks/10-eda/02-draft-data/01-premier-play/21-mulligans.html",
